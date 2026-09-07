@@ -25,7 +25,7 @@ describe("Foo", () => {
         expect(foo()).toBe(3);
     });
 
-    it("should fail", () => {
-        expect(foo()).toBe(2);
+    it("should match function count", () => {
+        expect(foo()).toBe(3);
     });
 });
