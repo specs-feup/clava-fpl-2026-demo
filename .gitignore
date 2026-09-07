@@ -3,6 +3,8 @@ woven_code/
 /dist
 /docs
 package-lock.json
+.venv/
+.ipynb_checkpoints/
 
 # Extensions
 ltex.dictionary.*

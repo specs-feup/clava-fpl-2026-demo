@@ -1,38 +1,27 @@
-# clava-project-template
+# clava-fpl-2026-demo
 
-A template for developing projects for Clava in Typescript
+This repository now contains two workspaces:
 
-## Installing dev environment
+- `clava-scripts/`: the original npm/TypeScript Clava project.
+- `notebooks/`: Jupyter workspace for running Python notebooks that can call the npm project.
 
-Execute the following commands to download all the required code:
+## clava-scripts
 
 ```bash
+cd clava-scripts
 npm install
-```
-
-## Compiling and executing Clava-based project
-
-First you need to compile the TypeScript files to JavaScript:
-
-```bash
 npm run build
-```
-
-Then you can execute your project by running the following on your terminal
-
-```bash
 npm run run
 ```
 
-By default it will run the script `main.ts`. Take a look inside the `scripts` field in the `package.json` file for more information.
-
-You can also run tests, get test coverage information and generate documentation for your project.
-
-## Debugging
-
-You can get debugging information using a `DEBUG` environment variable.
-This variable is used by the [debug](https://www.npmjs.com/package/debug) module to determine what to expose.
+## notebooks
 
 ```bash
-DEBUG="*" npm run run
+cd notebooks
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+jupyter lab
 ```
+
+Inside notebooks, use `../clava-scripts` as the working directory for npm commands so generated files remain directly accessible from the notebook.
