@@ -1,0 +1,3 @@
+Partitioning,Computation_Percentage,Latency_ms,FF,LUT,BRAM,DSP
+Single-Task (Highest Latency),24.0,31.22,6140,5730,4,3
+Holistic (Hotspot Expansion),76.0,48.57,11359,11617,468,0

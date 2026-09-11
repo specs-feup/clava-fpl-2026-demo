@@ -1,0 +1,1342 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cluster.cpp, Line: 18, Column: 3 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - Callee:          'cluster_edge_detect_out0(int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 194, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cluster.cpp, Line: 19, Column: 3 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - Callee:          'cluster_convolve2d_rep0(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 153, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cluster.cpp, Line: 20, Column: 3 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - Callee:          'cluster_edge_detect_out1(int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 140, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cluster.cpp, Line: 21, Column: 3 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - Callee:          'cluster_convolve2d_rep1(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 99, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cluster.cpp, Line: 22, Column: 3 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - Callee:          'cluster_edge_detect_out2(int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 86, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cluster.cpp, Line: 23, Column: 3 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - Callee:          'cluster_convolve2d_rep2(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 45, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cluster.cpp, Line: 24, Column: 3 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - Callee:          'cluster_combthreshold(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 28, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cluster.cpp, Line: 18, Column: 3 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - Callee:          'cluster_edge_detect_out0(int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 194, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cluster.cpp, Line: 19, Column: 3 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - Callee:          'cluster_convolve2d_rep0(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 153, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cluster.cpp, Line: 20, Column: 3 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - Callee:          'cluster_edge_detect_out1(int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 140, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cluster.cpp, Line: 21, Column: 3 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - Callee:          'cluster_convolve2d_rep1(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 99, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cluster.cpp, Line: 22, Column: 3 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - Callee:          'cluster_edge_detect_out2(int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 86, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cluster.cpp, Line: 23, Column: 3 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - Callee:          'cluster_convolve2d_rep2(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 45, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cluster.cpp, Line: 24, Column: 3 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - Callee:          'cluster_combthreshold(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 28, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_edge_detect_hw_ir
+Args:            
+  - Callee:          'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_edge_detect_hw_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cluster_edge_detect_out0(int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 194, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cluster_convolve2d_rep0(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 153, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cluster_edge_detect_out1(int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 140, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cluster_convolve2d_rep1(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 99, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cluster_edge_detect_out2(int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 86, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cluster_convolve2d_rep2(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 45, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cluster_combthreshold(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 28, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: cluster.cpp, Line: 183, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       image_gray
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'cluster.cpp:183:9'
+  - String:          ' '
+  - Function:        'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: cluster.cpp, Line: 185, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          for.inc32.i.load.8
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: cluster.cpp, Line: 129, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep8seq
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'cluster.cpp:129:9'
+  - String:          ' '
+  - Function:        'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: cluster.cpp, Line: 131, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          for.inc32.i39.load.8
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: cluster.cpp, Line: 75, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep9seq
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'cluster.cpp:75:9'
+  - String:          ' '
+  - Function:        'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: cluster.cpp, Line: 77, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          for.inc32.i89.load.8
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: cluster.cpp, Line: 183, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cluster.cpp, Line: 183, Column: 9 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       image_gray
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'cluster.cpp:182:7'
+  - String:          ' '
+  - Function:        'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: cluster.cpp, Line: 188, Column: 65 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: cluster.cpp, Line: 185, Column: 17 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: cluster.cpp, Line: 188, Column: 65 }
+  - OrigDirection:   write
+  - OrigID:          for.inc44.i.store.5
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: cluster.cpp, Line: 129, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cluster.cpp, Line: 129, Column: 9 }
+  - OrigDirection:   read
+  - OrigID:          scevgep8seq
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'cluster.cpp:128:7'
+  - String:          ' '
+  - Function:        'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: cluster.cpp, Line: 134, Column: 65 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: cluster.cpp, Line: 131, Column: 17 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: cluster.cpp, Line: 134, Column: 65 }
+  - OrigDirection:   write
+  - OrigID:          for.inc44.i47.store.5
+  - ArrayName:       image_gray
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: cluster.cpp, Line: 75, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cluster.cpp, Line: 75, Column: 9 }
+  - OrigDirection:   read
+  - OrigID:          scevgep9seq
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'cluster.cpp:74:7'
+  - String:          ' '
+  - Function:        'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: cluster.cpp, Line: 36, Column: 19 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: cluster.cpp, Line: 39, Column: 27 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: cluster.cpp, Line: 36, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          for.body3.i.load.4
+  - ArrayName:       image_gray
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: cluster.cpp, Line: 39, Column: 27 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: cluster.cpp, Line: 36, Column: 19 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: cluster.cpp, Line: 39, Column: 27 }
+  - OrigDirection:   write
+  - OrigID:          for.body3.i.store.17
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualAlignment
+DebugLoc:        { File: cluster.cpp, Line: 75, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to alignment '
+  - Alignment:       '4'
+  - String:          '(bytes)'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cluster.cpp, Line: 75, Column: 9 }
+  - OrigDirection:   read
+  - OrigID:          scevgep9seq
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'cluster.cpp:75:9'
+  - String:          ' '
+  - Function:        'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualAlignment
+DebugLoc:        { File: cluster.cpp, Line: 129, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to alignment '
+  - Alignment:       '4'
+  - String:          '(bytes)'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cluster.cpp, Line: 129, Column: 9 }
+  - OrigDirection:   read
+  - OrigID:          scevgep8seq
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'cluster.cpp:129:9'
+  - String:          ' '
+  - Function:        'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualAlignment
+DebugLoc:        { File: cluster.cpp, Line: 183, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to alignment '
+  - Alignment:       '4'
+  - String:          '(bytes)'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cluster.cpp, Line: 183, Column: 9 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       image_gray
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'cluster.cpp:183:9'
+  - String:          ' '
+  - Function:        'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        unknown
+  - String:          '> at '
+  - LoopLoc:         'cluster.cpp:167:5'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        unknown
+  - String:          '> at '
+  - LoopLoc:         'cluster.cpp:180:5'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        unknown
+  - String:          '> at '
+  - LoopLoc:         'cluster.cpp:113:5'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        unknown
+  - String:          '> at '
+  - LoopLoc:         'cluster.cpp:126:5'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        unknown
+  - String:          '> at '
+  - LoopLoc:         'cluster.cpp:59:5'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        unknown
+  - String:          '> at '
+  - LoopLoc:         'cluster.cpp:72:5'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        unknown
+  - String:          '> at '
+  - LoopLoc:         'cluster.cpp:35:5'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: cluster.cpp, Line: 74, Column: 7 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        anonymous
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: cluster.cpp, Line: 75, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        anonymous
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: cluster.cpp, Line: 128, Column: 7 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        anonymous
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: cluster.cpp, Line: 129, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        anonymous
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: cluster.cpp, Line: 182, Column: 7 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        anonymous
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: cluster.cpp, Line: 183, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        anonymous
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        anonymous
+  - String:          ''' ('
+  - LoopLoc:         'cluster.cpp:74:7'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          edge_detect_hw
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        anonymous
+  - String:          ''' ('
+  - LoopLoc:         'cluster.cpp:75:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          edge_detect_hw
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        anonymous
+  - String:          ''' ('
+  - LoopLoc:         'cluster.cpp:75:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          edge_detect_hw
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        anonymous
+  - String:          ''' ('
+  - LoopLoc:         'cluster.cpp:75:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          edge_detect_hw
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        anonymous
+  - String:          ''' ('
+  - LoopLoc:         'cluster.cpp:128:7'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          edge_detect_hw
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        anonymous
+  - String:          ''' ('
+  - LoopLoc:         'cluster.cpp:129:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          edge_detect_hw
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        anonymous
+  - String:          ''' ('
+  - LoopLoc:         'cluster.cpp:129:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          edge_detect_hw
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        anonymous
+  - String:          ''' ('
+  - LoopLoc:         'cluster.cpp:129:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          edge_detect_hw
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        anonymous
+  - String:          ''' ('
+  - LoopLoc:         'cluster.cpp:182:7'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          edge_detect_hw
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        anonymous
+  - String:          ''' ('
+  - LoopLoc:         'cluster.cpp:183:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          edge_detect_hw
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        anonymous
+  - String:          ''' ('
+  - LoopLoc:         'cluster.cpp:183:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          edge_detect_hw
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        anonymous
+  - String:          ''' ('
+  - LoopLoc:         'cluster.cpp:183:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          edge_detect_hw
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Failure
+Pass:            reflow-interface-check
+Name:            UnspportedNonScalarType
+DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Cannot apply interface mode '''
+  - String:          ap_none
+  - String:          ''' '
+  - String:          'on function argument '''
+  - Name:            image_gray
+  - String:          ''' since this interface mode only supports scalar types'
+...
+--- !Failure
+Pass:            reflow-interface-check
+Name:            UnspportedNonScalarType
+DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Cannot apply interface mode '''
+  - String:          ap_none
+  - String:          ''' '
+  - String:          'on function argument '''
+  - Name:            output
+  - String:          ''' since this interface mode only supports scalar types'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: cluster.cpp, Line: 183, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: cluster.cpp, Line: 183, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: cluster.cpp, Line: 183, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: cluster.cpp, Line: 183, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: cluster.cpp, Line: 183, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: cluster.cpp, Line: 183, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: cluster.cpp, Line: 129, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq3
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: cluster.cpp, Line: 129, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: cluster.cpp, Line: 129, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq4
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: cluster.cpp, Line: 129, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: cluster.cpp, Line: 129, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq5
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: cluster.cpp, Line: 129, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: cluster.cpp, Line: 75, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq6
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: cluster.cpp, Line: 75, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: cluster.cpp, Line: 75, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq7
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: cluster.cpp, Line: 75, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: cluster.cpp, Line: 75, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq8
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'edge_detect_hw(int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: cluster.cpp, Line: 75, Column: 9 }
+Function:        _Z14edge_detect_hwPiS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

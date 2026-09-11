@@ -1,0 +1,178 @@
+
+
+================================================================
+== Vitis HLS Report for 'edge_detect_hw_Pipeline_1'
+================================================================
+* Date:           Tue Sep  8 14:06:57 2026
+
+* Version:        2024.2.2 (Build 6049644 on Mar  5 2025)
+* Project:        final
+* Solution:       hls (Vitis Kernel Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.67 ns|  2.682 ns|     2.00 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min    |    max    | min | max |                      Type                      |
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    |       11|       11|  73.337 ns|  73.337 ns|   10|   10|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |        9|        9|         2|          1|          1|     9|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.30>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%normal_factor_1 = alloca i32 1" [cluster.cpp:158->cluster.cpp:19]   --->   Operation 5 'alloca' 'normal_factor_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%c = alloca i32 1" [cluster.cpp:156->cluster.cpp:19]   --->   Operation 6 'alloca' 'c' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%r = alloca i32 1" [cluster.cpp:157->cluster.cpp:19]   --->   Operation 7 'alloca' 'r' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%indvar_flatten = alloca i32 1"   --->   Operation 8 'alloca' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.42ns)   --->   "%store_ln0 = store i4 0, i4 %indvar_flatten"   --->   Operation 9 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 10 [1/1] (0.42ns)   --->   "%store_ln157 = store i2 0, i2 %r" [cluster.cpp:157->cluster.cpp:19]   --->   Operation 10 'store' 'store_ln157' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 11 [1/1] (0.42ns)   --->   "%store_ln156 = store i2 0, i2 %c" [cluster.cpp:156->cluster.cpp:19]   --->   Operation 11 'store' 'store_ln156' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 12 [1/1] (0.42ns)   --->   "%store_ln158 = store i6 0, i6 %normal_factor_1" [cluster.cpp:158->cluster.cpp:19]   --->   Operation 12 'store' 'store_ln158' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i"   --->   Operation 13 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%indvar_flatten_load = load i4 %indvar_flatten" [cluster.cpp:166->cluster.cpp:19]   --->   Operation 14 'load' 'indvar_flatten_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.79ns)   --->   "%icmp_ln166 = icmp_eq  i4 %indvar_flatten_load, i4 9" [cluster.cpp:166->cluster.cpp:19]   --->   Operation 15 'icmp' 'icmp_ln166' <Predicate = true> <Delay = 0.79> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.79ns)   --->   "%add_ln166 = add i4 %indvar_flatten_load, i4 1" [cluster.cpp:166->cluster.cpp:19]   --->   Operation 16 'add' 'add_ln166' <Predicate = true> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln166 = br i1 %icmp_ln166, void %for.inc5.i, void %for.body13.i.preheader.exitStub" [cluster.cpp:166->cluster.cpp:19]   --->   Operation 17 'br' 'br_ln166' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%c_load = load i2 %c" [cluster.cpp:167->cluster.cpp:19]   --->   Operation 18 'load' 'c_load' <Predicate = (!icmp_ln166)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%r_load = load i2 %r" [cluster.cpp:166->cluster.cpp:19]   --->   Operation 19 'load' 'r_load' <Predicate = (!icmp_ln166)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.54ns)   --->   "%icmp_ln167 = icmp_eq  i2 %c_load, i2 3" [cluster.cpp:167->cluster.cpp:19]   --->   Operation 20 'icmp' 'icmp_ln167' <Predicate = (!icmp_ln166)> <Delay = 0.54> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.17ns)   --->   "%select_ln157 = select i1 %icmp_ln167, i2 0, i2 %c_load" [cluster.cpp:157->cluster.cpp:19]   --->   Operation 21 'select' 'select_ln157' <Predicate = (!icmp_ln166)> <Delay = 0.17> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.17> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 22 [1/1] (0.54ns)   --->   "%add_ln166_1 = add i2 %r_load, i2 1" [cluster.cpp:166->cluster.cpp:19]   --->   Operation 22 'add' 'add_ln166_1' <Predicate = (!icmp_ln166)> <Delay = 0.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 23 [1/1] (0.17ns)   --->   "%select_ln166 = select i1 %icmp_ln167, i2 %add_ln166_1, i2 %r_load" [cluster.cpp:166->cluster.cpp:19]   --->   Operation 23 'select' 'select_ln166' <Predicate = (!icmp_ln166)> <Delay = 0.17> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.17> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%zext_ln166 = zext i2 %select_ln166" [cluster.cpp:166->cluster.cpp:19]   --->   Operation 24 'zext' 'zext_ln166' <Predicate = (!icmp_ln166)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%p_shl = bitconcatenate i4 @_ssdm_op_BitConcatenate.i4.i2.i2, i2 %select_ln166, i2 0" [cluster.cpp:166->cluster.cpp:19]   --->   Operation 25 'bitconcatenate' 'p_shl' <Predicate = (!icmp_ln166)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%empty = sub i4 %p_shl, i4 %zext_ln166" [cluster.cpp:166->cluster.cpp:19]   --->   Operation 26 'sub' 'empty' <Predicate = (!icmp_ln166)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.23> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%zext_ln167 = zext i2 %select_ln157" [cluster.cpp:167->cluster.cpp:19]   --->   Operation 27 'zext' 'zext_ln167' <Predicate = (!icmp_ln166)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.46ns) (root node of TernaryAdder)   --->   "%add_ln170 = add i4 %zext_ln167, i4 %empty" [cluster.cpp:170->cluster.cpp:19]   --->   Operation 28 'add' 'add_ln170' <Predicate = (!icmp_ln166)> <Delay = 0.46> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.23> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%zext_ln170 = zext i4 %add_ln170" [cluster.cpp:170->cluster.cpp:19]   --->   Operation 29 'zext' 'zext_ln170' <Predicate = (!icmp_ln166)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%filter_addr = getelementptr i4 %filter, i64 0, i64 %zext_ln170" [cluster.cpp:170->cluster.cpp:19]   --->   Operation 30 'getelementptr' 'filter_addr' <Predicate = (!icmp_ln166)> <Delay = 0.00>
+ST_1 : Operation 31 [2/2] (0.67ns)   --->   "%filter_load = load i4 %filter_addr" [cluster.cpp:170->cluster.cpp:19]   --->   Operation 31 'load' 'filter_load' <Predicate = (!icmp_ln166)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+ST_1 : Operation 32 [1/1] (0.54ns)   --->   "%add_ln167 = add i2 %select_ln157, i2 1" [cluster.cpp:167->cluster.cpp:19]   --->   Operation 32 'add' 'add_ln167' <Predicate = (!icmp_ln166)> <Delay = 0.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.42ns)   --->   "%store_ln166 = store i4 %add_ln166, i4 %indvar_flatten" [cluster.cpp:166->cluster.cpp:19]   --->   Operation 33 'store' 'store_ln166' <Predicate = (!icmp_ln166)> <Delay = 0.42>
+ST_1 : Operation 34 [1/1] (0.42ns)   --->   "%store_ln157 = store i2 %select_ln166, i2 %r" [cluster.cpp:157->cluster.cpp:19]   --->   Operation 34 'store' 'store_ln157' <Predicate = (!icmp_ln166)> <Delay = 0.42>
+ST_1 : Operation 35 [1/1] (0.42ns)   --->   "%store_ln156 = store i2 %add_ln167, i2 %c" [cluster.cpp:156->cluster.cpp:19]   --->   Operation 35 'store' 'store_ln156' <Predicate = (!icmp_ln166)> <Delay = 0.42>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%normal_factor_1_load_1 = load i6 %normal_factor_1"   --->   Operation 48 'load' 'normal_factor_1_load_1' <Predicate = (icmp_ln166)> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i6P0A, i6 %normal_factor_1_out, i6 %normal_factor_1_load_1"   --->   Operation 49 'write' 'write_ln0' <Predicate = (icmp_ln166)> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.42ns)   --->   "%ret_ln0 = ret"   --->   Operation 50 'ret' 'ret_ln0' <Predicate = (icmp_ln166)> <Delay = 0.42>
+
+State 2 <SV = 1> <Delay = 2.68>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%normal_factor_1_load = load i6 %normal_factor_1" [cluster.cpp:171->cluster.cpp:19]   --->   Operation 36 'load' 'normal_factor_1_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 9, i64 9, i64 9"   --->   Operation 37 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%specpipeline_ln156 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0" [cluster.cpp:156->cluster.cpp:19]   --->   Operation 38 'specpipeline' 'specpipeline_ln156' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/2] ( I:0.67ns O:0.67ns )   --->   "%filter_load = load i4 %filter_addr" [cluster.cpp:170->cluster.cpp:19]   --->   Operation 39 'load' 'filter_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%empty_43 = trunc i4 %filter_load" [cluster.cpp:170->cluster.cpp:19]   --->   Operation 40 'trunc' 'empty_43' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.67ns)   --->   "%neg = sub i3 0, i3 %empty_43" [cluster.cpp:170->cluster.cpp:19]   --->   Operation 41 'sub' 'neg' <Predicate = true> <Delay = 0.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 42 [1/1] (0.79ns)   --->   "%abscond = icmp_sgt  i4 %filter_load, i4 0" [cluster.cpp:170->cluster.cpp:19]   --->   Operation 42 'icmp' 'abscond' <Predicate = true> <Delay = 0.79> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 43 [1/1] (0.00ns) (grouped into LUT with out node normal_factor)   --->   "%p_d0_0 = select i1 %abscond, i3 %empty_43, i3 %neg" [cluster.cpp:170->cluster.cpp:19]   --->   Operation 43 'select' 'p_d0_0' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.20> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 44 [1/1] (0.00ns) (grouped into LUT with out node normal_factor)   --->   "%zext_ln168 = zext i3 %p_d0_0" [cluster.cpp:168->cluster.cpp:19]   --->   Operation 44 'zext' 'zext_ln168' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.78ns) (out node of the LUT)   --->   "%normal_factor = add i6 %zext_ln168, i6 %normal_factor_1_load" [cluster.cpp:171->cluster.cpp:19]   --->   Operation 45 'add' 'normal_factor' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 46 [1/1] (0.42ns)   --->   "%store_ln158 = store i6 %normal_factor, i6 %normal_factor_1" [cluster.cpp:158->cluster.cpp:19]   --->   Operation 46 'store' 'store_ln158' <Predicate = true> <Delay = 0.42>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%br_ln167 = br void %for.inc.i" [cluster.cpp:167->cluster.cpp:19]   --->   Operation 47 'br' 'br_ln167' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 6.667ns, clock uncertainty: 2.000ns.
+
+ <State 1>: 2.300ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln157', cluster.cpp:157->cluster.cpp:19) of constant 0 on local variable 'r', cluster.cpp:157->cluster.cpp:19 [8]  (0.427 ns)
+	'load' operation 2 bit ('r_load', cluster.cpp:166->cluster.cpp:19) on local variable 'r', cluster.cpp:157->cluster.cpp:19 [20]  (0.000 ns)
+	'add' operation 2 bit ('add_ln166_1', cluster.cpp:166->cluster.cpp:19) [24]  (0.548 ns)
+	'select' operation 2 bit ('select_ln166', cluster.cpp:166->cluster.cpp:19) [25]  (0.179 ns)
+	'sub' operation 4 bit ('empty', cluster.cpp:166->cluster.cpp:19) [28]  (0.000 ns)
+	'add' operation 4 bit ('add_ln170', cluster.cpp:170->cluster.cpp:19) [31]  (0.469 ns)
+	'getelementptr' operation 4 bit ('filter_addr', cluster.cpp:170->cluster.cpp:19) [33]  (0.000 ns)
+	'load' operation 4 bit ('filter_load', cluster.cpp:170->cluster.cpp:19) on array 'filter' [34]  (0.677 ns)
+
+ <State 2>: 2.682ns
+The critical path consists of the following:
+	'load' operation 4 bit ('filter_load', cluster.cpp:170->cluster.cpp:19) on array 'filter' [34]  (0.677 ns)
+	'icmp' operation 1 bit ('abscond', cluster.cpp:170->cluster.cpp:19) [37]  (0.797 ns)
+	'select' operation 3 bit ('_d0_0', cluster.cpp:170->cluster.cpp:19) [38]  (0.000 ns)
+	'add' operation 6 bit ('_d0_1', cluster.cpp:171->cluster.cpp:19) [40]  (0.781 ns)
+	'store' operation 0 bit ('store_ln158', cluster.cpp:158->cluster.cpp:19) of variable '_d0_1', cluster.cpp:171->cluster.cpp:19 on local variable 'normal_factor', cluster.cpp:158->cluster.cpp:19 [45]  (0.427 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

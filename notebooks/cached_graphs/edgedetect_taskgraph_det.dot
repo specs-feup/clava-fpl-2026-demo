@@ -1,0 +1,257 @@
+digraph G {
+	rankdir=TB;
+	node [shape=box];
+	"TSrc" [label="TSrc: <task_graph_source>", fillcolor=lightgray];
+	"TSink" [label="TSink: <task_graph_sink>", fillcolor=lightgray];
+	"TSrc" -> "TSink" [style=invis];
+	subgraph "cluster_T0" {
+	label = "T0: edge_detect
+
+[Param data]
+image_rgb {3145728} R
+image_gray {1048576} RW
+temp_buf {1048576} RW
+filter {36} RW
+output {1048576} RW";
+	bgcolor = bisque;
+	"T0_src" [shape=circle, label=""];
+	"T0_target" [shape=diamond, label=""];
+	"T0_src" -> "T0_target" [style=invis];
+	"T0.0" [label="T0.0: rgbToGrayscale
+
+[Param data]
+input_image {3145728} R
+output_image {1048576} W
+
+[New data]
+i {4} R
+jj {4} RW
+j {4} R
+r {4} RW
+g {4} RW
+b {4} RW
+gray {4} RW", style="filled,solid", fillcolor=lightpink];
+	"T0.0" -> "T0_target" [style=invis];
+	"T0.1" [label="T0.1: edge_detect_out0
+
+[Param data]
+filter {36} W", style="filled,solid", fillcolor=lightpink];
+	"T0.1" -> "T0_target" [style=invis];
+	"T0.2" [label="T0.2: convolve2d_rep0
+
+[Param data]
+input_image {1048576} R
+filter {36} R
+output_image {1048576} W
+
+[New data]
+i {4} RW
+j {4} RW
+c {4} RW
+r {4} RW
+normal_factor {4} RW
+sum {4} RW
+dead_rows {4} RW
+dead_cols {4} RW
+decomp_0 {4} RW
+_d0_0 {4} RW
+_d0_1 {4} RW", style="filled,solid", fillcolor=lightpink];
+	"T0.2" -> "T0_target" [style=invis];
+	"T0.3" [label="T0.3: edge_detect_out1
+
+[Param data]
+filter {36} W", style="filled,solid", fillcolor=lightpink];
+	"T0.3" -> "T0_target" [style=invis];
+	"T0.4" [label="T0.4: convolve2d_rep1
+
+[Param data]
+input_image {1048576} R
+filter {36} R
+output_image {1048576} W
+
+[New data]
+i {4} RW
+j {4} RW
+c {4} RW
+r {4} RW
+normal_factor {4} RW
+sum {4} RW
+dead_rows {4} RW
+dead_cols {4} RW
+decomp_0 {4} RW
+_d0_0 {4} RW
+_d0_1 {4} RW", style="filled,solid", fillcolor=lightpink];
+	"T0.4" -> "T0_target" [style=invis];
+	"T0.5" [label="T0.5: edge_detect_out2
+
+[Param data]
+filter {36} W", style="filled,solid", fillcolor=lightpink];
+	"T0.5" -> "T0_target" [style=invis];
+	"T0.6" [label="T0.6: convolve2d_rep2
+
+[Param data]
+input_image {1048576} R
+filter {36} R
+output_image {1048576} W
+
+[New data]
+i {4} RW
+j {4} RW
+c {4} RW
+r {4} RW
+normal_factor {4} RW
+sum {4} RW
+dead_rows {4} RW
+dead_cols {4} RW
+decomp_0 {4} RW
+_d0_0 {4} RW
+_d0_1 {4} RW", style="filled,solid", fillcolor=lightpink];
+	"T0.6" -> "T0_target" [style=invis];
+	"T0.7" [label="T0.7: combthreshold
+
+[Param data]
+image_gray {1048576} R
+temp_buf {1048576} R
+output {1048576} W
+
+[New data]
+i {4} RW
+j {4} RW
+temp1 {4} RW
+temp2 {4} RW
+temp3 {4} RW", style="filled,solid", fillcolor=lightpink];
+	"T0.7" -> "T0_target" [style=invis];
+	}
+
+	"T0_src" -> "T0.0" [label="[1]
+image_rgb
+(image_rgb)
+input_image
+{3145728}"];
+	"T0_src" -> "T0.0" [label="[2]
+image_gray
+(image_gray)
+output_image
+{1048576}"];
+	"T0_src" -> "T0.1" [label="[1]
+filter
+(filter)
+filter
+{36}"];
+	"T0.0" -> "T0.2" [label="[1]
+output_image
+(image_gray)
+input_image
+{1048576}", color="black", fontcolor="black"];
+	"T0.1" -> "T0.2" [label="[2]
+filter
+(filter)
+filter
+{36}", color="black", fontcolor="black"];
+	"T0_src" -> "T0.2" [label="[3]
+output
+(output)
+output_image
+{1048576}"];
+	"T0.1" -> "T0.3" [label="[1]
+filter
+(filter)
+filter
+{36}", color="black", fontcolor="black"];
+	"T0.2" -> "T0.4" [label="[1]
+output_image
+(output)
+input_image
+{1048576}", color="black", fontcolor="black"];
+	"T0.3" -> "T0.4" [label="[2]
+filter
+(filter)
+filter
+{36}", color="black", fontcolor="black"];
+	"T0.0" -> "T0.4" [label="[3]
+output_image
+(image_gray)
+output_image
+{1048576}", color="black", fontcolor="black"];
+	"T0.3" -> "T0.5" [label="[1]
+filter
+(filter)
+filter
+{36}", color="black", fontcolor="black"];
+	"T0.2" -> "T0.6" [label="[1]
+output_image
+(output)
+input_image
+{1048576}", color="black", fontcolor="black"];
+	"T0.5" -> "T0.6" [label="[2]
+filter
+(filter)
+filter
+{36}", color="black", fontcolor="black"];
+	"T0_src" -> "T0.6" [label="[3]
+temp_buf
+(temp_buf)
+output_image
+{1048576}"];
+	"T0.4" -> "T0.7" [label="[1]
+output_image
+(image_gray)
+image_gray
+{1048576}", color="black", fontcolor="black"];
+	"T0.6" -> "T0.7" [label="[2]
+output_image
+(temp_buf)
+temp_buf
+{1048576}", color="black", fontcolor="black"];
+	"T0.2" -> "T0.7" [label="[3]
+output_image
+(output)
+output
+{1048576}", color="black", fontcolor="black"];
+	"TSrc" -> "T0_src" [label="[1]
+image_rgb
+(<n/a>)
+image_rgb
+{3145728}", color="black", fontcolor="black"];
+	"TSrc" -> "T0_src" [label="[2]
+image_gray
+(<n/a>)
+image_gray
+{1048576}", color="black", fontcolor="black"];
+	"TSrc" -> "T0_src" [label="[3]
+temp_buf
+(<n/a>)
+temp_buf
+{1048576}", color="black", fontcolor="black"];
+	"TSrc" -> "T0_src" [label="[4]
+filter
+(<n/a>)
+filter
+{36}", color="black", fontcolor="black"];
+	"TSrc" -> "T0_src" [label="[5]
+output
+(<n/a>)
+output
+{1048576}", color="black", fontcolor="black"];
+	"T0_target" -> "TSink" [label="[1]
+image_gray
+(<n/a>)
+image_gray
+{1048576}", color="black", fontcolor="black"];
+	"T0_target" -> "TSink" [label="[2]
+temp_buf
+(<n/a>)
+temp_buf
+{1048576}", color="black", fontcolor="black"];
+	"T0_target" -> "TSink" [label="[3]
+filter
+(<n/a>)
+filter
+{36}", color="black", fontcolor="black"];
+	"T0_target" -> "TSink" [label="[4]
+output
+(<n/a>)
+output
+{1048576}", color="black", fontcolor="black"];
+
+}

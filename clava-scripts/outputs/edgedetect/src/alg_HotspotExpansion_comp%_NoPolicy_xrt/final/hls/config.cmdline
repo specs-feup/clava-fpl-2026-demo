@@ -1,0 +1,3 @@
+relativeroot=/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_HotspotExpansion_comp%_NoPolicy_xrt/final
+original_argv=--compile --mode hls --config hls_config.cfg --work_dir . 
+

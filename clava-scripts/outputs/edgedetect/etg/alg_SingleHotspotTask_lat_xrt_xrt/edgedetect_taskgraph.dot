@@ -1,0 +1,85 @@
+digraph G {
+	rankdir=TB;
+	node [shape=box];
+	"TSrc" [label="TSrc: <task_graph_source>", fillcolor=lightgray];
+	"TSink" [label="TSink: <task_graph_sink>", fillcolor=lightgray];
+	"TSrc" -> "TSink" [style=invis];
+	"T1" [label="T1: convolve2d_rep0_hw", style="filled,solid", fillcolor=bisque];
+
+	"TSrc" -> "T1" [label="[1]
+input_image
+(<n/a>)
+input_image
+{1048576}", color="black", fontcolor="black"];
+	"TSrc" -> "T1" [label="[2]
+filter
+(<n/a>)
+filter
+{36}", color="black", fontcolor="black"];
+	"TSrc" -> "T1" [label="[3]
+output_image
+(<n/a>)
+output_image
+{1048576}", color="black", fontcolor="black"];
+	"T1" -> "TSink" [label="[1]
+output_image
+(<n/a>)
+output_image
+{1048576}", color="black", fontcolor="black"];
+	"T1" -> "TSink" [label="[2]
+i
+(<n/a>)
+i
+{4}", color="black", fontcolor="black"];
+	"T1" -> "TSink" [label="[3]
+j
+(<n/a>)
+j
+{4}", color="black", fontcolor="black"];
+	"T1" -> "TSink" [label="[4]
+c
+(<n/a>)
+c
+{4}", color="black", fontcolor="black"];
+	"T1" -> "TSink" [label="[5]
+r
+(<n/a>)
+r
+{4}", color="black", fontcolor="black"];
+	"T1" -> "TSink" [label="[6]
+normal_factor
+(<n/a>)
+normal_factor
+{4}", color="black", fontcolor="black"];
+	"T1" -> "TSink" [label="[7]
+sum
+(<n/a>)
+sum
+{4}", color="black", fontcolor="black"];
+	"T1" -> "TSink" [label="[8]
+dead_rows
+(<n/a>)
+dead_rows
+{4}", color="black", fontcolor="black"];
+	"T1" -> "TSink" [label="[9]
+dead_cols
+(<n/a>)
+dead_cols
+{4}", color="black", fontcolor="black"];
+	"T1" -> "TSink" [label="[10]
+decomp_0
+(<n/a>)
+decomp_0
+{4}", color="black", fontcolor="black"];
+	"T1" -> "TSink" [label="[11]
+_d0_0
+(<n/a>)
+_d0_0
+{4}", color="black", fontcolor="black"];
+	"T1" -> "TSink" [label="[12]
+_d0_1
+(<n/a>)
+_d0_1
+{4}", color="black", fontcolor="black"];
+
+}

@@ -1,0 +1,80 @@
+digraph G {
+	rankdir=TB;
+	node [shape=box];
+	"TSrc" [label="<task_graph_source>
+        No errors.
+        ", fillcolor=lightgray];
+	"TSink" [label="<task_graph_sink>
+        No errors.
+        ", fillcolor=lightgray];
+	"TSrc" -> "TSink" [style=invis];
+	subgraph "cluster_T0" {
+	label = "edge_detect
+        No errors.
+        ";
+	bgcolor = lightgreen;
+	"T0_src" [shape=circle, label=""];
+	"T0_target" [shape=diamond, label=""];
+	"T0_src" -> "T0_target" [style=invis];
+	"T0.0" [label="rgbToGrayscale
+        No errors.
+        ", style="filled,solid", fillcolor=lightgreen];
+	"T0.0" -> "T0_target" [style=invis];
+	"T0.1" [label="edge_detect_out0
+        No errors.
+        ", style="filled,solid", fillcolor=lightgreen];
+	"T0.1" -> "T0_target" [style=invis];
+	"T0.2" [label="convolve2d_rep0
+        No errors.
+        ", style="filled,solid", fillcolor=gray];
+	"T0.2" -> "T0_target" [style=invis];
+	"T0.3" [label="edge_detect_out1
+        No errors.
+        ", style="filled,solid", fillcolor=lightgreen];
+	"T0.3" -> "T0_target" [style=invis];
+	"T0.4" [label="convolve2d_rep1
+        No errors.
+        ", style="filled,solid", fillcolor=gray];
+	"T0.4" -> "T0_target" [style=invis];
+	"T0.5" [label="edge_detect_out2
+        No errors.
+        ", style="filled,solid", fillcolor=lightgreen];
+	"T0.5" -> "T0_target" [style=invis];
+	"T0.6" [label="convolve2d_rep2
+        No errors.
+        ", style="filled,solid", fillcolor=gray];
+	"T0.6" -> "T0_target" [style=invis];
+	"T0.7" [label="combthreshold
+        No errors.
+        ", style="filled,solid", fillcolor=lightgreen];
+	"T0.7" -> "T0_target" [style=invis];
+	}
+
+	"T0_src" -> "T0.0" [label=""];
+	"T0_src" -> "T0.0" [label=""];
+	"T0_src" -> "T0.1" [label=""];
+	"T0.0" -> "T0.2" [label="", color="black", fontcolor="black"];
+	"T0.1" -> "T0.2" [label="", color="black", fontcolor="black"];
+	"T0_src" -> "T0.2" [label=""];
+	"T0.1" -> "T0.3" [label="", color="black", fontcolor="black"];
+	"T0.2" -> "T0.4" [label="", color="black", fontcolor="black"];
+	"T0.3" -> "T0.4" [label="", color="black", fontcolor="black"];
+	"T0.0" -> "T0.4" [label="", color="black", fontcolor="black"];
+	"T0.3" -> "T0.5" [label="", color="black", fontcolor="black"];
+	"T0.2" -> "T0.6" [label="", color="black", fontcolor="black"];
+	"T0.5" -> "T0.6" [label="", color="black", fontcolor="black"];
+	"T0_src" -> "T0.6" [label=""];
+	"T0.4" -> "T0.7" [label="", color="black", fontcolor="black"];
+	"T0.6" -> "T0.7" [label="", color="black", fontcolor="black"];
+	"T0.2" -> "T0.7" [label="", color="black", fontcolor="black"];
+	"TSrc" -> "T0_src" [label="", color="black", fontcolor="black"];
+	"TSrc" -> "T0_src" [label="", color="black", fontcolor="black"];
+	"TSrc" -> "T0_src" [label="", color="black", fontcolor="black"];
+	"TSrc" -> "T0_src" [label="", color="black", fontcolor="black"];
+	"TSrc" -> "T0_src" [label="", color="black", fontcolor="black"];
+	"T0_target" -> "TSink" [label="", color="black", fontcolor="black"];
+	"T0_target" -> "TSink" [label="", color="black", fontcolor="black"];
+	"T0_target" -> "TSink" [label="", color="black", fontcolor="black"];
+	"T0_target" -> "TSink" [label="", color="black", fontcolor="black"];
+
+}

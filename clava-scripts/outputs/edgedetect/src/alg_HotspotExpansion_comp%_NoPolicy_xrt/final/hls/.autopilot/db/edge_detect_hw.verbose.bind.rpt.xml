@@ -1,0 +1,52 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'edge_detect_hw'" level="0">
+<item name = "Date">Tue Sep  8 14:06:58 2026
+</item>
+<item name = "Version">2024.2.2 (Build 6049644 on Mar  5 2025)</item>
+<item name = "Project">final</item>
+<item name = "Solution">hls (Vitis Kernel Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu9eg-ffvb1156-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">6.67 ns, 4.667 ns, 2.00 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">7285487, 7285487, 48.572 ms, 48.572 ms, 7285488, 7285488, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_edge_detect_hw_Pipeline_1_fu_213">edge_detect_hw_Pipeline_1, 11, 11, 73.337 ns, 73.337 ns, 10, 10, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_edge_detect_hw_Pipeline_2_fu_219">edge_detect_hw_Pipeline_2, 2341078, 2341078, 15.608 ms, 15.608 ms, 2340909, 2340909, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_edge_detect_hw_Pipeline_3_fu_230">edge_detect_hw_Pipeline_3, 11, 11, 73.337 ns, 73.337 ns, 10, 10, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_edge_detect_hw_Pipeline_4_fu_236">edge_detect_hw_Pipeline_4, 2341078, 2341078, 15.608 ms, 15.608 ms, 2340909, 2340909, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_edge_detect_hw_Pipeline_5_fu_245">edge_detect_hw_Pipeline_5, 11, 11, 73.337 ns, 73.337 ns, 10, 10, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_edge_detect_hw_Pipeline_6_fu_251">edge_detect_hw_Pipeline_6, 2341009, 2341009, 15.608 ms, 15.608 ms, 2340909, 2340909, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_edge_detect_hw_Pipeline_7_fu_260">edge_detect_hw_Pipeline_7, 262287, 262287, 1.749 ms, 1.749 ms, 262145, 262145, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

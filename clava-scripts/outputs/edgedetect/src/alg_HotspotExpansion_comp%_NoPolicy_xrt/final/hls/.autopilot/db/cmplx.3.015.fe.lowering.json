@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 29,
+    "calls": "",
+    "file": "cluster.cpp",
+    "fileloc": 15,
+    "instructions": 349,
+    "loads": {
+      "L": 31
+    },
+    "name": "edge_detect_hw",
+    "stores": {
+      "L": 28
+    },
+    "total_instructions": 349
+  }
+}

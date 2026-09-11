@@ -1,0 +1,377 @@
+import os
+import subprocess
+from pathlib import Path
+import graphviz
+
+NOTEBOOKS_DIR = Path(__file__).resolve().parent
+CACHED_GRAPHS_DIR = NOTEBOOKS_DIR / "cached_graphs"
+CLAVA_SCRIPTS_DIR = NOTEBOOKS_DIR.parent / "clava-scripts"
+
+def run_clava(verbose: bool = False) -> None:
+    """Run Clava ETG generation flow via npm run run in clava-scripts."""
+    print("Running Clava ETG generation flow (~20s)...")
+    env = os.environ.copy()
+    env["PATH"] = f"/home/tls/.local/bin:/home/tls/.nvm/versions/node/v20.20.2/bin:{env.get('PATH', '')}"
+    env["JAVA_HOME"] = "/usr/lib/jvm/java-21-openjdk-amd64"
+
+    result = subprocess.run(
+        ["npm", "run", "run"],
+        cwd=str(CLAVA_SCRIPTS_DIR),
+        env=env,
+        capture_output=True,
+        text=True,
+        check=True
+    )
+    if verbose:
+        print(result.stdout)
+    else:
+        filtered = [
+            line for line in result.stdout.splitlines()
+            if any(k in line for k in ["ETG", "TaskGraph", "Dumped", "metrics", "Cached ETG"])
+        ]
+        print("\n".join(filtered))
+    print("✓ Clava ETG generation completed.")
+
+def run_hoopa(verbose: bool = False) -> None:
+    """Run Hoopa partitioning flow via npm run run:hoopa in clava-scripts."""
+    print("Running Hoopa HW/SW partitioning flow (~20s)...")
+    env = os.environ.copy()
+    env["PATH"] = f"/home/tls/.local/bin:/home/tls/.nvm/versions/node/v20.20.2/bin:{env.get('PATH', '')}"
+    env["JAVA_HOME"] = "/usr/lib/jvm/java-21-openjdk-amd64"
+
+    result = subprocess.run(
+        ["npm", "run", "run:hoopa"],
+        cwd=str(CLAVA_SCRIPTS_DIR),
+        env=env,
+        capture_output=True,
+        text=True,
+        check=True
+    )
+    if verbose:
+        print(result.stdout)
+    else:
+        filtered = [
+            line for line in result.stdout.splitlines()
+            if any(k in line for k in ["Hoopa", "SingleHotspotTask", "cluster", "hotspot", "offload", "highlighted", "Finished running Hoopa"])
+            and not any(k in line for k in ["fatal error", "frama-c", "No such file"])
+        ]
+        print("\n".join(filtered))
+    print("✓ Hoopa partitioning completed.")
+
+def run_hotspot_expansion(verbose: bool = False) -> None:
+    """Run Hoopa holistic hotspot expansion flow via npm run run:expansion in clava-scripts."""
+    print("Running Hoopa Hotspot Expansion flow (~25s)...")
+    env = os.environ.copy()
+    env["PATH"] = f"/home/tls/.local/bin:/home/tls/.nvm/versions/node/v20.20.2/bin:{env.get('PATH', '')}"
+    env["JAVA_HOME"] = "/usr/lib/jvm/java-21-openjdk-amd64"
+
+    result = subprocess.run(
+        ["npm", "run", "run:expansion"],
+        cwd=str(CLAVA_SCRIPTS_DIR),
+        env=env,
+        capture_output=True,
+        text=True,
+        check=True
+    )
+    if verbose:
+        print(result.stdout)
+    else:
+        filtered = [
+            line for line in result.stdout.splitlines()
+            if any(k in line for k in ["Hoopa", "HotspotExpansion", "cluster", "hotspot", "offload", "highlighted", "Finished running Hoopa", "profiledExecTime"])
+            and not any(k in line for k in ["fatal error", "frama-c", "No such file"])
+        ]
+        print("\n".join(filtered))
+    print("✓ Hoopa Hotspot Expansion completed.")
+
+def _resolve_dot_path(dot_filename: str) -> Path:
+    # 1. Prefer freshly generated outputs in clava-scripts if present
+    out_path = CLAVA_SCRIPTS_DIR / "outputs" / "edgedetect" / "etg" / "default" / dot_filename
+    if out_path.exists():
+        return out_path
+    # 2. Fall back to cached_graphs directory for instant rendering without running Clava
+    cached_path = CACHED_GRAPHS_DIR / dot_filename
+    if cached_path.exists():
+        return cached_path
+    raise FileNotFoundError(f"DOT file '{dot_filename}' not found in outputs or cached_graphs.")
+
+def show_task_graph(dot_filename: str = "edgedetect_taskgraph_min.dot") -> graphviz.Source:
+    """Render and return the generated or cached Graphviz task graph immediately."""
+    dot_path = _resolve_dot_path(dot_filename)
+    return graphviz.Source.from_file(str(dot_path))
+
+def show_offloaded_task_graph(dot_filename: str = "edgedetect_taskgraph_offloaded_min.dot") -> graphviz.Source:
+    """Render and return the task graph with the offloaded hotspot task highlighted in green."""
+    dot_path = _resolve_dot_path(dot_filename)
+    return graphviz.Source.from_file(str(dot_path))
+
+def show_expanded_task_graph(dot_filename: str = "edgedetect_taskgraph_expansion_min.dot") -> graphviz.Source:
+    """Render and return the task graph with CPU profiling percentages and expanded offloaded tasks highlighted in green."""
+    dot_path = _resolve_dot_path(dot_filename)
+    return graphviz.Source.from_file(str(dot_path))
+
+def show_cluster_task_graph(dot_filename: str = "edgedetect_taskgraph_expansion_cluster_min.dot") -> graphviz.Source:
+    """Render and return the hardware cluster task graph generated by the XRT backend."""
+    out_path = CLAVA_SCRIPTS_DIR / "outputs" / "edgedetect" / "etg" / "alg_HotspotExpansion_comp%_NoPolicy_xrt_xrt" / "edgedetect_taskgraph_min.dot"
+    if out_path.exists():
+        return graphviz.Source.from_file(str(out_path))
+    cached_path = CACHED_GRAPHS_DIR / dot_filename
+    if cached_path.exists():
+        return graphviz.Source.from_file(str(cached_path))
+    raise FileNotFoundError(f"Cluster DOT file not found in outputs or cached_graphs.")
+
+def load_comparison_data(csv_path: str = None):
+    """Load partitioning comparison metrics from CSV file."""
+    import pandas as pd
+    if csv_path is None:
+        target_path = NOTEBOOKS_DIR / "data" / "partitioning_comparison.csv"
+    else:
+        target_path = Path(csv_path)
+    if not target_path.exists():
+        raise FileNotFoundError(f"Comparison data file '{target_path}' not found.")
+    return pd.read_csv(target_path)
+
+def load_resource_tables(csv_path: str = None):
+    """
+    Returns two separate DataFrames for FPGA resources:
+    1. Logic Resources (LUT, FF) with count and utilization % on ZCU102
+    2. Dedicated Blocks (BRAM_18K, DSP48E) with count and utilization % on ZCU102
+    """
+    df = load_comparison_data(csv_path)
+
+    TOTAL_LUT = 274080
+    TOTAL_FF = 548160
+    TOTAL_BRAM = 1824  # 18K blocks (912 36K blocks)
+    TOTAL_DSP = 2520
+
+    logic_df = df[["Partitioning", "LUT", "FF"]].copy()
+    logic_df["LUT_Util_%"] = (logic_df["LUT"] / TOTAL_LUT * 100.0).round(2)
+    logic_df["FF_Util_%"] = (logic_df["FF"] / TOTAL_FF * 100.0).round(2)
+
+    blocks_df = df[["Partitioning", "BRAM", "DSP"]].copy()
+    blocks_df["BRAM_Util_%"] = (blocks_df["BRAM"] / TOTAL_BRAM * 100.0).round(2)
+    blocks_df["DSP_Util_%"] = (blocks_df["DSP"] / TOTAL_DSP * 100.0).round(2)
+
+    return logic_df, blocks_df
+
+def plot_partitioning_comparison(csv_path: str = None, interactive: bool = True):
+    """
+    Draw a 2-panel chart:
+    - Subplot 1: End-to-end application latency breakdown using split bars (FPGA time + CPU time).
+    - Subplot 2: FPGA resource utilization using grouped bars (not split).
+    """
+    df = load_comparison_data(csv_path)
+
+    # Execution time modeling: 0.31s CPU for 92% compute; 8% non-accelerable file I/O
+    t_cpu_compute_base_ms = 310.0
+    t_cpu_io_ms = (0.31 / 0.92) * 0.08 * 1000.0  # 26.96 ms (~27.0 ms)
+    t_cpu_total_ms = t_cpu_compute_base_ms + t_cpu_io_ms  # 336.96 ms (~337.0 ms)
+
+    categories = [
+        "Baseline<br>(CPU Only)",
+        "Single-Task<br>(24% HW Compute)",
+        "Hotspot Expansion<br>(76% HW Compute)"
+    ]
+
+    single_row = df[df["Partitioning"].str.contains("Single-Task")].iloc[0]
+    exp_row = df[df["Partitioning"].str.contains("Holistic")].iloc[0]
+
+    single_comp_pct = float(single_row["Computation_Percentage"]) / 100.0
+    exp_comp_pct = float(exp_row["Computation_Percentage"]) / 100.0
+
+    single_hw_ms = float(single_row["Latency_ms"])
+    single_cpu_comp_ms = (1.0 - single_comp_pct) * t_cpu_compute_base_ms
+
+    exp_hw_ms = float(exp_row["Latency_ms"])
+    exp_cpu_comp_ms = (1.0 - exp_comp_pct) * t_cpu_compute_base_ms
+
+    hw_times = [0.0, single_hw_ms, exp_hw_ms]
+    cpu_comp_times = [t_cpu_compute_base_ms, single_cpu_comp_ms, exp_cpu_comp_ms]
+    cpu_io_times = [t_cpu_io_ms, t_cpu_io_ms, t_cpu_io_ms]
+    total_times = [hw + comp + io for hw, comp, io in zip(hw_times, cpu_comp_times, cpu_io_times)]
+
+    hw_pcts = [(hw / tot) * 100.0 if tot > 0 else 0.0 for hw, tot in zip(hw_times, total_times)]
+    cpu_comp_pcts = [(comp / tot) * 100.0 for comp, tot in zip(cpu_comp_times, total_times)]
+    cpu_io_pcts = [(io / tot) * 100.0 for io, tot in zip(cpu_io_times, total_times)]
+
+    if interactive:
+        import plotly.graph_objects as go
+        from plotly.subplots import make_subplots
+
+        fig = make_subplots(
+            rows=1, cols=2,
+            subplot_titles=(
+                "End-to-End Application Latency Breakdown",
+                "FPGA Resource Utilization"
+            ),
+            horizontal_spacing=0.15
+        )
+
+        # Subplot 1: Stacked / segmented bars for latency (3 segments: HW, CPU Compute, Non-accelerable I/O)
+        hw_labels = ["", f"{single_hw_ms:.1f} ms<br>({hw_pcts[1]:.1f}%)", f"{exp_hw_ms:.1f} ms<br>({hw_pcts[2]:.1f}%)"]
+        cpu_comp_labels = [
+            f"{t_cpu_compute_base_ms:.1f} ms<br>({cpu_comp_pcts[0]:.1f}%)",
+            f"{single_cpu_comp_ms:.1f} ms<br>({cpu_comp_pcts[1]:.1f}%)",
+            f"{exp_cpu_comp_ms:.1f} ms<br>({cpu_comp_pcts[2]:.1f}%)"
+        ]
+        cpu_io_labels = [
+            f"{t_cpu_io_ms:.1f} ms<br>({cpu_io_pcts[0]:.1f}%)",
+            f"{t_cpu_io_ms:.1f} ms<br>({cpu_io_pcts[1]:.1f}%)",
+            f"{t_cpu_io_ms:.1f} ms<br>({cpu_io_pcts[2]:.1f}%)"
+        ]
+
+        fig.add_trace(go.Bar(
+            name="FPGA Hardware Time",
+            x=categories,
+            y=hw_times,
+            offsetgroup="timing",
+            marker_color="#2ecc71",
+            text=hw_labels,
+            textposition="inside",
+            insidetextanchor="middle",
+            hovertemplate="<b>%{x}</b><br>FPGA Hardware Time: %{y:.2f} ms<extra></extra>"
+        ), row=1, col=1)
+
+        fig.add_trace(go.Bar(
+            name="Host CPU (Compute)",
+            x=categories,
+            y=cpu_comp_times,
+            offsetgroup="timing",
+            marker_color="#34495e",
+            text=cpu_comp_labels,
+            textposition="inside",
+            insidetextanchor="middle",
+            hovertemplate="<b>%{x}</b><br>Host CPU (Compute): %{y:.2f} ms<extra></extra>"
+        ), row=1, col=1)
+
+        fig.add_trace(go.Bar(
+            name="Host CPU (I/O, Non-accelerable)",
+            x=categories,
+            y=cpu_io_times,
+            offsetgroup="timing",
+            marker_color="#e67e22",
+            text=cpu_io_labels,
+            textposition="inside",
+            insidetextanchor="middle",
+            hovertemplate="<b>%{x}</b><br>Host CPU (I/O, Non-accelerable): %{y:.2f} ms<extra></extra>"
+        ), row=1, col=1)
+
+        for cat, tot in zip(categories, total_times):
+            fig.add_annotation(
+                x=cat,
+                y=tot + 10,
+                text=f"<b>Total: {tot:.1f} ms</b>",
+                showarrow=False,
+                font=dict(size=11, color="#2c3e50"),
+                row=1, col=1
+            )
+
+        # Subplot 2: Separated / grouped side-by-side bars for resources (different offsetgroups)
+        colors_part = {
+            "Single-Task (Highest Latency)": "#3498db",
+            "Holistic (Hotspot Expansion)": "#2ecc71"
+        }
+        for idx, row in df.iterrows():
+            name = str(row["Partitioning"])
+            comp_pct = float(row["Computation_Percentage"])
+            color = colors_part.get(name, "#95a5a6")
+            label_name = f"{name} ({comp_pct:.0f}% compute)"
+            lut_str = "{:,}".format(int(row["LUT"]))
+            ff_str = "{:,}".format(int(row["FF"]))
+            bram_str = str(int(row["BRAM"]))
+            dsp_str = str(int(row["DSP"]))
+            fig.add_trace(go.Bar(
+                name=label_name,
+                x=["LUT", "FF", "BRAM", "DSP"],
+                y=[row["LUT"], row["FF"], row["BRAM"], row["DSP"]],
+                offsetgroup=f"res_{idx}",
+                marker_color=color,
+                text=[lut_str, ff_str, bram_str, dsp_str],
+                textposition="outside",
+                hovertemplate=f"<b>{name}</b><br>%{{x}}: %{{y:,.0f}}<extra></extra>"
+            ), row=1, col=2)
+
+        fig.update_xaxes(title_text="Execution Strategy", row=1, col=1)
+        fig.update_yaxes(title_text="Execution Time (ms)", range=[0, 390], row=1, col=1)
+        fig.update_xaxes(title_text="Resource Type", row=1, col=2)
+        fig.update_yaxes(title_text="Count", range=[0, max(df["LUT"].max(), df["FF"].max()) * 1.35], row=1, col=2)
+
+        fig.update_layout(
+            title_text="<b>HW/SW Partitioning: End-to-End Latency Breakdown & FPGA Resource Usage</b><br><sup>Hardware synthesis results on Xilinx ZCU102 @ 150MHz</sup>",
+            title_x=0.5,
+            barmode="relative",
+            height=560,
+            template="plotly_white",
+            legend=dict(
+                orientation="h",
+                yanchor="top",
+                y=-0.24,
+                xanchor="center",
+                x=0.5
+            )
+        )
+
+        return fig
+    else:
+        import matplotlib.pyplot as plt
+        import numpy as np
+
+        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5.5))
+        fig.suptitle("HW/SW Partitioning: End-to-End Latency Breakdown & FPGA Resource Usage", fontsize=13, fontweight="bold")
+
+        categories_clean = ["Baseline\n(CPU Only)", "Single-Task\n(24% HW)", "Hotspot Expansion\n(76% HW)"]
+        x1 = np.arange(len(categories_clean))
+        width1 = 0.52
+
+        hw_arr = np.array(hw_times)
+        cpu_comp_arr = np.array(cpu_comp_times)
+        cpu_io_arr = np.array(cpu_io_times)
+        tot_arr = np.array(total_times)
+
+        # Subplot 1: Split bars for execution time (3 segments)
+        ax1.bar(x1, hw_arr, width1, label="FPGA Hardware Time", color="#2ecc71")
+        ax1.bar(x1, cpu_comp_arr, width1, bottom=hw_arr, label="Host CPU (Compute)", color="#34495e")
+        ax1.bar(x1, cpu_io_arr, width1, bottom=hw_arr + cpu_comp_arr, label="Host CPU (I/O, Non-accelerable)", color="#e67e22")
+
+        for i in range(len(categories_clean)):
+            if hw_arr[i] > 0:
+                pct = (hw_arr[i] / tot_arr[i]) * 100.0
+                ax1.text(x1[i], hw_arr[i] / 2, f"{hw_arr[i]:.1f} ms\n({pct:.1f}%)", ha="center", va="center", color="white", fontweight="bold", fontsize=8)
+            pct_c = (cpu_comp_arr[i] / tot_arr[i]) * 100.0
+            ax1.text(x1[i], hw_arr[i] + cpu_comp_arr[i] / 2, f"{cpu_comp_arr[i]:.1f} ms\n({pct_c:.1f}%)", ha="center", va="center", color="white", fontweight="bold", fontsize=8)
+            pct_io = (cpu_io_arr[i] / tot_arr[i]) * 100.0
+            ax1.text(x1[i], hw_arr[i] + cpu_comp_arr[i] + cpu_io_arr[i] / 2, f"{cpu_io_arr[i]:.1f} ms\n({pct_io:.1f}%)", ha="center", va="center", color="white", fontweight="bold", fontsize=7.5)
+            ax1.text(x1[i], tot_arr[i] + 7, f"Total: {tot_arr[i]:.1f} ms", ha="center", va="bottom", fontweight="bold", fontsize=9)
+
+        ax1.set_xticks(x1)
+        ax1.set_xticklabels(categories_clean)
+        ax1.set_ylabel("Application Execution Time (ms)")
+        ax1.set_title("End-to-End Application Latency Breakdown")
+        ax1.set_ylim(0, 390)
+        ax1.legend(loc="upper center", bbox_to_anchor=(0.5, -0.16), ncol=3, fontsize=7.5)
+        ax1.grid(True, linestyle=":", alpha=0.6, axis="y")
+
+        # Subplot 2: Hardware Resources
+        x2 = np.arange(4)
+        width2 = 0.35
+        colors_part = ["#3498db", "#2ecc71"]
+        labels_part = [f"{row['Partitioning']} ({row['Computation_Percentage']:.0f}% compute)" for _, row in df.iterrows()]
+
+        for i, row in df.iterrows():
+            offset = (i - 0.5) * width2
+            rects = ax2.bar(x2 + offset, [row['LUT'], row['FF'], row['BRAM'], row['DSP']], width2, color=colors_part[i], label=labels_part[i])
+            ax2.bar_label(rects, labels=[f"{int(row['LUT']):,}", f"{int(row['FF']):,}", f"{int(row['BRAM'])}", f"{int(row['DSP'])}"], padding=3, fontsize=8)
+
+        ax2.set_xticks(x2)
+        ax2.set_xticklabels(['LUT', 'FF', 'BRAM', 'DSP'])
+        ax2.set_title("FPGA Resource Utilization")
+        ax2.set_ylabel("Count")
+        max_res = max(df["LUT"].max(), df["FF"].max())
+        ax2.set_ylim(0, max_res * 1.35)
+        ax2.legend(loc="upper center", bbox_to_anchor=(0.5, -0.16), ncol=2, fontsize=8)
+        ax2.grid(True, linestyle=":", alpha=0.6, axis="y")
+
+        plt.tight_layout()
+        return fig
+
+plot_latency_breakdown = plot_partitioning_comparison

@@ -1,0 +1,202 @@
+---
+MainSourceFile:  '/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_HotspotExpansion_comp%_NoPolicy_xrt/final/hls/.autopilot/db/cluster.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_34_1:  '
+    FileOffset:      34
+    FilePath:        cluster.cpp
+    Replacements:    
+      - FilePath:        '/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_HotspotExpansion_comp%_NoPolicy_xrt/final/hls/.autopilot/db/cluster.pp.0.cpp'
+        Offset:          1038251
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_34_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_35_2:  '
+    FileOffset:      35
+    FilePath:        cluster.cpp
+    Replacements:    
+      - FilePath:        '/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_HotspotExpansion_comp%_NoPolicy_xrt/final/hls/.autopilot/db/cluster.pp.0.cpp'
+        Offset:          1038283
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_35_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_58_1:  '
+    FileOffset:      58
+    FilePath:        cluster.cpp
+    Replacements:    
+      - FilePath:        '/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_HotspotExpansion_comp%_NoPolicy_xrt/final/hls/.autopilot/db/cluster.pp.0.cpp'
+        Offset:          1038811
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_58_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_59_2:  '
+    FileOffset:      59
+    FilePath:        cluster.cpp
+    Replacements:    
+      - FilePath:        '/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_HotspotExpansion_comp%_NoPolicy_xrt/final/hls/.autopilot/db/cluster.pp.0.cpp'
+        Offset:          1038841
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_59_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_71_3:  '
+    FileOffset:      71
+    FilePath:        cluster.cpp
+    Replacements:    
+      - FilePath:        '/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_HotspotExpansion_comp%_NoPolicy_xrt/final/hls/.autopilot/db/cluster.pp.0.cpp'
+        Offset:          1039078
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_71_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_72_4:  '
+    FileOffset:      72
+    FilePath:        cluster.cpp
+    Replacements:    
+      - FilePath:        '/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_HotspotExpansion_comp%_NoPolicy_xrt/final/hls/.autopilot/db/cluster.pp.0.cpp'
+        Offset:          1039110
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_72_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_74_5:  '
+    FileOffset:      74
+    FilePath:        cluster.cpp
+    Replacements:    
+      - FilePath:        '/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_HotspotExpansion_comp%_NoPolicy_xrt/final/hls/.autopilot/db/cluster.pp.0.cpp'
+        Offset:          1039159
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_74_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_75_6:  '
+    FileOffset:      75
+    FilePath:        cluster.cpp
+    Replacements:    
+      - FilePath:        '/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_HotspotExpansion_comp%_NoPolicy_xrt/final/hls/.autopilot/db/cluster.pp.0.cpp'
+        Offset:          1039193
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_75_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_112_1:  '
+    FileOffset:      112
+    FilePath:        cluster.cpp
+    Replacements:    
+      - FilePath:        '/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_HotspotExpansion_comp%_NoPolicy_xrt/final/hls/.autopilot/db/cluster.pp.0.cpp'
+        Offset:          1039957
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_112_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_113_2:  '
+    FileOffset:      113
+    FilePath:        cluster.cpp
+    Replacements:    
+      - FilePath:        '/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_HotspotExpansion_comp%_NoPolicy_xrt/final/hls/.autopilot/db/cluster.pp.0.cpp'
+        Offset:          1039987
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_113_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_125_3:  '
+    FileOffset:      125
+    FilePath:        cluster.cpp
+    Replacements:    
+      - FilePath:        '/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_HotspotExpansion_comp%_NoPolicy_xrt/final/hls/.autopilot/db/cluster.pp.0.cpp'
+        Offset:          1040224
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_125_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_126_4:  '
+    FileOffset:      126
+    FilePath:        cluster.cpp
+    Replacements:    
+      - FilePath:        '/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_HotspotExpansion_comp%_NoPolicy_xrt/final/hls/.autopilot/db/cluster.pp.0.cpp'
+        Offset:          1040256
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_126_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_128_5:  '
+    FileOffset:      128
+    FilePath:        cluster.cpp
+    Replacements:    
+      - FilePath:        '/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_HotspotExpansion_comp%_NoPolicy_xrt/final/hls/.autopilot/db/cluster.pp.0.cpp'
+        Offset:          1040305
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_128_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_129_6:  '
+    FileOffset:      129
+    FilePath:        cluster.cpp
+    Replacements:    
+      - FilePath:        '/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_HotspotExpansion_comp%_NoPolicy_xrt/final/hls/.autopilot/db/cluster.pp.0.cpp'
+        Offset:          1040339
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_129_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_166_1:  '
+    FileOffset:      166
+    FilePath:        cluster.cpp
+    Replacements:    
+      - FilePath:        '/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_HotspotExpansion_comp%_NoPolicy_xrt/final/hls/.autopilot/db/cluster.pp.0.cpp'
+        Offset:          1041103
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_166_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_167_2:  '
+    FileOffset:      167
+    FilePath:        cluster.cpp
+    Replacements:    
+      - FilePath:        '/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_HotspotExpansion_comp%_NoPolicy_xrt/final/hls/.autopilot/db/cluster.pp.0.cpp'
+        Offset:          1041133
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_167_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_179_3:  '
+    FileOffset:      179
+    FilePath:        cluster.cpp
+    Replacements:    
+      - FilePath:        '/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_HotspotExpansion_comp%_NoPolicy_xrt/final/hls/.autopilot/db/cluster.pp.0.cpp'
+        Offset:          1041370
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_179_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_180_4:  '
+    FileOffset:      180
+    FilePath:        cluster.cpp
+    Replacements:    
+      - FilePath:        '/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_HotspotExpansion_comp%_NoPolicy_xrt/final/hls/.autopilot/db/cluster.pp.0.cpp'
+        Offset:          1041402
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_180_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_182_5:  '
+    FileOffset:      182
+    FilePath:        cluster.cpp
+    Replacements:    
+      - FilePath:        '/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_HotspotExpansion_comp%_NoPolicy_xrt/final/hls/.autopilot/db/cluster.pp.0.cpp'
+        Offset:          1041451
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_182_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_183_6:  '
+    FileOffset:      183
+    FilePath:        cluster.cpp
+    Replacements:    
+      - FilePath:        '/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_HotspotExpansion_comp%_NoPolicy_xrt/final/hls/.autopilot/db/cluster.pp.0.cpp'
+        Offset:          1041485
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_183_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_207_1:  '
+    FileOffset:      207
+    FilePath:        cluster.cpp
+    Replacements:    
+      - FilePath:        '/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_HotspotExpansion_comp%_NoPolicy_xrt/final/hls/.autopilot/db/cluster.pp.0.cpp'
+        Offset:          1042027
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_207_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_210_2:  '
+    FileOffset:      210
+    FilePath:        cluster.cpp
+    Replacements:    
+      - FilePath:        '/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_HotspotExpansion_comp%_NoPolicy_xrt/final/hls/.autopilot/db/cluster.pp.0.cpp'
+        Offset:          1042087
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_210_2: '
+...

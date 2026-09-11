@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "cluster.cpp",
+    "fileloc": 3,
+    "instructions": 63,
+    "loads": {
+      "T": 3
+    },
+    "name": "convolve2d_rep0_hw",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 63
+  }
+}

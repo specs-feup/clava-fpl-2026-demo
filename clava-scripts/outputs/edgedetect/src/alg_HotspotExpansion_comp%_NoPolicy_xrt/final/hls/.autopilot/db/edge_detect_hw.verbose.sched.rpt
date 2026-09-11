@@ -1,0 +1,366 @@
+
+
+================================================================
+== Vitis HLS Report for 'edge_detect_hw'
+================================================================
+* Date:           Tue Sep  8 14:06:58 2026
+
+* Version:        2024.2.2 (Build 6049644 on Mar  5 2025)
+* Project:        final
+* Solution:       hls (Vitis Kernel Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.67 ns|  4.667 ns|     2.00 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+---------+---------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline|
+    |   min   |   max   |    min    |    max    |   min   |   max   |   Type  |
+    +---------+---------+-----------+-----------+---------+---------+---------+
+    |  7285487|  7285487|  48.572 ms|  48.572 ms|  7285488|  7285488|       no|
+    +---------+---------+-----------+-----------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 25
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.67>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%normal_factor_3_loc = alloca i64 1"   --->   Operation 26 'alloca' 'normal_factor_3_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%normal_factor_2_loc = alloca i64 1"   --->   Operation 27 'alloca' 'normal_factor_2_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%normal_factor_1_loc = alloca i64 1"   --->   Operation 28 'alloca' 'normal_factor_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%filter = alloca i64 1" [cluster.cpp:16]   --->   Operation 29 'alloca' 'filter' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%temp_buf = alloca i64 1" [cluster.cpp:17]   --->   Operation 30 'alloca' 'temp_buf' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%filter_addr_8 = getelementptr i4 %filter, i64 0, i64 0" [cluster.cpp:18]   --->   Operation 31 'getelementptr' 'filter_addr_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln195 = store i4 1, i4 %filter_addr_8" [cluster.cpp:195->cluster.cpp:18]   --->   Operation 32 'store' 'store_ln195' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+
+State 2 <SV = 1> <Delay = 0.67>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%filter_addr = getelementptr i4 %filter, i64 0, i64 1" [cluster.cpp:196->cluster.cpp:18]   --->   Operation 33 'getelementptr' 'filter_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln196 = store i4 2, i4 %filter_addr" [cluster.cpp:196->cluster.cpp:18]   --->   Operation 34 'store' 'store_ln196' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%filter_addr_1 = getelementptr i4 %filter, i64 0, i64 2" [cluster.cpp:197->cluster.cpp:18]   --->   Operation 35 'getelementptr' 'filter_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln197 = store i4 1, i4 %filter_addr_1" [cluster.cpp:197->cluster.cpp:18]   --->   Operation 36 'store' 'store_ln197' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+
+State 3 <SV = 2> <Delay = 0.67>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%filter_addr_2 = getelementptr i4 %filter, i64 0, i64 3" [cluster.cpp:198->cluster.cpp:18]   --->   Operation 37 'getelementptr' 'filter_addr_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln198 = store i4 2, i4 %filter_addr_2" [cluster.cpp:198->cluster.cpp:18]   --->   Operation 38 'store' 'store_ln198' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%filter_addr_3 = getelementptr i4 %filter, i64 0, i64 4" [cluster.cpp:199->cluster.cpp:18]   --->   Operation 39 'getelementptr' 'filter_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln199 = store i4 4, i4 %filter_addr_3" [cluster.cpp:199->cluster.cpp:18]   --->   Operation 40 'store' 'store_ln199' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+
+State 4 <SV = 3> <Delay = 0.67>
+ST_4 : Operation 41 [1/1] (0.00ns)   --->   "%filter_addr_4 = getelementptr i4 %filter, i64 0, i64 5" [cluster.cpp:200->cluster.cpp:18]   --->   Operation 41 'getelementptr' 'filter_addr_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 42 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln200 = store i4 2, i4 %filter_addr_4" [cluster.cpp:200->cluster.cpp:18]   --->   Operation 42 'store' 'store_ln200' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+ST_4 : Operation 43 [1/1] (0.00ns)   --->   "%filter_addr_5 = getelementptr i4 %filter, i64 0, i64 6" [cluster.cpp:201->cluster.cpp:18]   --->   Operation 43 'getelementptr' 'filter_addr_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 44 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln201 = store i4 1, i4 %filter_addr_5" [cluster.cpp:201->cluster.cpp:18]   --->   Operation 44 'store' 'store_ln201' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+
+State 5 <SV = 4> <Delay = 0.67>
+ST_5 : Operation 45 [1/1] (0.00ns)   --->   "%filter_addr_6 = getelementptr i4 %filter, i64 0, i64 7" [cluster.cpp:202->cluster.cpp:18]   --->   Operation 45 'getelementptr' 'filter_addr_6' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 46 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln202 = store i4 2, i4 %filter_addr_6" [cluster.cpp:202->cluster.cpp:18]   --->   Operation 46 'store' 'store_ln202' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+ST_5 : Operation 47 [1/1] (0.00ns)   --->   "%filter_addr_7 = getelementptr i4 %filter, i64 0, i64 8" [cluster.cpp:203->cluster.cpp:18]   --->   Operation 47 'getelementptr' 'filter_addr_7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 48 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln203 = store i4 1, i4 %filter_addr_7" [cluster.cpp:203->cluster.cpp:18]   --->   Operation 48 'store' 'store_ln203' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 49 [2/2] (0.00ns)   --->   "%call_ln0 = call void @edge_detect_hw_Pipeline_1, i4 %filter, i6 %normal_factor_1_loc"   --->   Operation 49 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 7 <SV = 6> <Delay = 1.65>
+ST_7 : Operation 50 [1/2] (1.65ns)   --->   "%call_ln0 = call void @edge_detect_hw_Pipeline_1, i4 %filter, i6 %normal_factor_1_loc"   --->   Operation 50 'call' 'call_ln0' <Predicate = true> <Delay = 1.65> <CoreType = "Generic">   --->   Generic Core
+
+State 8 <SV = 7> <Delay = 0.67>
+ST_8 : Operation 51 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln141 = store i4 1, i4 %filter_addr_8" [cluster.cpp:141->cluster.cpp:20]   --->   Operation 51 'store' 'store_ln141' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+ST_8 : Operation 52 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln142 = store i4 0, i4 %filter_addr" [cluster.cpp:142->cluster.cpp:20]   --->   Operation 52 'store' 'store_ln142' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+
+State 9 <SV = 8> <Delay = 0.67>
+ST_9 : Operation 53 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln143 = store i4 15, i4 %filter_addr_1" [cluster.cpp:143->cluster.cpp:20]   --->   Operation 53 'store' 'store_ln143' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+ST_9 : Operation 54 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln144 = store i4 2, i4 %filter_addr_2" [cluster.cpp:144->cluster.cpp:20]   --->   Operation 54 'store' 'store_ln144' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+
+State 10 <SV = 9> <Delay = 0.67>
+ST_10 : Operation 55 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln145 = store i4 0, i4 %filter_addr_3" [cluster.cpp:145->cluster.cpp:20]   --->   Operation 55 'store' 'store_ln145' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+ST_10 : Operation 56 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln146 = store i4 14, i4 %filter_addr_4" [cluster.cpp:146->cluster.cpp:20]   --->   Operation 56 'store' 'store_ln146' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+
+State 11 <SV = 10> <Delay = 0.67>
+ST_11 : Operation 57 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln147 = store i4 1, i4 %filter_addr_5" [cluster.cpp:147->cluster.cpp:20]   --->   Operation 57 'store' 'store_ln147' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+ST_11 : Operation 58 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln148 = store i4 0, i4 %filter_addr_6" [cluster.cpp:148->cluster.cpp:20]   --->   Operation 58 'store' 'store_ln148' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+
+State 12 <SV = 11> <Delay = 0.67>
+ST_12 : Operation 59 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln149 = store i4 15, i4 %filter_addr_7" [cluster.cpp:149->cluster.cpp:20]   --->   Operation 59 'store' 'store_ln149' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+
+State 13 <SV = 12> <Delay = 1.00>
+ST_13 : Operation 60 [1/1] (1.00ns)   --->   "%output_r_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %output_r"   --->   Operation 60 'read' 'output_r_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 120 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_13 : Operation 61 [1/1] (1.00ns)   --->   "%image_gray_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %image_gray"   --->   Operation 61 'read' 'image_gray_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 120 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_13 : Operation 62 [1/1] (0.00ns)   --->   "%normal_factor_1_loc_load = load i6 %normal_factor_1_loc"   --->   Operation 62 'load' 'normal_factor_1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 63 [2/2] (0.00ns)   --->   "%call_ln0 = call void @edge_detect_hw_Pipeline_2, i32 %gmem, i64 %image_gray_read, i6 %normal_factor_1_loc_load, i64 %output_r_read"   --->   Operation 63 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_13 : Operation 64 [2/2] (0.00ns)   --->   "%call_ln0 = call void @edge_detect_hw_Pipeline_3, i4 %filter, i6 %normal_factor_2_loc"   --->   Operation 64 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 14 <SV = 13> <Delay = 1.65>
+ST_14 : Operation 65 [1/2] (0.00ns)   --->   "%call_ln0 = call void @edge_detect_hw_Pipeline_2, i32 %gmem, i64 %image_gray_read, i6 %normal_factor_1_loc_load, i64 %output_r_read"   --->   Operation 65 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_14 : Operation 66 [1/2] (1.65ns)   --->   "%call_ln0 = call void @edge_detect_hw_Pipeline_3, i4 %filter, i6 %normal_factor_2_loc"   --->   Operation 66 'call' 'call_ln0' <Predicate = true> <Delay = 1.65> <CoreType = "Generic">   --->   Generic Core
+
+State 15 <SV = 14> <Delay = 0.67>
+ST_15 : Operation 67 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln87 = store i4 1, i4 %filter_addr_8" [cluster.cpp:87->cluster.cpp:22]   --->   Operation 67 'store' 'store_ln87' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+ST_15 : Operation 68 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln88 = store i4 2, i4 %filter_addr" [cluster.cpp:88->cluster.cpp:22]   --->   Operation 68 'store' 'store_ln88' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+
+State 16 <SV = 15> <Delay = 0.67>
+ST_16 : Operation 69 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln89 = store i4 1, i4 %filter_addr_1" [cluster.cpp:89->cluster.cpp:22]   --->   Operation 69 'store' 'store_ln89' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+ST_16 : Operation 70 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln90 = store i4 0, i4 %filter_addr_2" [cluster.cpp:90->cluster.cpp:22]   --->   Operation 70 'store' 'store_ln90' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+
+State 17 <SV = 16> <Delay = 0.67>
+ST_17 : Operation 71 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln91 = store i4 0, i4 %filter_addr_3" [cluster.cpp:91->cluster.cpp:22]   --->   Operation 71 'store' 'store_ln91' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+ST_17 : Operation 72 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln92 = store i4 0, i4 %filter_addr_4" [cluster.cpp:92->cluster.cpp:22]   --->   Operation 72 'store' 'store_ln92' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+
+State 18 <SV = 17> <Delay = 0.67>
+ST_18 : Operation 73 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln93 = store i4 15, i4 %filter_addr_5" [cluster.cpp:93->cluster.cpp:22]   --->   Operation 73 'store' 'store_ln93' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+ST_18 : Operation 74 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln94 = store i4 14, i4 %filter_addr_6" [cluster.cpp:94->cluster.cpp:22]   --->   Operation 74 'store' 'store_ln94' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+
+State 19 <SV = 18> <Delay = 0.67>
+ST_19 : Operation 75 [1/1] ( I:0.67ns O:0.67ns )   --->   "%store_ln95 = store i4 15, i4 %filter_addr_7" [cluster.cpp:95->cluster.cpp:22]   --->   Operation 75 'store' 'store_ln95' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 9> <RAM>
+
+State 20 <SV = 19> <Delay = 0.00>
+ST_20 : Operation 76 [1/1] (0.00ns)   --->   "%normal_factor_2_loc_load = load i6 %normal_factor_2_loc"   --->   Operation 76 'load' 'normal_factor_2_loc_load' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 77 [2/2] (0.00ns)   --->   "%call_ln0 = call void @edge_detect_hw_Pipeline_4, i32 %gmem, i64 %output_r_read, i6 %normal_factor_2_loc_load, i64 %image_gray_read"   --->   Operation 77 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_20 : Operation 78 [2/2] (0.00ns)   --->   "%call_ln0 = call void @edge_detect_hw_Pipeline_5, i4 %filter, i6 %normal_factor_3_loc"   --->   Operation 78 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 21 <SV = 20> <Delay = 1.65>
+ST_21 : Operation 79 [1/2] (0.00ns)   --->   "%call_ln0 = call void @edge_detect_hw_Pipeline_4, i32 %gmem, i64 %output_r_read, i6 %normal_factor_2_loc_load, i64 %image_gray_read"   --->   Operation 79 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_21 : Operation 80 [1/2] (1.65ns)   --->   "%call_ln0 = call void @edge_detect_hw_Pipeline_5, i4 %filter, i6 %normal_factor_3_loc"   --->   Operation 80 'call' 'call_ln0' <Predicate = true> <Delay = 1.65> <CoreType = "Generic">   --->   Generic Core
+
+State 22 <SV = 21> <Delay = 0.00>
+ST_22 : Operation 81 [1/1] (0.00ns)   --->   "%normal_factor_3_loc_load = load i6 %normal_factor_3_loc"   --->   Operation 81 'load' 'normal_factor_3_loc_load' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 82 [2/2] (0.00ns)   --->   "%call_ln0 = call void @edge_detect_hw_Pipeline_6, i32 %gmem, i64 %output_r_read, i6 %normal_factor_3_loc_load, i32 %temp_buf"   --->   Operation 82 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 23 <SV = 22> <Delay = 0.00>
+ST_23 : Operation 83 [1/2] (0.00ns)   --->   "%call_ln0 = call void @edge_detect_hw_Pipeline_6, i32 %gmem, i64 %output_r_read, i6 %normal_factor_3_loc_load, i32 %temp_buf"   --->   Operation 83 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 24 <SV = 23> <Delay = 0.00>
+ST_24 : Operation 84 [2/2] (0.00ns)   --->   "%call_ln0 = call void @edge_detect_hw_Pipeline_7, i32 %gmem, i64 %image_gray_read, i32 %temp_buf, i64 %output_r_read"   --->   Operation 84 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 25 <SV = 24> <Delay = 0.00>
+ST_25 : Operation 85 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_8"   --->   Operation 85 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 86 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_9, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 86 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 87 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty, i32 0, i32 0, void @empty_0, i32 64, i32 0, void @empty_1, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 87 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 88 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem"   --->   Operation 88 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 89 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %image_gray, void @empty_3, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_4, void @empty_5, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 89 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 90 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %image_gray, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 90 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 91 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %output_r, void @empty_3, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_4, void @empty_7, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 91 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 92 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %output_r, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 92 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 93 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_3, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_4, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 93 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 94 [1/2] (0.00ns)   --->   "%call_ln0 = call void @edge_detect_hw_Pipeline_7, i32 %gmem, i64 %image_gray_read, i32 %temp_buf, i64 %output_r_read"   --->   Operation 94 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_25 : Operation 95 [1/1] (0.00ns)   --->   "%ret_ln25 = ret" [cluster.cpp:25]   --->   Operation 95 'ret' 'ret_ln25' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 6.667ns, clock uncertainty: 2.000ns.
+
+ <State 1>: 0.677ns
+The critical path consists of the following:
+	'alloca' operation 4 bit ('filter', cluster.cpp:16) [18]  (0.000 ns)
+	'getelementptr' operation 4 bit ('filter', cluster.cpp:18) [20]  (0.000 ns)
+	'store' operation 0 bit ('store_ln195', cluster.cpp:195->cluster.cpp:18) of constant 1 on array 'filter', cluster.cpp:16 [21]  (0.677 ns)
+
+ <State 2>: 0.677ns
+The critical path consists of the following:
+	'getelementptr' operation 4 bit ('filter_addr', cluster.cpp:196->cluster.cpp:18) [22]  (0.000 ns)
+	'store' operation 0 bit ('store_ln196', cluster.cpp:196->cluster.cpp:18) of constant 2 on array 'filter', cluster.cpp:16 [23]  (0.677 ns)
+
+ <State 3>: 0.677ns
+The critical path consists of the following:
+	'getelementptr' operation 4 bit ('filter_addr_2', cluster.cpp:198->cluster.cpp:18) [26]  (0.000 ns)
+	'store' operation 0 bit ('store_ln198', cluster.cpp:198->cluster.cpp:18) of constant 2 on array 'filter', cluster.cpp:16 [27]  (0.677 ns)
+
+ <State 4>: 0.677ns
+The critical path consists of the following:
+	'getelementptr' operation 4 bit ('filter_addr_4', cluster.cpp:200->cluster.cpp:18) [30]  (0.000 ns)
+	'store' operation 0 bit ('store_ln200', cluster.cpp:200->cluster.cpp:18) of constant 2 on array 'filter', cluster.cpp:16 [31]  (0.677 ns)
+
+ <State 5>: 0.677ns
+The critical path consists of the following:
+	'getelementptr' operation 4 bit ('filter_addr_6', cluster.cpp:202->cluster.cpp:18) [34]  (0.000 ns)
+	'store' operation 0 bit ('store_ln202', cluster.cpp:202->cluster.cpp:18) of constant 2 on array 'filter', cluster.cpp:16 [35]  (0.677 ns)
+
+ <State 6>: 0.000ns
+The critical path consists of the following:
+
+ <State 7>: 1.651ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln0') to 'edge_detect_hw_Pipeline_1' [38]  (1.651 ns)
+
+ <State 8>: 0.677ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln141', cluster.cpp:141->cluster.cpp:20) of constant 1 on array 'filter', cluster.cpp:16 [41]  (0.677 ns)
+
+ <State 9>: 0.677ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln143', cluster.cpp:143->cluster.cpp:20) of constant 15 on array 'filter', cluster.cpp:16 [43]  (0.677 ns)
+
+ <State 10>: 0.677ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln145', cluster.cpp:145->cluster.cpp:20) of constant 0 on array 'filter', cluster.cpp:16 [45]  (0.677 ns)
+
+ <State 11>: 0.677ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln147', cluster.cpp:147->cluster.cpp:20) of constant 1 on array 'filter', cluster.cpp:16 [47]  (0.677 ns)
+
+ <State 12>: 0.677ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln149', cluster.cpp:149->cluster.cpp:20) of constant 15 on array 'filter', cluster.cpp:16 [49]  (0.677 ns)
+
+ <State 13>: 1.000ns
+The critical path consists of the following:
+	s_axi read operation ('output_r_read') on port 'output_r' [4]  (1.000 ns)
+
+ <State 14>: 1.651ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln0') to 'edge_detect_hw_Pipeline_3' [50]  (1.651 ns)
+
+ <State 15>: 0.677ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln87', cluster.cpp:87->cluster.cpp:22) of constant 1 on array 'filter', cluster.cpp:16 [53]  (0.677 ns)
+
+ <State 16>: 0.677ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln89', cluster.cpp:89->cluster.cpp:22) of constant 1 on array 'filter', cluster.cpp:16 [55]  (0.677 ns)
+
+ <State 17>: 0.677ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln91', cluster.cpp:91->cluster.cpp:22) of constant 0 on array 'filter', cluster.cpp:16 [57]  (0.677 ns)
+
+ <State 18>: 0.677ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln93', cluster.cpp:93->cluster.cpp:22) of constant 15 on array 'filter', cluster.cpp:16 [59]  (0.677 ns)
+
+ <State 19>: 0.677ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln95', cluster.cpp:95->cluster.cpp:22) of constant 15 on array 'filter', cluster.cpp:16 [61]  (0.677 ns)
+
+ <State 20>: 0.000ns
+The critical path consists of the following:
+
+ <State 21>: 1.651ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln0') to 'edge_detect_hw_Pipeline_5' [62]  (1.651 ns)
+
+ <State 22>: 0.000ns
+The critical path consists of the following:
+
+ <State 23>: 0.000ns
+The critical path consists of the following:
+
+ <State 24>: 0.000ns
+The critical path consists of the following:
+
+ <State 25>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

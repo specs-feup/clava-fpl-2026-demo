@@ -1,0 +1,165 @@
+
+
+================================================================
+== Vitis HLS Report for 'convolve2d_rep0_hw_Pipeline_VITIS_LOOP_16_1_VITIS_LOOP_17_2'
+================================================================
+* Date:           Tue Sep  8 13:52:57 2026
+
+* Version:        2024.2.2 (Build 6049644 on Mar  5 2025)
+* Project:        final
+* Solution:       hls (Vitis Kernel Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.67 ns|  4.667 ns|     2.00 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min    |    max    | min | max |                      Type                      |
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    |       12|       12|  80.004 ns|  80.004 ns|   10|   10|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |             Loop Name             |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_16_1_VITIS_LOOP_17_2  |       10|       10|         3|          1|          1|     9|       yes|
+        +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.65>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%normal_factor_1 = alloca i32 1" [cluster.cpp:8]   --->   Operation 6 'alloca' 'normal_factor_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%indvar_flatten = alloca i32 1"   --->   Operation 7 'alloca' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%sext_ln16_read = read i62 @_ssdm_op_Read.ap_auto.i62, i62 %sext_ln16"   --->   Operation 8 'read' 'sext_ln16_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%sext_ln16_cast = sext i62 %sext_ln16_read"   --->   Operation 9 'sext' 'sext_ln16_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_5, i32 0, i32 0, void @empty, i32 64, i32 0, void @empty_0, void @empty_1, void @empty, i32 16, i32 16, i32 16, i32 16, void @empty, void @empty, i32 4294967295, i32 0, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.42ns)   --->   "%store_ln0 = store i4 0, i4 %indvar_flatten"   --->   Operation 11 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 12 [1/1] (0.42ns)   --->   "%store_ln8 = store i32 0, i32 %normal_factor_1" [cluster.cpp:8]   --->   Operation 12 'store' 'store_ln8' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc"   --->   Operation 13 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%indvar_flatten_load = load i4 %indvar_flatten" [cluster.cpp:16]   --->   Operation 14 'load' 'indvar_flatten_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem"   --->   Operation 15 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.79ns)   --->   "%icmp_ln16 = icmp_eq  i4 %indvar_flatten_load, i4 9" [cluster.cpp:16]   --->   Operation 16 'icmp' 'icmp_ln16' <Predicate = true> <Delay = 0.79> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.79ns)   --->   "%add_ln16 = add i4 %indvar_flatten_load, i4 1" [cluster.cpp:16]   --->   Operation 17 'add' 'add_ln16' <Predicate = true> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln16 = br i1 %icmp_ln16, void %for.inc5, void %VITIS_LOOP_29_3.exitStub" [cluster.cpp:16]   --->   Operation 18 'br' 'br_ln16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.42ns)   --->   "%store_ln16 = store i4 %add_ln16, i4 %indvar_flatten" [cluster.cpp:16]   --->   Operation 19 'store' 'store_ln16' <Predicate = (!icmp_ln16)> <Delay = 0.42>
+
+State 2 <SV = 1> <Delay = 4.66>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%gmem_addr = getelementptr i32 %gmem, i64 %sext_ln16_cast" [cluster.cpp:16]   --->   Operation 20 'getelementptr' 'gmem_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (4.66ns)   --->   "%gmem_addr_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr" [cluster.cpp:20]   --->   Operation 21 'read' 'gmem_addr_read' <Predicate = true> <Delay = 4.66> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%normal_factor_1_load_1 = load i32 %normal_factor_1"   --->   Operation 32 'load' 'normal_factor_1_load_1' <Predicate = (icmp_ln16)> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %normal_factor_1_out, i32 %normal_factor_1_load_1"   --->   Operation 33 'write' 'write_ln0' <Predicate = (icmp_ln16)> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.42ns)   --->   "%ret_ln0 = ret"   --->   Operation 34 'ret' 'ret_ln0' <Predicate = (icmp_ln16)> <Delay = 0.42>
+
+State 3 <SV = 2> <Delay = 2.90>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%normal_factor_1_load = load i32 %normal_factor_1" [cluster.cpp:21]   --->   Operation 22 'load' 'normal_factor_1_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @VITIS_LOOP_16_1_VITIS_LOOP_17_2_str"   --->   Operation 23 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 9, i64 9, i64 9"   --->   Operation 24 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%specpipeline_ln6 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty" [cluster.cpp:6]   --->   Operation 25 'specpipeline' 'specpipeline_ln6' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (1.01ns)   --->   "%neg = sub i32 0, i32 %gmem_addr_read" [cluster.cpp:20]   --->   Operation 26 'sub' 'neg' <Predicate = true> <Delay = 1.01> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 27 [1/1] (1.01ns)   --->   "%abscond = icmp_sgt  i32 %gmem_addr_read, i32 0" [cluster.cpp:20]   --->   Operation 27 'icmp' 'abscond' <Predicate = true> <Delay = 1.01> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 28 [1/1] (0.44ns)   --->   "%p_d0_0 = select i1 %abscond, i32 %gmem_addr_read, i32 %neg" [cluster.cpp:20]   --->   Operation 28 'select' 'p_d0_0' <Predicate = true> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 29 [1/1] (1.01ns)   --->   "%normal_factor = add i32 %p_d0_0, i32 %normal_factor_1_load" [cluster.cpp:21]   --->   Operation 29 'add' 'normal_factor' <Predicate = true> <Delay = 1.01> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 30 [1/1] (0.42ns)   --->   "%store_ln8 = store i32 %normal_factor, i32 %normal_factor_1" [cluster.cpp:8]   --->   Operation 30 'store' 'store_ln8' <Predicate = true> <Delay = 0.42>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln17 = br void %for.inc" [cluster.cpp:17]   --->   Operation 31 'br' 'br_ln17' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 6.667ns, clock uncertainty: 2.000ns.
+
+ <State 1>: 1.651ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln0') of constant 0 on local variable 'indvar_flatten' [9]  (0.427 ns)
+	'load' operation 4 bit ('indvar_flatten_load', cluster.cpp:16) on local variable 'indvar_flatten' [13]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln16', cluster.cpp:16) [15]  (0.797 ns)
+	'store' operation 0 bit ('store_ln16', cluster.cpp:16) of variable 'add_ln16', cluster.cpp:16 on local variable 'indvar_flatten' [29]  (0.427 ns)
+
+ <State 2>: 4.667ns
+The critical path consists of the following:
+	'getelementptr' operation 32 bit ('gmem_addr', cluster.cpp:16) [20]  (0.000 ns)
+	bus read operation ('gmem_addr_read', cluster.cpp:20) on port 'gmem' (cluster.cpp:20) [24]  (4.667 ns)
+
+ <State 3>: 2.908ns
+The critical path consists of the following:
+	'sub' operation 32 bit ('neg', cluster.cpp:20) [25]  (1.016 ns)
+	'select' operation 32 bit ('_d0_0', cluster.cpp:20) [27]  (0.449 ns)
+	'add' operation 32 bit ('_d0_1', cluster.cpp:21) [28]  (1.016 ns)
+	'store' operation 0 bit ('store_ln8', cluster.cpp:8) of variable '_d0_1', cluster.cpp:21 on local variable 'normal_factor', cluster.cpp:8 [30]  (0.427 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

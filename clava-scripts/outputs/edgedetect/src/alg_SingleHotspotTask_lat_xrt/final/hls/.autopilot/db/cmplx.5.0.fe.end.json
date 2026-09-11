@@ -1,0 +1,50 @@
+{
+    "0": {
+        "name": "convolve2d_rep0_hw",
+        "file": "cluster.cpp",
+        "fileloc": "3",
+        "instructions": "32",
+        "total_instructions": "210",
+        "calls": "2 1",
+        "basicblocks": "1",
+        "loads": {
+            "L": "1"
+        }
+    },
+    "1": {
+        "name": "convolve2d_rep0_hw_Pipeline_VITIS_LOOP_29_3_VITIS_LOOP_30_4",
+        "file": "cluster.cpp",
+        "fileloc": "6",
+        "instructions": "149",
+        "total_instructions": "149",
+        "calls": "",
+        "basicblocks": "8",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "convolve2d_rep0_hw_Pipeline_VITIS_LOOP_16_1_VITIS_LOOP_17_2",
+        "file": "cluster.cpp",
+        "fileloc": "6",
+        "instructions": "29",
+        "total_instructions": "29",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

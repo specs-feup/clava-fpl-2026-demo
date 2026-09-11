@@ -1,0 +1,536 @@
+{
+    "appName": "edgedetect",
+    "uniqueTaskInstances": {
+        "convolve2d_rep0_hw": {
+            "instances": [
+                1
+            ],
+            "statements": 55,
+            "loops": 6,
+            "whiles": 0,
+            "ifs": 1,
+            "switches": 0,
+            "perLoopsStaticCounts": 1
+        }
+    },
+    "taskGraphStats": {
+        "counts": {
+            "#tasks": 1,
+            "#edges": 15,
+            "externalTasks": 0,
+            "regularTasks": 1,
+            "inlinableCalls": 1,
+            "globalVars": 0
+        },
+        "uniqueTaskTypes": {
+            "convolve2d_rep0_hw": 0
+        }
+    },
+    "noTaskCallsHistogram": {
+        "abs": 1
+    },
+    "dataPerTask": {
+        "T1-convolve2d_rep0_hw": {
+            "input_image": {
+                "origin": 2,
+                "sizeInBytes": 1048576,
+                "cxxType": "int",
+                "isScalar": false,
+                "nameInInterface": "<n/a>",
+                "nameInPrevTask": "<no_name_in_prev_task>",
+                "stateChanges": {
+                    "isInit": true,
+                    "isWritten": false,
+                    "isRead": true
+                }
+            },
+            "filter": {
+                "origin": 2,
+                "sizeInBytes": 36,
+                "cxxType": "int",
+                "isScalar": false,
+                "nameInInterface": "<n/a>",
+                "nameInPrevTask": "<no_name_in_prev_task>",
+                "stateChanges": {
+                    "isInit": true,
+                    "isWritten": false,
+                    "isRead": true
+                }
+            },
+            "output_image": {
+                "origin": 2,
+                "sizeInBytes": 1048576,
+                "cxxType": "int",
+                "isScalar": false,
+                "nameInInterface": "<n/a>",
+                "nameInPrevTask": "<no_name_in_prev_task>",
+                "stateChanges": {
+                    "isInit": true,
+                    "isWritten": true,
+                    "isRead": false
+                }
+            },
+            "i": {
+                "origin": 3,
+                "sizeInBytes": 4,
+                "cxxType": "int",
+                "isScalar": true,
+                "nameInInterface": "<n/a>",
+                "nameInPrevTask": "<no_name_in_prev_task>",
+                "stateChanges": {
+                    "isInit": true,
+                    "isWritten": true,
+                    "isRead": true
+                }
+            },
+            "j": {
+                "origin": 3,
+                "sizeInBytes": 4,
+                "cxxType": "int",
+                "isScalar": true,
+                "nameInInterface": "<n/a>",
+                "nameInPrevTask": "<no_name_in_prev_task>",
+                "stateChanges": {
+                    "isInit": true,
+                    "isWritten": true,
+                    "isRead": true
+                }
+            },
+            "c": {
+                "origin": 3,
+                "sizeInBytes": 4,
+                "cxxType": "int",
+                "isScalar": true,
+                "nameInInterface": "<n/a>",
+                "nameInPrevTask": "<no_name_in_prev_task>",
+                "stateChanges": {
+                    "isInit": true,
+                    "isWritten": true,
+                    "isRead": true
+                }
+            },
+            "r": {
+                "origin": 3,
+                "sizeInBytes": 4,
+                "cxxType": "int",
+                "isScalar": true,
+                "nameInInterface": "<n/a>",
+                "nameInPrevTask": "<no_name_in_prev_task>",
+                "stateChanges": {
+                    "isInit": true,
+                    "isWritten": true,
+                    "isRead": true
+                }
+            },
+            "normal_factor": {
+                "origin": 3,
+                "sizeInBytes": 4,
+                "cxxType": "int",
+                "isScalar": true,
+                "nameInInterface": "<n/a>",
+                "nameInPrevTask": "<no_name_in_prev_task>",
+                "stateChanges": {
+                    "isInit": true,
+                    "isWritten": true,
+                    "isRead": true
+                }
+            },
+            "sum": {
+                "origin": 3,
+                "sizeInBytes": 4,
+                "cxxType": "int",
+                "isScalar": true,
+                "nameInInterface": "<n/a>",
+                "nameInPrevTask": "<no_name_in_prev_task>",
+                "stateChanges": {
+                    "isInit": true,
+                    "isWritten": true,
+                    "isRead": true
+                }
+            },
+            "dead_rows": {
+                "origin": 3,
+                "sizeInBytes": 4,
+                "cxxType": "int",
+                "isScalar": true,
+                "nameInInterface": "<n/a>",
+                "nameInPrevTask": "<no_name_in_prev_task>",
+                "stateChanges": {
+                    "isInit": true,
+                    "isWritten": true,
+                    "isRead": true
+                }
+            },
+            "dead_cols": {
+                "origin": 3,
+                "sizeInBytes": 4,
+                "cxxType": "int",
+                "isScalar": true,
+                "nameInInterface": "<n/a>",
+                "nameInPrevTask": "<no_name_in_prev_task>",
+                "stateChanges": {
+                    "isInit": true,
+                    "isWritten": true,
+                    "isRead": true
+                }
+            },
+            "decomp_0": {
+                "origin": 3,
+                "sizeInBytes": 4,
+                "cxxType": "bool",
+                "isScalar": true,
+                "nameInInterface": "<n/a>",
+                "nameInPrevTask": "<no_name_in_prev_task>",
+                "stateChanges": {
+                    "isInit": true,
+                    "isWritten": true,
+                    "isRead": true
+                }
+            },
+            "_d0_0": {
+                "origin": 3,
+                "sizeInBytes": 4,
+                "cxxType": "int",
+                "isScalar": true,
+                "nameInInterface": "<n/a>",
+                "nameInPrevTask": "<no_name_in_prev_task>",
+                "stateChanges": {
+                    "isInit": true,
+                    "isWritten": true,
+                    "isRead": true
+                }
+            },
+            "_d0_1": {
+                "origin": 3,
+                "sizeInBytes": 4,
+                "cxxType": "int",
+                "isScalar": true,
+                "nameInInterface": "<n/a>",
+                "nameInPrevTask": "<no_name_in_prev_task>",
+                "stateChanges": {
+                    "isInit": true,
+                    "isWritten": true,
+                    "isRead": true
+                }
+            },
+            "imm(3)": {
+                "origin": 6,
+                "sizeInBytes": 4,
+                "cxxType": "int",
+                "isScalar": true,
+                "nameInInterface": "<n/a>",
+                "nameInPrevTask": "<no_name_in_prev_task>",
+                "stateChanges": {
+                    "isInit": false,
+                    "isWritten": false,
+                    "isRead": false
+                }
+            }
+        }
+    },
+    "globalData": {},
+    "dataSourceDistance": {
+        "T1-convolve2d_rep0_hw": {
+            "input_image": {
+                "pathToOrigin": [
+                    "T1-convolve2d_rep0_hw",
+                    "TSrc-<task_graph_source>"
+                ],
+                "dataEvolution": [
+                    "input_image",
+                    "input_image"
+                ],
+                "distanceToOrigin": 2
+            },
+            "filter": {
+                "pathToOrigin": [
+                    "T1-convolve2d_rep0_hw",
+                    "TSrc-<task_graph_source>"
+                ],
+                "dataEvolution": [
+                    "filter",
+                    "filter"
+                ],
+                "distanceToOrigin": 2
+            },
+            "output_image": {
+                "pathToOrigin": [
+                    "T1-convolve2d_rep0_hw",
+                    "TSrc-<task_graph_source>"
+                ],
+                "dataEvolution": [
+                    "output_image",
+                    "output_image"
+                ],
+                "distanceToOrigin": 2
+            },
+            "i": {
+                "pathToOrigin": [
+                    "T1-convolve2d_rep0_hw"
+                ],
+                "dataEvolution": [
+                    "i"
+                ],
+                "distanceToOrigin": 1
+            },
+            "j": {
+                "pathToOrigin": [
+                    "T1-convolve2d_rep0_hw"
+                ],
+                "dataEvolution": [
+                    "j"
+                ],
+                "distanceToOrigin": 1
+            },
+            "c": {
+                "pathToOrigin": [
+                    "T1-convolve2d_rep0_hw"
+                ],
+                "dataEvolution": [
+                    "c"
+                ],
+                "distanceToOrigin": 1
+            },
+            "r": {
+                "pathToOrigin": [
+                    "T1-convolve2d_rep0_hw"
+                ],
+                "dataEvolution": [
+                    "r"
+                ],
+                "distanceToOrigin": 1
+            },
+            "normal_factor": {
+                "pathToOrigin": [
+                    "T1-convolve2d_rep0_hw"
+                ],
+                "dataEvolution": [
+                    "normal_factor"
+                ],
+                "distanceToOrigin": 1
+            },
+            "sum": {
+                "pathToOrigin": [
+                    "T1-convolve2d_rep0_hw"
+                ],
+                "dataEvolution": [
+                    "sum"
+                ],
+                "distanceToOrigin": 1
+            },
+            "dead_rows": {
+                "pathToOrigin": [
+                    "T1-convolve2d_rep0_hw"
+                ],
+                "dataEvolution": [
+                    "dead_rows"
+                ],
+                "distanceToOrigin": 1
+            },
+            "dead_cols": {
+                "pathToOrigin": [
+                    "T1-convolve2d_rep0_hw"
+                ],
+                "dataEvolution": [
+                    "dead_cols"
+                ],
+                "distanceToOrigin": 1
+            },
+            "decomp_0": {
+                "pathToOrigin": [
+                    "T1-convolve2d_rep0_hw"
+                ],
+                "dataEvolution": [
+                    "decomp_0"
+                ],
+                "distanceToOrigin": 1
+            },
+            "_d0_0": {
+                "pathToOrigin": [
+                    "T1-convolve2d_rep0_hw"
+                ],
+                "dataEvolution": [
+                    "_d0_0"
+                ],
+                "distanceToOrigin": 1
+            },
+            "_d0_1": {
+                "pathToOrigin": [
+                    "T1-convolve2d_rep0_hw"
+                ],
+                "dataEvolution": [
+                    "_d0_1"
+                ],
+                "distanceToOrigin": 1
+            },
+            "imm(3)": {
+                "pathToOrigin": [
+                    "T1-convolve2d_rep0_hw"
+                ],
+                "dataEvolution": [
+                    "imm(3)"
+                ],
+                "distanceToOrigin": 1
+            }
+        }
+    },
+    "dataPaths": {
+        "i": {
+            "datatype": "int",
+            "sizeInBytes": 4,
+            "mainPath": [
+                "convolve2d_rep0_hw"
+            ],
+            "mainPathLength": 1,
+            "spurs": [],
+            "#spurs": 0,
+            "aliases": [
+                "i"
+            ],
+            "#aliases": 1
+        },
+        "j": {
+            "datatype": "int",
+            "sizeInBytes": 4,
+            "mainPath": [
+                "convolve2d_rep0_hw"
+            ],
+            "mainPathLength": 1,
+            "spurs": [],
+            "#spurs": 0,
+            "aliases": [
+                "j"
+            ],
+            "#aliases": 1
+        },
+        "c": {
+            "datatype": "int",
+            "sizeInBytes": 4,
+            "mainPath": [
+                "convolve2d_rep0_hw"
+            ],
+            "mainPathLength": 1,
+            "spurs": [],
+            "#spurs": 0,
+            "aliases": [
+                "c"
+            ],
+            "#aliases": 1
+        },
+        "r": {
+            "datatype": "int",
+            "sizeInBytes": 4,
+            "mainPath": [
+                "convolve2d_rep0_hw"
+            ],
+            "mainPathLength": 1,
+            "spurs": [],
+            "#spurs": 0,
+            "aliases": [
+                "r"
+            ],
+            "#aliases": 1
+        },
+        "normal_factor": {
+            "datatype": "int",
+            "sizeInBytes": 4,
+            "mainPath": [
+                "convolve2d_rep0_hw"
+            ],
+            "mainPathLength": 1,
+            "spurs": [],
+            "#spurs": 0,
+            "aliases": [
+                "normal_factor"
+            ],
+            "#aliases": 1
+        },
+        "sum": {
+            "datatype": "int",
+            "sizeInBytes": 4,
+            "mainPath": [
+                "convolve2d_rep0_hw"
+            ],
+            "mainPathLength": 1,
+            "spurs": [],
+            "#spurs": 0,
+            "aliases": [
+                "sum"
+            ],
+            "#aliases": 1
+        },
+        "dead_rows": {
+            "datatype": "int",
+            "sizeInBytes": 4,
+            "mainPath": [
+                "convolve2d_rep0_hw"
+            ],
+            "mainPathLength": 1,
+            "spurs": [],
+            "#spurs": 0,
+            "aliases": [
+                "dead_rows"
+            ],
+            "#aliases": 1
+        },
+        "dead_cols": {
+            "datatype": "int",
+            "sizeInBytes": 4,
+            "mainPath": [
+                "convolve2d_rep0_hw"
+            ],
+            "mainPathLength": 1,
+            "spurs": [],
+            "#spurs": 0,
+            "aliases": [
+                "dead_cols"
+            ],
+            "#aliases": 1
+        },
+        "decomp_0": {
+            "datatype": "bool",
+            "sizeInBytes": 4,
+            "mainPath": [
+                "convolve2d_rep0_hw"
+            ],
+            "mainPathLength": 1,
+            "spurs": [],
+            "#spurs": 0,
+            "aliases": [
+                "decomp_0"
+            ],
+            "#aliases": 1
+        },
+        "_d0_0": {
+            "datatype": "int",
+            "sizeInBytes": 4,
+            "mainPath": [
+                "convolve2d_rep0_hw"
+            ],
+            "mainPathLength": 1,
+            "spurs": [],
+            "#spurs": 0,
+            "aliases": [
+                "_d0_0"
+            ],
+            "#aliases": 1
+        },
+        "_d0_1": {
+            "datatype": "int",
+            "sizeInBytes": 4,
+            "mainPath": [
+                "convolve2d_rep0_hw"
+            ],
+            "mainPathLength": 1,
+            "spurs": [],
+            "#spurs": 0,
+            "aliases": [
+                "_d0_1"
+            ],
+            "#aliases": 1
+        }
+    },
+    "parallelTasks": [],
+    "producerConsumer": [],
+    "criticalPaths": {}
+}

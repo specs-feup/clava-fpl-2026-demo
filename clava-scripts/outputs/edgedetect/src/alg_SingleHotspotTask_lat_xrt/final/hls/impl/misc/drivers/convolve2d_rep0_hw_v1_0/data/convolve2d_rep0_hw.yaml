@@ -1,0 +1,24 @@
+# ==============================================================
+# Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.2.2 (64-bit)
+# Tool Version Limit: 2024.11
+# Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+# Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+# 
+# ==============================================================
+%YAML 1.2
+---
+title: convolve2d_rep0_hw driver
+type: driver
+properties:
+    compatible:
+        items:
+            - const: xlnx,convolve2d-rep0-hw-1.0
+config:
+    - XConvolve2d_rep0_hw_Config
+required:
+    - compatible
+    - reg
+additionalProperties:
+   - interrupts
+   - interrupt-parent
+

@@ -1,0 +1,66 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="" msg_id="214-414" msg_severity="WARNING" msg_loc="cluster.cpp:15:0" msg_body="Cannot apply interface mode 'ap_none' on function argument 'image_gray' since this interface mode only supports scalar types">
+        <args Name="image_gray"/>
+    </msg>
+    <msg msg_groups="" msg_id="214-414" msg_severity="WARNING" msg_loc="cluster.cpp:15:0" msg_body="Cannot apply interface mode 'ap_none' on function argument 'output' since this interface mode only supports scalar types">
+        <args Name="output"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="cluster.cpp:15:0" msg_body="Inlining function 'cluster_edge_detect_out0(int*)' into 'edge_detect_hw(int*, int*)'">
+        <args Callee="cluster_edge_detect_out0(int*)" Callee-DebugLoc="File cluster.cpp Line 194 Column 0" Caller="edge_detect_hw(int*, int*)" Caller-DebugLoc="File cluster.cpp Line 15 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="cluster.cpp:15:0" msg_body="Inlining function 'cluster_convolve2d_rep0(int*, int*, int*)' into 'edge_detect_hw(int*, int*)'">
+        <args Callee="cluster_convolve2d_rep0(int*, int*, int*)" Callee-DebugLoc="File cluster.cpp Line 153 Column 0" Caller="edge_detect_hw(int*, int*)" Caller-DebugLoc="File cluster.cpp Line 15 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="cluster.cpp:15:0" msg_body="Inlining function 'cluster_edge_detect_out1(int*)' into 'edge_detect_hw(int*, int*)'">
+        <args Callee="cluster_edge_detect_out1(int*)" Callee-DebugLoc="File cluster.cpp Line 140 Column 0" Caller="edge_detect_hw(int*, int*)" Caller-DebugLoc="File cluster.cpp Line 15 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="cluster.cpp:15:0" msg_body="Inlining function 'cluster_convolve2d_rep1(int*, int*, int*)' into 'edge_detect_hw(int*, int*)'">
+        <args Callee="cluster_convolve2d_rep1(int*, int*, int*)" Callee-DebugLoc="File cluster.cpp Line 99 Column 0" Caller="edge_detect_hw(int*, int*)" Caller-DebugLoc="File cluster.cpp Line 15 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="cluster.cpp:15:0" msg_body="Inlining function 'cluster_edge_detect_out2(int*)' into 'edge_detect_hw(int*, int*)'">
+        <args Callee="cluster_edge_detect_out2(int*)" Callee-DebugLoc="File cluster.cpp Line 86 Column 0" Caller="edge_detect_hw(int*, int*)" Caller-DebugLoc="File cluster.cpp Line 15 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="cluster.cpp:15:0" msg_body="Inlining function 'cluster_convolve2d_rep2(int*, int*, int*)' into 'edge_detect_hw(int*, int*)'">
+        <args Callee="cluster_convolve2d_rep2(int*, int*, int*)" Callee-DebugLoc="File cluster.cpp Line 45 Column 0" Caller="edge_detect_hw(int*, int*)" Caller-DebugLoc="File cluster.cpp Line 15 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="cluster.cpp:15:0" msg_body="Inlining function 'cluster_combthreshold(int*, int*, int*)' into 'edge_detect_hw(int*, int*)'">
+        <args Callee="cluster_combthreshold(int*, int*, int*)" Callee-DebugLoc="File cluster.cpp Line 28 Column 0" Caller="edge_detect_hw(int*, int*)" Caller-DebugLoc="File cluster.cpp Line 15 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="cluster.cpp:74:7" msg_body="Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="anonymous"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="cluster.cpp:75:9" msg_body="Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="anonymous"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="cluster.cpp:128:7" msg_body="Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="anonymous"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="cluster.cpp:129:9" msg_body="Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="anonymous"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="cluster.cpp:182:7" msg_body="Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="anonymous"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="cluster.cpp:183:9" msg_body="Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="anonymous"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="cluster.cpp:15:0" msg_body="Unrolling loop 'anonymous' (cluster.cpp:74:7) in function 'edge_detect_hw' completely with a factor of 3">
+        <args Factor="3" LoopLoc="cluster.cpp:74:7" LoopName="anonymous"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="cluster.cpp:15:0" msg_body="Unrolling loop 'anonymous' (cluster.cpp:75:9) in function 'edge_detect_hw' completely with a factor of 3">
+        <args Factor="3" LoopLoc="cluster.cpp:75:9" LoopName="anonymous"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="cluster.cpp:15:0" msg_body="Unrolling loop 'anonymous' (cluster.cpp:128:7) in function 'edge_detect_hw' completely with a factor of 3">
+        <args Factor="3" LoopLoc="cluster.cpp:128:7" LoopName="anonymous"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="cluster.cpp:15:0" msg_body="Unrolling loop 'anonymous' (cluster.cpp:129:9) in function 'edge_detect_hw' completely with a factor of 3">
+        <args Factor="3" LoopLoc="cluster.cpp:129:9" LoopName="anonymous"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="cluster.cpp:15:0" msg_body="Unrolling loop 'anonymous' (cluster.cpp:182:7) in function 'edge_detect_hw' completely with a factor of 3">
+        <args Factor="3" LoopLoc="cluster.cpp:182:7" LoopName="anonymous"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="cluster.cpp:15:0" msg_body="Unrolling loop 'anonymous' (cluster.cpp:183:9) in function 'edge_detect_hw' completely with a factor of 3">
+        <args Factor="3" LoopLoc="cluster.cpp:183:9" LoopName="anonymous"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

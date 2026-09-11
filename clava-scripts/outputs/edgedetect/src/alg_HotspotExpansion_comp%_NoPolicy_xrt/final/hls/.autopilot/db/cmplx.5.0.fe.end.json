@@ -1,0 +1,143 @@
+{
+    "1": {
+        "name": "edge_detect_hw_Pipeline_7",
+        "file": "cluster.cpp",
+        "fileloc": "24",
+        "instructions": "61",
+        "total_instructions": "61",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "edge_detect_hw_Pipeline_4",
+        "file": "cluster.cpp",
+        "fileloc": "21",
+        "instructions": "83",
+        "total_instructions": "83",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "edge_detect_hw_Pipeline_6",
+        "file": "cluster.cpp",
+        "fileloc": "23",
+        "instructions": "77",
+        "total_instructions": "77",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "7"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "edge_detect_hw_Pipeline_2",
+        "file": "cluster.cpp",
+        "fileloc": "19",
+        "instructions": "89",
+        "total_instructions": "89",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "edge_detect_hw_Pipeline_5",
+        "file": "cluster.cpp",
+        "fileloc": "23",
+        "instructions": "45",
+        "total_instructions": "45",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "6"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "edge_detect_hw_Pipeline_1",
+        "file": "cluster.cpp",
+        "fileloc": "19",
+        "instructions": "45",
+        "total_instructions": "45",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "6"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "7": {
+        "name": "edge_detect_hw_Pipeline_3",
+        "file": "cluster.cpp",
+        "fileloc": "21",
+        "instructions": "45",
+        "total_instructions": "45",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "6"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "edge_detect_hw",
+        "file": "cluster.cpp",
+        "fileloc": "15",
+        "instructions": "63",
+        "total_instructions": "508",
+        "calls": "6 4 7 2 5 3 1",
+        "basicblocks": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "27"
+        }
+    }
+}

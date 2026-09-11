@@ -1,0 +1,66 @@
+
+digraph G {
+rankdir=LR;
+node [shape=rectangle];
+
+F84 [label="main
+LOC=27", style=filled];
+F85 [label="now
+LOC=1", style=dotted];
+F86 [label="edge_detect
+LOC=10", style=filled];
+F87 [label="rgbToGrayscale
+LOC=24", style=filled];
+F88 [label="floor
+LOC=2", style=filled];
+F89 [label="edge_detect_out0
+LOC=11", style=filled];
+F90 [label="convolve2d_rep0
+LOC=56", style=filled];
+F91 [label="abs
+LOC=1", style=dotted];
+F92 [label="edge_detect_out1
+LOC=11", style=filled];
+F93 [label="convolve2d_rep1
+LOC=56", style=filled];
+F94 [label="abs
+LOC=1", style=dotted];
+F95 [label="edge_detect_out2
+LOC=11", style=filled];
+F96 [label="convolve2d_rep2
+LOC=56", style=filled];
+F97 [label="abs
+LOC=1", style=dotted];
+F98 [label="combthreshold
+LOC=21", style=filled];
+F99 [label="abs
+LOC=1", style=dotted];
+F100 [label="abs
+LOC=1", style=dotted];
+F101 [label="now
+LOC=1", style=dotted];
+F102 [label="duration_cast
+LOC=1", style=dotted];
+F107 [label="count
+LOC=1", style=dotted];
+
+F84 -> F85 [label=0];
+F87 -> F88 [label=0];
+F86 -> F87 [label=0];
+F86 -> F89 [label=1];
+F90 -> F91 [label=0];
+F86 -> F90 [label=2];
+F86 -> F92 [label=3];
+F93 -> F94 [label=0];
+F86 -> F93 [label=4];
+F86 -> F95 [label=5];
+F96 -> F97 [label=0];
+F86 -> F96 [label=6];
+F98 -> F99 [label=0];
+F98 -> F100 [label=1];
+F86 -> F98 [label=7];
+F84 -> F86 [label=1];
+F84 -> F101 [label=2];
+F84 -> F102 [label=3];
+F84 -> F107 [label=4];
+}

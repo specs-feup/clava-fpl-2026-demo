@@ -1,0 +1,9 @@
+{
+    "id": "alg_SingleHotspotTask_lat",
+    "cluster": {
+        "name": "cluster",
+        "nTopLevelTasks": 1,
+        "nAllTasks": 1,
+        "value": 372000
+    }
+}

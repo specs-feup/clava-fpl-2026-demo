@@ -1,0 +1,246 @@
+<ENTRY>
+{
+ "thisFile": "/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_SingleHotspotTask_lat_xrt/final/final.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue Sep  8 13:52:41 2026",
+ "timestampMillis": "1788868361446",
+ "buildStep": {
+  "cmdId": "d21bbd7b-d5cc-4c6a-91d3-a73e9bde2b46",
+  "name": "v++",
+  "logFile": "/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_SingleHotspotTask_lat_xrt/final/logs/final.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2024.2/bin/unwrapped/lnx64.o/v++  --compile --mode hls --config hls_config.cfg --work_dir . ",
+  "args": [
+   "--compile",
+   "--mode",
+   "hls",
+   "--config",
+   "hls_config.cfg",
+   "--work_dir",
+   "."
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_SingleHotspotTask_lat_xrt/final/hls_config.cfg",
+    "content": "\npart=xczu9eg-ffvb1156-2-e\n\n[hls]\nflow_target=vitis\npackage.output.format=xo\npackage.output.syn=false\nclock_uncertainty=2ns\nclock=150MHz\nsyn.top=convolve2d_rep0_hw\nsyn.file=cluster.cpp\nsyn.file=cluster.h\n"
+   }
+  ],
+  "cwd": "/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_SingleHotspotTask_lat_xrt/final"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Sep  8 13:52:41 2026",
+ "timestampMillis": "1788868361446",
+ "status": {
+  "cmdId": "d21bbd7b-d5cc-4c6a-91d3-a73e9bde2b46",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Tue Sep  8 13:52:47 2026",
+ "timestampMillis": "1788868367504",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "convolve2d_rep0_hw",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_SingleHotspotTask_lat_xrt/final/cluster.cpp",
+     "/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_SingleHotspotTask_lat_xrt/final/cluster.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Sep  8 13:52:47 2026",
+ "timestampMillis": "1788868367505",
+ "buildStep": {
+  "cmdId": "1ed48198-1d68-4592-9afd-02a02907ca06",
+  "name": "",
+  "logFile": "/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_SingleHotspotTask_lat_xrt/final/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_SingleHotspotTask_lat_xrt/final"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Sep  8 13:52:47 2026",
+ "timestampMillis": "1788868367505",
+ "status": {
+  "cmdId": "1ed48198-1d68-4592-9afd-02a02907ca06",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Sep  8 13:52:47 2026",
+ "timestampMillis": "1788868367505",
+ "report": {
+  "path": "/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_SingleHotspotTask_lat_xrt/final/hls/hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Sep  8 13:52:47 2026",
+ "timestampMillis": "1788868367506",
+ "report": {
+  "path": "/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_SingleHotspotTask_lat_xrt/final/hls/syn/report/csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Sep  8 13:52:47 2026",
+ "timestampMillis": "1788868367506",
+ "report": {
+  "path": "/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_SingleHotspotTask_lat_xrt/final/hls/syn/report/csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Sep  8 13:52:59 2026",
+ "timestampMillis": "1788868379479",
+ "report": {
+  "path": "/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_SingleHotspotTask_lat_xrt/final/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Sep  8 13:52:59 2026",
+ "timestampMillis": "1788868379480",
+ "report": {
+  "path": "/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_SingleHotspotTask_lat_xrt/final/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Sep  8 13:52:59 2026",
+ "timestampMillis": "1788868379480",
+ "report": {
+  "path": "/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_SingleHotspotTask_lat_xrt/final/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Sep  8 13:52:59 2026",
+ "timestampMillis": "1788868379480",
+ "status": {
+  "cmdId": "1ed48198-1d68-4592-9afd-02a02907ca06",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Sep  8 13:52:59 2026",
+ "timestampMillis": "1788868379700",
+ "status": {
+  "cmdId": "d21bbd7b-d5cc-4c6a-91d3-a73e9bde2b46",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Sep  8 13:52:59 2026",
+ "timestampMillis": "1788868379729",
+ "report": {
+  "path": "/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_SingleHotspotTask_lat_xrt/final/reports/v++_compile_final_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Sep  8 13:52:59 2026",
+ "timestampMillis": "1788868379729",
+ "report": {
+  "path": "/home/tls/clava-workspace/clava-fpl-2026-demo/clava-scripts/outputs/edgedetect/src/alg_SingleHotspotTask_lat_xrt/final/reports/.db/v++_compile_final_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

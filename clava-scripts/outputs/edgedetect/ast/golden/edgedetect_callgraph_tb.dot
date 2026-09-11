@@ -1,0 +1,30 @@
+digraph test {
+"node_0" [label="main()" shape=box];
+"node_1" [label="std::chrono::system_clock::system_clock::now()" shape=box style=dashed];
+"node_2" [label="edge_detect(int *[1536], int *[512], int *[512], int *[3], int *[512])" shape=box];
+"node_3" [label="duration_cast()" shape=box style=dashed];
+"node_4" [label="operator-()" shape=box style=dashed];
+"node_5" [label="std::basic_ostream::basic_ostream::operator<<()" shape=box style=dashed];
+"node_6" [label="std::basic_ostream::basic_ostream::operator<<()" shape=box style=dashed];
+"node_7" [label="operator<<()" shape=box style=dashed];
+"node_8" [label="std::chrono::duration::duration::count() const" shape=box style=dashed];
+"node_9" [label="std::basic_ostream::basic_ostream::operator<<()" shape=box style=dashed];
+"node_10" [label="rgbToGrayscale(int *[1536], int *[512])" shape=box];
+"node_11" [label="convolve2d(int *[512], int *[3], int *[512])" shape=box];
+"node_12" [label="combthreshold(int *[512], int *[512], int *[512])" shape=box];
+"node_13" [label="floor(float)" shape=box];
+"node_14" [label="abs(int)" shape=box style=dashed];
+"node_0" -> "node_1" [label="2"];
+"node_0" -> "node_2" [label="1"];
+"node_0" -> "node_3" [label="1"];
+"node_0" -> "node_4" [label="1"];
+"node_0" -> "node_5" [label="5"];
+"node_0" -> "node_7" [label="4"];
+"node_0" -> "node_8" [label="1"];
+"node_2" -> "node_10" [label="1"];
+"node_2" -> "node_11" [label="3"];
+"node_2" -> "node_12" [label="1"];
+"node_10" -> "node_13" [label="1"];
+"node_11" -> "node_14" [label="1"];
+"node_12" -> "node_14" [label="2"];
+}

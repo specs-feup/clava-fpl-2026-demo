@@ -1,0 +1,272 @@
+{
+  "source": {
+    "name": "<task_graph_source>",
+    "type": "3",
+    "id": "TSrc",
+    "dataItems": [
+      {
+        "name": "<n/a>:input_image:<no_name_in_prev_task>",
+        "origin": "0",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": false
+      },
+      {
+        "name": "<n/a>:filter:<no_name_in_prev_task>",
+        "origin": "0",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": false
+      },
+      {
+        "name": "<n/a>:output_image:<no_name_in_prev_task>",
+        "origin": "0",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": false
+      }
+    ]
+  },
+  "sink": {
+    "name": "<task_graph_sink>",
+    "type": "4",
+    "id": "TSink",
+    "dataItems": [
+      {
+        "name": "<n/a>:output_image:<no_name_in_prev_task>",
+        "origin": "1",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": false
+      },
+      {
+        "name": "<n/a>:i:<no_name_in_prev_task>",
+        "origin": "1",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": false
+      },
+      {
+        "name": "<n/a>:j:<no_name_in_prev_task>",
+        "origin": "1",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": false
+      },
+      {
+        "name": "<n/a>:c:<no_name_in_prev_task>",
+        "origin": "1",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": false
+      },
+      {
+        "name": "<n/a>:r:<no_name_in_prev_task>",
+        "origin": "1",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": false
+      },
+      {
+        "name": "<n/a>:normal_factor:<no_name_in_prev_task>",
+        "origin": "1",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": false
+      },
+      {
+        "name": "<n/a>:sum:<no_name_in_prev_task>",
+        "origin": "1",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": false
+      },
+      {
+        "name": "<n/a>:dead_rows:<no_name_in_prev_task>",
+        "origin": "1",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": false
+      },
+      {
+        "name": "<n/a>:dead_cols:<no_name_in_prev_task>",
+        "origin": "1",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": false
+      },
+      {
+        "name": "<n/a>:decomp_0:<no_name_in_prev_task>",
+        "origin": "1",
+        "datatype": "bool",
+        "size": 4,
+        "isWritten": false,
+        "isRead": false
+      },
+      {
+        "name": "<n/a>:_d0_0:<no_name_in_prev_task>",
+        "origin": "1",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": false
+      },
+      {
+        "name": "<n/a>:_d0_1:<no_name_in_prev_task>",
+        "origin": "1",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": false
+      }
+    ]
+  },
+  "globals": {
+    "name": "<globals_source>",
+    "type": "5",
+    "id": "TG",
+    "dataItems": []
+  },
+  "top": {
+    "name": "convolve2d_rep0_hw",
+    "type": "0",
+    "id": "T1",
+    "dataItems": [
+      {
+        "name": "<n/a>:input_image:<no_name_in_prev_task>",
+        "origin": "2",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": true
+      },
+      {
+        "name": "<n/a>:filter:<no_name_in_prev_task>",
+        "origin": "2",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": true
+      },
+      {
+        "name": "<n/a>:output_image:<no_name_in_prev_task>",
+        "origin": "2",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": true,
+        "isRead": false
+      },
+      {
+        "name": "<n/a>:i:<no_name_in_prev_task>",
+        "origin": "3",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": true,
+        "isRead": true
+      },
+      {
+        "name": "<n/a>:j:<no_name_in_prev_task>",
+        "origin": "3",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": true,
+        "isRead": true
+      },
+      {
+        "name": "<n/a>:c:<no_name_in_prev_task>",
+        "origin": "3",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": true,
+        "isRead": true
+      },
+      {
+        "name": "<n/a>:r:<no_name_in_prev_task>",
+        "origin": "3",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": true,
+        "isRead": true
+      },
+      {
+        "name": "<n/a>:normal_factor:<no_name_in_prev_task>",
+        "origin": "3",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": true,
+        "isRead": true
+      },
+      {
+        "name": "<n/a>:sum:<no_name_in_prev_task>",
+        "origin": "3",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": true,
+        "isRead": true
+      },
+      {
+        "name": "<n/a>:dead_rows:<no_name_in_prev_task>",
+        "origin": "3",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": true,
+        "isRead": true
+      },
+      {
+        "name": "<n/a>:dead_cols:<no_name_in_prev_task>",
+        "origin": "3",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": true,
+        "isRead": true
+      },
+      {
+        "name": "<n/a>:decomp_0:<no_name_in_prev_task>",
+        "origin": "3",
+        "datatype": "bool",
+        "size": 4,
+        "isWritten": true,
+        "isRead": true
+      },
+      {
+        "name": "<n/a>:_d0_0:<no_name_in_prev_task>",
+        "origin": "3",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": true,
+        "isRead": true
+      },
+      {
+        "name": "<n/a>:_d0_1:<no_name_in_prev_task>",
+        "origin": "3",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": true,
+        "isRead": true
+      },
+      {
+        "name": "<n/a>:imm(3):<no_name_in_prev_task>",
+        "origin": "6",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": false
+      }
+    ],
+    "call": "N/A",
+    "numTasks": 1,
+    "childTasks": []
+  }
+}

@@ -1,0 +1,629 @@
+[
+  [
+    "rgbToGrayscale",
+    {
+      "Vitis": {
+        "platform": "xczu9eg-ffvb1156-2-e",
+        "topFunction": "rgbToGrayscale",
+        "clockTarget": {
+          "value": 10,
+          "unit": "ns"
+        },
+        "clockTargetUncertainty": {
+          "value": 2,
+          "unit": "ns"
+        },
+        "clockEstim": {
+          "value": 8,
+          "unit": "ns"
+        },
+        "frequencyMaxMHz": 125,
+        "latencyWorst": 6220963,
+        "latencyAvg": 6220963,
+        "latencyBest": 6220963,
+        "hasFixedLatency": true,
+        "execTimeWorst": {
+          "value": 62.21,
+          "unit": "ms"
+        },
+        "execTimeAvg": {
+          "value": 62.21,
+          "unit": "ms"
+        },
+        "execTimeBest": {
+          "value": 62.21,
+          "unit": "ms"
+        },
+        "FF": 6988,
+        "LUT": 12985,
+        "BRAM": 60,
+        "DSP": 15,
+        "availFF": 548160,
+        "availLUT": 274080,
+        "availBRAM": 1824,
+        "availDSP": 2520,
+        "perFF": 0.01274810274372446,
+        "perLUT": 0.047376678342089903,
+        "perBRAM": 0.03289473684210526,
+        "perDSP": 0.005952380952380952,
+        "valid": true,
+        "errors": [],
+        "runSeconds": 18.518,
+        "timestamp": "2026-01-13T03:50:43.547Z",
+        "machineCpu": "AMD Ryzen 5 5600H with Radeon Graphics",
+        "machineMemoryMB": 31947,
+        "vitisVersion": "2024.2.2"
+      }
+    }
+  ],
+  [
+    "set_smooth_filter",
+    {
+      "Vitis": {
+        "platform": "xczu9eg-ffvb1156-2-e",
+        "topFunction": "set_smooth_filter",
+        "clockTarget": {
+          "value": 10,
+          "unit": "ns"
+        },
+        "clockTargetUncertainty": {
+          "value": 2,
+          "unit": "ns"
+        },
+        "clockEstim": {
+          "value": 8,
+          "unit": "ns"
+        },
+        "frequencyMaxMHz": 125,
+        "latencyWorst": 70,
+        "latencyAvg": 70,
+        "latencyBest": 70,
+        "hasFixedLatency": true,
+        "execTimeWorst": {
+          "value": 0.7,
+          "unit": "us"
+        },
+        "execTimeAvg": {
+          "value": 0.7,
+          "unit": "us"
+        },
+        "execTimeBest": {
+          "value": 0.7,
+          "unit": "us"
+        },
+        "FF": 1807,
+        "LUT": 2202,
+        "BRAM": 29,
+        "DSP": 0,
+        "availFF": 548160,
+        "availLUT": 274080,
+        "availBRAM": 1824,
+        "availDSP": 2520,
+        "perFF": 0.0032964827787507296,
+        "perLUT": 0.00803415061295972,
+        "perBRAM": 0.015899122807017545,
+        "perDSP": 0,
+        "valid": true,
+        "errors": [],
+        "runSeconds": 17.527,
+        "timestamp": "2026-01-13T03:51:02.087Z",
+        "machineCpu": "AMD Ryzen 5 5600H with Radeon Graphics",
+        "machineMemoryMB": 31947,
+        "vitisVersion": "2024.2.2"
+      }
+    }
+  ],
+  [
+    "convolve2d_smooth",
+    {
+      "Vitis": {
+        "platform": "xczu9eg-ffvb1156-2-e",
+        "topFunction": "convolve2d_smooth",
+        "clockTarget": {
+          "value": 10,
+          "unit": "ns"
+        },
+        "clockTargetUncertainty": {
+          "value": 2,
+          "unit": "ns"
+        },
+        "clockEstim": {
+          "value": 8,
+          "unit": "ns"
+        },
+        "frequencyMaxMHz": 125,
+        "latencyWorst": 37217137,
+        "latencyAvg": 37217137,
+        "latencyBest": 37217137,
+        "hasFixedLatency": true,
+        "execTimeWorst": {
+          "value": 0.372,
+          "unit": "s"
+        },
+        "execTimeAvg": {
+          "value": 0.372,
+          "unit": "s"
+        },
+        "execTimeBest": {
+          "value": 0.372,
+          "unit": "s"
+        },
+        "FF": 6149,
+        "LUT": 5882,
+        "BRAM": 4,
+        "DSP": 3,
+        "availFF": 548160,
+        "availLUT": 274080,
+        "availBRAM": 1824,
+        "availDSP": 2520,
+        "perFF": 0.011217527729130181,
+        "perLUT": 0.02146088733216579,
+        "perBRAM": 0.0021929824561403508,
+        "perDSP": 0.0011904761904761906,
+        "valid": true,
+        "errors": [],
+        "runSeconds": 18.737,
+        "timestamp": "2026-01-13T03:51:19.630Z",
+        "machineCpu": "AMD Ryzen 5 5600H with Radeon Graphics",
+        "machineMemoryMB": 31947,
+        "vitisVersion": "2024.2.2"
+      }
+    }
+  ],
+  [
+    "set_vert_filter",
+    {
+      "Vitis": {
+        "platform": "xczu9eg-ffvb1156-2-e",
+        "topFunction": "set_vert_filter",
+        "clockTarget": {
+          "value": 10,
+          "unit": "ns"
+        },
+        "clockTargetUncertainty": {
+          "value": 2,
+          "unit": "ns"
+        },
+        "clockEstim": {
+          "value": 8,
+          "unit": "ns"
+        },
+        "frequencyMaxMHz": 125,
+        "latencyWorst": 70,
+        "latencyAvg": 70,
+        "latencyBest": 70,
+        "hasFixedLatency": true,
+        "execTimeWorst": {
+          "value": 0.7,
+          "unit": "us"
+        },
+        "execTimeAvg": {
+          "value": 0.7,
+          "unit": "us"
+        },
+        "execTimeBest": {
+          "value": 0.7,
+          "unit": "us"
+        },
+        "FF": 1807,
+        "LUT": 2202,
+        "BRAM": 29,
+        "DSP": 0,
+        "availFF": 548160,
+        "availLUT": 274080,
+        "availBRAM": 1824,
+        "availDSP": 2520,
+        "perFF": 0.0032964827787507296,
+        "perLUT": 0.00803415061295972,
+        "perBRAM": 0.015899122807017545,
+        "perDSP": 0,
+        "valid": true,
+        "errors": [],
+        "runSeconds": 17.548,
+        "timestamp": "2026-01-13T03:51:38.387Z",
+        "machineCpu": "AMD Ryzen 5 5600H with Radeon Graphics",
+        "machineMemoryMB": 31947,
+        "vitisVersion": "2024.2.2"
+      }
+    }
+  ],
+  [
+    "convolve2d_vert",
+    {
+      "Vitis": {
+        "platform": "xczu9eg-ffvb1156-2-e",
+        "topFunction": "convolve2d_vert",
+        "clockTarget": {
+          "value": 10,
+          "unit": "ns"
+        },
+        "clockTargetUncertainty": {
+          "value": 2,
+          "unit": "ns"
+        },
+        "clockEstim": {
+          "value": 8,
+          "unit": "ns"
+        },
+        "frequencyMaxMHz": 125,
+        "latencyWorst": 37217137,
+        "latencyAvg": 37217137,
+        "latencyBest": 37217137,
+        "hasFixedLatency": true,
+        "execTimeWorst": {
+          "value": 0.372,
+          "unit": "s"
+        },
+        "execTimeAvg": {
+          "value": 0.372,
+          "unit": "s"
+        },
+        "execTimeBest": {
+          "value": 0.372,
+          "unit": "s"
+        },
+        "FF": 6149,
+        "LUT": 5882,
+        "BRAM": 4,
+        "DSP": 3,
+        "availFF": 548160,
+        "availLUT": 274080,
+        "availBRAM": 1824,
+        "availDSP": 2520,
+        "perFF": 0.011217527729130181,
+        "perLUT": 0.02146088733216579,
+        "perBRAM": 0.0021929824561403508,
+        "perDSP": 0.0011904761904761906,
+        "valid": true,
+        "errors": [],
+        "runSeconds": 19.273,
+        "timestamp": "2026-01-13T03:51:55.947Z",
+        "machineCpu": "AMD Ryzen 5 5600H with Radeon Graphics",
+        "machineMemoryMB": 31947,
+        "vitisVersion": "2024.2.2"
+      }
+    }
+  ],
+  [
+    "set_horiz_filter",
+    {
+      "Vitis": {
+        "platform": "xczu9eg-ffvb1156-2-e",
+        "topFunction": "set_horiz_filter",
+        "clockTarget": {
+          "value": 10,
+          "unit": "ns"
+        },
+        "clockTargetUncertainty": {
+          "value": 2,
+          "unit": "ns"
+        },
+        "clockEstim": {
+          "value": 8,
+          "unit": "ns"
+        },
+        "frequencyMaxMHz": 125,
+        "latencyWorst": 70,
+        "latencyAvg": 70,
+        "latencyBest": 70,
+        "hasFixedLatency": true,
+        "execTimeWorst": {
+          "value": 0.7,
+          "unit": "us"
+        },
+        "execTimeAvg": {
+          "value": 0.7,
+          "unit": "us"
+        },
+        "execTimeBest": {
+          "value": 0.7,
+          "unit": "us"
+        },
+        "FF": 1807,
+        "LUT": 2202,
+        "BRAM": 29,
+        "DSP": 0,
+        "availFF": 548160,
+        "availLUT": 274080,
+        "availBRAM": 1824,
+        "availDSP": 2520,
+        "perFF": 0.0032964827787507296,
+        "perLUT": 0.00803415061295972,
+        "perBRAM": 0.015899122807017545,
+        "perDSP": 0,
+        "valid": true,
+        "errors": [],
+        "runSeconds": 17.524,
+        "timestamp": "2026-01-13T03:52:15.234Z",
+        "machineCpu": "AMD Ryzen 5 5600H with Radeon Graphics",
+        "machineMemoryMB": 31947,
+        "vitisVersion": "2024.2.2"
+      }
+    }
+  ],
+  [
+    "convolve2d_horiz",
+    {
+      "Vitis": {
+        "platform": "xczu9eg-ffvb1156-2-e",
+        "topFunction": "convolve2d_horiz",
+        "clockTarget": {
+          "value": 10,
+          "unit": "ns"
+        },
+        "clockTargetUncertainty": {
+          "value": 2,
+          "unit": "ns"
+        },
+        "clockEstim": {
+          "value": 8,
+          "unit": "ns"
+        },
+        "frequencyMaxMHz": 125,
+        "latencyWorst": 37217137,
+        "latencyAvg": 37217137,
+        "latencyBest": 37217137,
+        "hasFixedLatency": true,
+        "execTimeWorst": {
+          "value": 0.372,
+          "unit": "s"
+        },
+        "execTimeAvg": {
+          "value": 0.372,
+          "unit": "s"
+        },
+        "execTimeBest": {
+          "value": 0.372,
+          "unit": "s"
+        },
+        "FF": 6149,
+        "LUT": 5882,
+        "BRAM": 4,
+        "DSP": 3,
+        "availFF": 548160,
+        "availLUT": 274080,
+        "availBRAM": 1824,
+        "availDSP": 2520,
+        "perFF": 0.011217527729130181,
+        "perLUT": 0.02146088733216579,
+        "perBRAM": 0.0021929824561403508,
+        "perDSP": 0.0011904761904761906,
+        "valid": true,
+        "errors": [],
+        "runSeconds": 19.44,
+        "timestamp": "2026-01-13T03:52:32.770Z",
+        "machineCpu": "AMD Ryzen 5 5600H with Radeon Graphics",
+        "machineMemoryMB": 31947,
+        "vitisVersion": "2024.2.2"
+      }
+    }
+  ],
+  [
+    "combthreshold",
+    {
+      "Vitis": {
+        "platform": "xczu9eg-ffvb1156-2-e",
+        "topFunction": "combthreshold",
+        "clockTarget": {
+          "value": 10,
+          "unit": "ns"
+        },
+        "clockTargetUncertainty": {
+          "value": 2,
+          "unit": "ns"
+        },
+        "clockEstim": {
+          "value": 8,
+          "unit": "ns"
+        },
+        "frequencyMaxMHz": 125,
+        "latencyWorst": 4147343,
+        "latencyAvg": 4147343,
+        "latencyBest": 4147343,
+        "hasFixedLatency": true,
+        "execTimeWorst": {
+          "value": 41.473,
+          "unit": "ms"
+        },
+        "execTimeAvg": {
+          "value": 41.473,
+          "unit": "ms"
+        },
+        "execTimeBest": {
+          "value": 41.473,
+          "unit": "ms"
+        },
+        "FF": 42901,
+        "LUT": 5103,
+        "BRAM": 58,
+        "DSP": 0,
+        "availFF": 548160,
+        "availLUT": 274080,
+        "availBRAM": 1824,
+        "availDSP": 2520,
+        "perFF": 0.07826364565090485,
+        "perLUT": 0.018618651488616463,
+        "perBRAM": 0.03179824561403509,
+        "perDSP": 0,
+        "valid": true,
+        "errors": [],
+        "runSeconds": 18.827,
+        "timestamp": "2026-01-13T03:52:52.230Z",
+        "machineCpu": "AMD Ryzen 5 5600H with Radeon Graphics",
+        "machineMemoryMB": 31947,
+        "vitisVersion": "2024.2.2"
+      }
+    }
+  ],
+  [
+    "convolve2d",
+    {
+      "Vitis": {
+        "platform": "xczu9eg-ffvb1156-2-e",
+        "topFunction": "convolve2d_smooth",
+        "clockTarget": {
+          "value": 10,
+          "unit": "ns"
+        },
+        "clockTargetUncertainty": {
+          "value": 2,
+          "unit": "ns"
+        },
+        "clockEstim": {
+          "value": 8,
+          "unit": "ns"
+        },
+        "frequencyMaxMHz": 125,
+        "latencyWorst": 37217137,
+        "latencyAvg": 37217137,
+        "latencyBest": 37217137,
+        "hasFixedLatency": true,
+        "execTimeWorst": {
+          "value": 0.372,
+          "unit": "s"
+        },
+        "execTimeAvg": {
+          "value": 0.372,
+          "unit": "s"
+        },
+        "execTimeBest": {
+          "value": 0.372,
+          "unit": "s"
+        },
+        "FF": 6149,
+        "LUT": 5882,
+        "BRAM": 4,
+        "DSP": 3,
+        "availFF": 548160,
+        "availLUT": 274080,
+        "availBRAM": 1824,
+        "availDSP": 2520,
+        "perFF": 0.011217527729130181,
+        "perLUT": 0.02146088733216579,
+        "perBRAM": 0.0021929824561403508,
+        "perDSP": 0.0011904761904761906,
+        "valid": true,
+        "errors": [],
+        "runSeconds": 18.737,
+        "timestamp": "2026-01-13T03:51:19.630Z",
+        "machineCpu": "AMD Ryzen 5 5600H with Radeon Graphics",
+        "machineMemoryMB": 31947,
+        "vitisVersion": "2024.2.2"
+      }
+    }
+  ],
+  [
+    "convolve2d_rep",
+    {
+      "Vitis": {
+        "platform": "xczu9eg-ffvb1156-2-e",
+        "topFunction": "convolve2d_smooth",
+        "clockTarget": {
+          "value": 10,
+          "unit": "ns"
+        },
+        "clockTargetUncertainty": {
+          "value": 2,
+          "unit": "ns"
+        },
+        "clockEstim": {
+          "value": 8,
+          "unit": "ns"
+        },
+        "frequencyMaxMHz": 125,
+        "latencyWorst": 37217137,
+        "latencyAvg": 37217137,
+        "latencyBest": 37217137,
+        "hasFixedLatency": true,
+        "execTimeWorst": {
+          "value": 0.372,
+          "unit": "s"
+        },
+        "execTimeAvg": {
+          "value": 0.372,
+          "unit": "s"
+        },
+        "execTimeBest": {
+          "value": 0.372,
+          "unit": "s"
+        },
+        "FF": 6149,
+        "LUT": 5882,
+        "BRAM": 4,
+        "DSP": 3,
+        "availFF": 548160,
+        "availLUT": 274080,
+        "availBRAM": 1824,
+        "availDSP": 2520,
+        "perFF": 0.011217527729130181,
+        "perLUT": 0.02146088733216579,
+        "perBRAM": 0.0021929824561403508,
+        "perDSP": 0.0011904761904761906,
+        "valid": true,
+        "errors": [],
+        "runSeconds": 18.737,
+        "timestamp": "2026-01-13T03:51:19.630Z",
+        "machineCpu": "AMD Ryzen 5 5600H with Radeon Graphics",
+        "machineMemoryMB": 31947,
+        "vitisVersion": "2024.2.2"
+      }
+    }
+  ],
+  [
+    "edge_detect_out",
+    {
+      "Vitis": {
+        "platform": "xczu9eg-ffvb1156-2-e",
+        "topFunction": "set_smooth_filter",
+        "clockTarget": {
+          "value": 10,
+          "unit": "ns"
+        },
+        "clockTargetUncertainty": {
+          "value": 2,
+          "unit": "ns"
+        },
+        "clockEstim": {
+          "value": 8,
+          "unit": "ns"
+        },
+        "frequencyMaxMHz": 125,
+        "latencyWorst": 70,
+        "latencyAvg": 70,
+        "latencyBest": 70,
+        "hasFixedLatency": true,
+        "execTimeWorst": {
+          "value": 0.7,
+          "unit": "us"
+        },
+        "execTimeAvg": {
+          "value": 0.7,
+          "unit": "us"
+        },
+        "execTimeBest": {
+          "value": 0.7,
+          "unit": "us"
+        },
+        "FF": 1807,
+        "LUT": 2202,
+        "BRAM": 29,
+        "DSP": 0,
+        "availFF": 548160,
+        "availLUT": 274080,
+        "availBRAM": 1824,
+        "availDSP": 2520,
+        "perFF": 0.0032964827787507296,
+        "perLUT": 0.00803415061295972,
+        "perBRAM": 0.015899122807017545,
+        "perDSP": 0,
+        "valid": true,
+        "errors": [],
+        "runSeconds": 17.527,
+        "timestamp": "2026-01-13T03:51:02.087Z",
+        "machineCpu": "AMD Ryzen 5 5600H with Radeon Graphics",
+        "machineMemoryMB": 31947,
+        "vitisVersion": "2024.2.2"
+      }
+    }
+  ]
+]

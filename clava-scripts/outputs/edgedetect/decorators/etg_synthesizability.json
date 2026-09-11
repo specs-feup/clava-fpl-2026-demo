@@ -1,0 +1,128 @@
+[
+    [
+        "edge_detect",
+        {
+            "SynthColor": "lightgreen",
+            "SynthErrors": []
+        }
+    ],
+    [
+        "edge_detect",
+        {
+            "SynthColor": "lightgreen",
+            "SynthErrors": []
+        }
+    ],
+    [
+        "rgbToGrayscale",
+        {
+            "SynthColor": "lightgreen",
+            "SynthErrors": []
+        }
+    ],
+    [
+        "rgbToGrayscale",
+        {
+            "SynthColor": "lightgreen",
+            "SynthErrors": []
+        }
+    ],
+    [
+        "set_smooth_filter",
+        {
+            "SynthColor": "lightgreen",
+            "SynthErrors": []
+        }
+    ],
+    [
+        "set_smooth_filter",
+        {
+            "SynthColor": "lightgreen",
+            "SynthErrors": []
+        }
+    ],
+    [
+        "convolve2d_smooth",
+        {
+            "SynthColor": "lightgreen",
+            "SynthErrors": []
+        }
+    ],
+    [
+        "convolve2d_smooth",
+        {
+            "SynthColor": "lightgreen",
+            "SynthErrors": []
+        }
+    ],
+    [
+        "set_vert_filter",
+        {
+            "SynthColor": "lightgreen",
+            "SynthErrors": []
+        }
+    ],
+    [
+        "set_vert_filter",
+        {
+            "SynthColor": "lightgreen",
+            "SynthErrors": []
+        }
+    ],
+    [
+        "convolve2d_vert",
+        {
+            "SynthColor": "lightgreen",
+            "SynthErrors": []
+        }
+    ],
+    [
+        "convolve2d_vert",
+        {
+            "SynthColor": "lightgreen",
+            "SynthErrors": []
+        }
+    ],
+    [
+        "set_horiz_filter",
+        {
+            "SynthColor": "lightgreen",
+            "SynthErrors": []
+        }
+    ],
+    [
+        "set_horiz_filter",
+        {
+            "SynthColor": "lightgreen",
+            "SynthErrors": []
+        }
+    ],
+    [
+        "convolve2d_horiz",
+        {
+            "SynthColor": "lightgreen",
+            "SynthErrors": []
+        }
+    ],
+    [
+        "convolve2d_horiz",
+        {
+            "SynthColor": "lightgreen",
+            "SynthErrors": []
+        }
+    ],
+    [
+        "combthreshold",
+        {
+            "SynthColor": "lightgreen",
+            "SynthErrors": []
+        }
+    ],
+    [
+        "combthreshold",
+        {
+            "SynthColor": "lightgreen",
+            "SynthErrors": []
+        }
+    ]
+]

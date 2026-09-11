@@ -1,0 +1,81 @@
+{
+    "id": "alg_HotspotExpansion_comp%_NoPolicy",
+    "hotspot": {
+        "name": "edge_detect",
+        "nTopLevelTasks": 1,
+        "nAllTasks": 9,
+        "value": 92,
+        "nStatements": 247,
+        "linesOfCode": 199
+    },
+    "cluster": {
+        "name": "cluster",
+        "nTopLevelTasks": 1,
+        "nAllTasks": 9,
+        "value": 92,
+        "nStatements": 247,
+        "linesOfCode": 199,
+        "percentageOfHotspot": 100,
+        "percentageOfHotspotTasks": 100,
+        "percentageOfHotspotStatements": 100,
+        "percentageOfHotspotLinesOfCode": 100,
+        "topLevelTasks": [
+            {
+                "name": "edge_detect",
+                "value": 92
+            }
+        ],
+        "allTasks": [
+            {
+                "name": "edge_detect",
+                "value": 92,
+                "criterion": "COMPUTATION_PERCENTAGE"
+            },
+            {
+                "name": "rgbToGrayscale",
+                "value": 16,
+                "criterion": "COMPUTATION_PERCENTAGE"
+            },
+            {
+                "name": "edge_detect_out0",
+                "value": 0,
+                "criterion": "COMPUTATION_PERCENTAGE"
+            },
+            {
+                "name": "convolve2d_rep0",
+                "value": 24,
+                "criterion": "COMPUTATION_PERCENTAGE"
+            },
+            {
+                "name": "edge_detect_out1",
+                "value": 0,
+                "criterion": "COMPUTATION_PERCENTAGE"
+            },
+            {
+                "name": "convolve2d_rep1",
+                "value": 24,
+                "criterion": "COMPUTATION_PERCENTAGE"
+            },
+            {
+                "name": "edge_detect_out2",
+                "value": 0,
+                "criterion": "COMPUTATION_PERCENTAGE"
+            },
+            {
+                "name": "convolve2d_rep2",
+                "value": 24,
+                "criterion": "COMPUTATION_PERCENTAGE"
+            },
+            {
+                "name": "combthreshold",
+                "value": 4,
+                "criterion": "COMPUTATION_PERCENTAGE"
+            }
+        ]
+    },
+    "algorithm": {
+        "criterion": "COMPUTATION_PERCENTAGE",
+        "policies": [],
+        "precision": "us"
+    }
+}

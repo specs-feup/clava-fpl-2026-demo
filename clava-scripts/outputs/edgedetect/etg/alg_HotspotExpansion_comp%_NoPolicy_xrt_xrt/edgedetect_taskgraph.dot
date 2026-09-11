@@ -1,0 +1,162 @@
+digraph G {
+	rankdir=TB;
+	node [shape=box];
+	"TSrc" [label="TSrc: <task_graph_source>", fillcolor=lightgray];
+	"TSink" [label="TSink: <task_graph_sink>", fillcolor=lightgray];
+	"TSrc" -> "TSink" [style=invis];
+	subgraph "cluster_T1" {
+	label = "T1: edge_detect_hw";
+	bgcolor = bisque;
+	"T1_src" [shape=circle, label=""];
+	"T1_target" [shape=diamond, label=""];
+	"T1_src" -> "T1_target" [style=invis];
+	"T1.0" [label="T1.0: cluster_rgbToGrayscale", style="filled,solid", fillcolor=lightpink];
+	"T1.0" -> "T1_target" [style=invis];
+	"T1.1" [label="T1.1: cluster_edge_detect_out0", style="filled,solid", fillcolor=lightpink];
+	"T1.1" -> "T1_target" [style=invis];
+	"T1.2" [label="T1.2: cluster_convolve2d_rep0", style="filled,solid", fillcolor=lightpink];
+	"T1.2" -> "T1_target" [style=invis];
+	"T1.3" [label="T1.3: cluster_edge_detect_out1", style="filled,solid", fillcolor=lightpink];
+	"T1.3" -> "T1_target" [style=invis];
+	"T1.4" [label="T1.4: cluster_convolve2d_rep1", style="filled,solid", fillcolor=lightpink];
+	"T1.4" -> "T1_target" [style=invis];
+	"T1.5" [label="T1.5: cluster_edge_detect_out2", style="filled,solid", fillcolor=lightpink];
+	"T1.5" -> "T1_target" [style=invis];
+	"T1.6" [label="T1.6: cluster_convolve2d_rep2", style="filled,solid", fillcolor=lightpink];
+	"T1.6" -> "T1_target" [style=invis];
+	"T1.7" [label="T1.7: cluster_combthreshold", style="filled,solid", fillcolor=lightpink];
+	"T1.7" -> "T1_target" [style=invis];
+	}
+
+	"T1_src" -> "T1.0" [label="[1]
+image_rgb
+(image_rgb)
+input_image
+{3145728}"];
+	"T1_src" -> "T1.0" [label="[2]
+image_gray
+(image_gray)
+output_image
+{1048576}"];
+	"T1_src" -> "T1.1" [label="[1]
+filter
+(filter)
+filter
+{36}"];
+	"T1.0" -> "T1.2" [label="[1]
+output_image
+(image_gray)
+input_image
+{1048576}", color="black", fontcolor="black"];
+	"T1.1" -> "T1.2" [label="[2]
+filter
+(filter)
+filter
+{36}", color="black", fontcolor="black"];
+	"T1_src" -> "T1.2" [label="[3]
+output
+(output)
+output_image
+{1048576}"];
+	"T1.1" -> "T1.3" [label="[1]
+filter
+(filter)
+filter
+{36}", color="black", fontcolor="black"];
+	"T1.2" -> "T1.4" [label="[1]
+output_image
+(output)
+input_image
+{1048576}", color="black", fontcolor="black"];
+	"T1.3" -> "T1.4" [label="[2]
+filter
+(filter)
+filter
+{36}", color="black", fontcolor="black"];
+	"T1.0" -> "T1.4" [label="[3]
+output_image
+(image_gray)
+output_image
+{1048576}", color="black", fontcolor="black"];
+	"T1.3" -> "T1.5" [label="[1]
+filter
+(filter)
+filter
+{36}", color="black", fontcolor="black"];
+	"T1.2" -> "T1.6" [label="[1]
+output_image
+(output)
+input_image
+{1048576}", color="black", fontcolor="black"];
+	"T1.5" -> "T1.6" [label="[2]
+filter
+(filter)
+filter
+{36}", color="black", fontcolor="black"];
+	"T1_src" -> "T1.6" [label="[3]
+temp_buf
+(temp_buf)
+output_image
+{1048576}"];
+	"T1.4" -> "T1.7" [label="[1]
+output_image
+(image_gray)
+image_gray
+{1048576}", color="black", fontcolor="black"];
+	"T1.6" -> "T1.7" [label="[2]
+output_image
+(temp_buf)
+temp_buf
+{1048576}", color="black", fontcolor="black"];
+	"T1.2" -> "T1.7" [label="[3]
+output_image
+(output)
+output
+{1048576}", color="black", fontcolor="black"];
+	"TSrc" -> "T1_src" [label="[1]
+image_rgb
+(<n/a>)
+image_rgb
+{3145728}", color="black", fontcolor="black"];
+	"TSrc" -> "T1_src" [label="[2]
+image_gray
+(<n/a>)
+image_gray
+{1048576}", color="black", fontcolor="black"];
+	"TSrc" -> "T1_src" [label="[3]
+temp_buf
+(<n/a>)
+temp_buf
+{1048576}", color="black", fontcolor="black"];
+	"TSrc" -> "T1_src" [label="[4]
+filter
+(<n/a>)
+filter
+{36}", color="black", fontcolor="black"];
+	"TSrc" -> "T1_src" [label="[5]
+output
+(<n/a>)
+output
+{1048576}", color="black", fontcolor="black"];
+	"T1_target" -> "TSink" [label="[1]
+image_gray
+(<n/a>)
+image_gray
+{1048576}", color="black", fontcolor="black"];
+	"T1_target" -> "TSink" [label="[2]
+temp_buf
+(<n/a>)
+temp_buf
+{1048576}", color="black", fontcolor="black"];
+	"T1_target" -> "TSink" [label="[3]
+filter
+(<n/a>)
+filter
+{36}", color="black", fontcolor="black"];
+	"T1_target" -> "TSink" [label="[4]
+output
+(<n/a>)
+output
+{1048576}", color="black", fontcolor="black"];
+
+}

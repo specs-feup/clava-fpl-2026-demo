@@ -1,0 +1,17 @@
+{
+  "rgbToGrayscale": 16.0,
+  "convolve2d": 24.0,
+  "convolve2d_rep0": 24.0,
+  "convolve2d_rep1": 24.0,
+  "convolve2d_rep2": 24.0,
+  "combthreshold": 4.0,
+  "edge_detect_out0": 0.0,
+  "edge_detect_out1": 0.0,
+  "edge_detect_out2": 0.0,
+  "convolve2d_smooth": 24.0,
+  "convolve2d_vert": 24.0,
+  "convolve2d_horiz": 24.0,
+  "set_smooth_filter": 0.0,
+  "set_vert_filter": 0.0,
+  "set_horiz_filter": 0.0
+}

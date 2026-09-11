@@ -1,0 +1,2842 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clava AST dump</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1e1e1e;
+      color: #fff;
+      margin: 20px;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 20px;
+    }
+    .directory {
+      cursor: pointer;
+      user-select: none;
+    }
+    .hidden {
+      display: none;
+    }
+    .expand-icon::before {
+      content: "▶";
+      display: inline-block;
+      margin-right: 5px;
+      transition: transform 0.2s;
+    }
+    .expanded .expand-icon::before {
+      transform: rotate(90deg);
+    }
+    .file {
+      margin-left: 15px;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+  <div id="ast-tree">
+   <ul>
+<li data-indent="0"><span class="joinpoint expand-icon">program</span><ul>
+<li data-indent="1"><span class="joinpoint expand-icon">file {filename: edge_detect.cpp}</span><ul>
+<li data-indent="2"><span class="joinpoint expand-icon">include {}</span></li></ul>
+<ul>
+<li data-indent="2"><span class="joinpoint expand-icon">include {}</span></li></ul>
+<ul>
+<li data-indent="2"><span class="joinpoint expand-icon">include {}</span></li></ul>
+<ul>
+<li data-indent="2"><span class="joinpoint expand-icon">include {}</span></li></ul>
+<ul>
+<li data-indent="2"><span class="joinpoint expand-icon">include {}</span></li></ul>
+<ul>
+<li data-indent="2"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="3"><span class="joinpoint expand-icon">namedDecl {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="2"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="3"><span class="joinpoint expand-icon">namedDecl {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="2"><span class="joinpoint expand-icon">function {sig: convolve2d_rep2(int *, int *, int *)}</span><ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: input_image, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: output_image, type: adjustedType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="2"><span class="joinpoint expand-icon">function {sig: convolve2d_rep1(int *, int *, int *)}</span><ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: input_image, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: output_image, type: adjustedType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="2"><span class="joinpoint expand-icon">function {sig: convolve2d_rep0(int *, int *, int *)}</span><ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: input_image, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: output_image, type: adjustedType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="2"><span class="joinpoint expand-icon">function {sig: rgbToGrayscale(int *, int *)}</span><ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: input_image, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: output_image, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="4"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">vardecl {name: i, type: builtinType}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">vardecl {name: jj, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">varref {name: jj, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">vardecl {name: j, type: builtinType}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">vardecl {name: r, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">vardecl {name: g, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">vardecl {name: b, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">vardecl {name: gray, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: input_image, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="12"><span class="joinpoint expand-icon">varref {name: jj, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: g, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: input_image, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="12"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="14"><span class="joinpoint expand-icon">varref {name: jj, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="14"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: b, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: input_image, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="12"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="14"><span class="joinpoint expand-icon">varref {name: jj, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="14"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: jj, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: jj, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: gray, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">floatLiteral {}</span></li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">floatLiteral {}</span></li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: g, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">floatLiteral {}</span></li></ul>
+<ul>
+<li data-indent="12"><span class="joinpoint expand-icon">varref {name: b, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: output_image, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="12"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">cast {}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">call {function: floor}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">varref {name: floor, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="12"><span class="joinpoint expand-icon">varref {name: gray, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="2"><span class="joinpoint expand-icon">function {sig: convolve2d(int *, int *, int *)}</span><ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: input_image, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: output_image, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: i, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: j, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: c, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: r, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: normal_factor, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: sum, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: dead_rows, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: dead_cols, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: decomp_0, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: dead_rows, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: dead_cols, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: normal_factor, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">vardecl {name: _d0_0, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">vardecl {name: _d0_1, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: _d0_0, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">call {function: abs}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: abs, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="14"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="14"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: _d0_1, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: normal_factor, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: _d0_0, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: normal_factor, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: _d0_1, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: decomp_0, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">if {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">varref {name: decomp_0, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">varref {name: normal_factor, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: sum, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="14"><span class="joinpoint expand-icon">varref {name: sum, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="14"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="15"><span class="joinpoint expand-icon">varref {name: sum, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="15"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="16"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="17"><span class="joinpoint expand-icon">varref {name: input_image, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="17"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="18"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="19"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="20"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="21"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="22"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="22"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="19"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="18"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="19"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="20"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="21"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="21"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="16"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="17"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="17"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="18"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="19"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="19"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="18"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: output_image, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="14"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="15"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="16"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="16"><span class="joinpoint expand-icon">varref {name: dead_rows, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="12"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="14"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="15"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="15"><span class="joinpoint expand-icon">varref {name: dead_cols, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">binaryOp {kind: div}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">varref {name: sum, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="12"><span class="joinpoint expand-icon">varref {name: normal_factor, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="2"><span class="joinpoint expand-icon">function {sig: convolve2d_rep2(int *, int *, int *)}</span><ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: input_image, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: output_image, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: i, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: j, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: c, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: r, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: normal_factor, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: sum, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: dead_rows, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: dead_cols, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: decomp_0, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: dead_rows, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: dead_cols, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: normal_factor, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">vardecl {name: _d0_0, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">vardecl {name: _d0_1, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: _d0_0, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">call {function: abs}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: abs, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="14"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="14"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: _d0_1, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: normal_factor, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: _d0_0, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: normal_factor, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: _d0_1, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: decomp_0, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">if {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">varref {name: decomp_0, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">varref {name: normal_factor, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: sum, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="14"><span class="joinpoint expand-icon">varref {name: sum, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="14"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="15"><span class="joinpoint expand-icon">varref {name: sum, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="15"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="16"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="17"><span class="joinpoint expand-icon">varref {name: input_image, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="17"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="18"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="19"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="20"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="21"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="22"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="22"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="19"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="18"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="19"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="20"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="21"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="21"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="16"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="17"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="17"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="18"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="19"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="19"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="18"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: output_image, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="14"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="15"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="16"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="16"><span class="joinpoint expand-icon">varref {name: dead_rows, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="12"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="14"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="15"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="15"><span class="joinpoint expand-icon">varref {name: dead_cols, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">binaryOp {kind: div}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">varref {name: sum, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="12"><span class="joinpoint expand-icon">varref {name: normal_factor, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="2"><span class="joinpoint expand-icon">function {sig: convolve2d_rep1(int *, int *, int *)}</span><ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: input_image, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: output_image, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: i, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: j, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: c, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: r, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: normal_factor, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: sum, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: dead_rows, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: dead_cols, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: decomp_0, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: dead_rows, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: dead_cols, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: normal_factor, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">vardecl {name: _d0_0, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">vardecl {name: _d0_1, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: _d0_0, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">call {function: abs}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: abs, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="14"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="14"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: _d0_1, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: normal_factor, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: _d0_0, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: normal_factor, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: _d0_1, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: decomp_0, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">if {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">varref {name: decomp_0, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">varref {name: normal_factor, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: sum, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="14"><span class="joinpoint expand-icon">varref {name: sum, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="14"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="15"><span class="joinpoint expand-icon">varref {name: sum, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="15"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="16"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="17"><span class="joinpoint expand-icon">varref {name: input_image, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="17"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="18"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="19"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="20"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="21"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="22"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="22"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="19"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="18"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="19"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="20"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="21"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="21"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="16"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="17"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="17"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="18"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="19"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="19"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="18"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: output_image, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="14"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="15"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="16"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="16"><span class="joinpoint expand-icon">varref {name: dead_rows, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="12"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="14"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="15"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="15"><span class="joinpoint expand-icon">varref {name: dead_cols, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">binaryOp {kind: div}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">varref {name: sum, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="12"><span class="joinpoint expand-icon">varref {name: normal_factor, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="2"><span class="joinpoint expand-icon">function {sig: convolve2d_rep0(int *, int *, int *)}</span><ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: input_image, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: output_image, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: i, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: j, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: c, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: r, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: normal_factor, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: sum, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: dead_rows, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: dead_cols, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: decomp_0, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: dead_rows, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: dead_cols, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: normal_factor, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">vardecl {name: _d0_0, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">vardecl {name: _d0_1, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: _d0_0, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">call {function: abs}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: abs, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="14"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="14"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: _d0_1, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: normal_factor, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: _d0_0, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: normal_factor, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: _d0_1, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: decomp_0, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">if {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">varref {name: decomp_0, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">varref {name: normal_factor, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: sum, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="14"><span class="joinpoint expand-icon">varref {name: sum, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="14"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="15"><span class="joinpoint expand-icon">varref {name: sum, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="15"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="16"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="17"><span class="joinpoint expand-icon">varref {name: input_image, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="17"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="18"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="19"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="20"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="21"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="22"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="22"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="19"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="18"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="19"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="20"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="21"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="21"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="16"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="17"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="17"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="18"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="19"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="19"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="18"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: output_image, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="14"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="15"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="16"><span class="joinpoint expand-icon">varref {name: r, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="16"><span class="joinpoint expand-icon">varref {name: dead_rows, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="12"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="14"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="15"><span class="joinpoint expand-icon">varref {name: c, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="15"><span class="joinpoint expand-icon">varref {name: dead_cols, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">binaryOp {kind: div}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">varref {name: sum, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="12"><span class="joinpoint expand-icon">varref {name: normal_factor, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="2"><span class="joinpoint expand-icon">function {sig: combthreshold(int *, int *, int *)}</span><ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: image_gray, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: temp_buf, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: output, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: i, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: j, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: temp1, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: temp2, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: temp3, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">unaryOp {kind: pre_inc}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: temp1, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">call {function: abs}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: abs, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">varref {name: image_gray, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="14"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="14"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: temp2, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">call {function: abs}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: abs, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">varref {name: temp_buf, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="14"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="14"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: temp3, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">ternaryOp {}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: gt}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: temp1, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: temp2, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: temp1, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: temp2, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: output, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="12"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">ternaryOp {}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: gt}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: temp3, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="2"><span class="joinpoint expand-icon">function {sig: edge_detect_out0(int *)}</span><ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="2"><span class="joinpoint expand-icon">function {sig: edge_detect_out1(int *)}</span><ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">unaryOp {kind: minus}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">unaryOp {kind: minus}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">unaryOp {kind: minus}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="2"><span class="joinpoint expand-icon">function {sig: edge_detect_out2(int *)}</span><ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">unaryOp {kind: minus}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">unaryOp {kind: minus}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">binaryOp {kind: assign}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">unaryOp {kind: minus}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="2"><span class="joinpoint expand-icon">function {sig: edge_detect(int *, int *, int *, int *, int *)}</span><ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: image_rgb, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: image_gray, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: temp_buf, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">param {name: output, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="3"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">call {function: rgbToGrayscale}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: rgbToGrayscale, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: image_rgb, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: image_gray, type: adjustedType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">call {function: edge_detect_out0}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: edge_detect_out0, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">call {function: convolve2d_rep0}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: convolve2d_rep0, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: image_gray, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: output, type: adjustedType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">call {function: edge_detect_out1}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: edge_detect_out1, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">call {function: convolve2d_rep1}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: convolve2d_rep1, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: output, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: image_gray, type: adjustedType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">call {function: edge_detect_out2}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: edge_detect_out2, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">call {function: convolve2d_rep2}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: convolve2d_rep2, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: output, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: filter, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: temp_buf, type: adjustedType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">call {function: combthreshold}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: combthreshold, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: image_gray, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: temp_buf, type: adjustedType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: output, type: adjustedType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="2"><span class="joinpoint expand-icon">function {sig: main()}</span><ul>
+<li data-indent="3"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: image_rgb, type: arrayType}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">initList {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: image_gray, type: arrayType}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">initList {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: temp_buf, type: arrayType}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">initList {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: filter, type: arrayType}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">initList {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">initList (9x)</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: output, type: arrayType}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">initList {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: start, type: type}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">expression {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">call {function: now}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">varref {name: now, type: functionType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">call {function: edge_detect}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: edge_detect, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: image_rgb, type: arrayType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: image_gray, type: arrayType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: temp_buf, type: arrayType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: filter, type: arrayType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: output, type: arrayType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: stop, type: type}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">expression {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">call {function: now}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">varref {name: now, type: functionType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: duration, type: type}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">expression {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">call {function: duration_cast}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">varref {name: duration_cast, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">call {function: operator-}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: operator-, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: stop, type: type}</span></li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: start, type: type}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">call {function: operator<<}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: operator<<, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">call {function: operator<<}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: operator<<, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">call {function: operator<<}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">varref {name: operator<<, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">varref {name: cout, type: elaboratedType}</span></li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">literal {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">memberCall {function: count}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">memberAccess {name: count, type: builtinType}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: duration, type: type}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: endl, type: functionType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: actual, type: builtinType}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">vardecl {name: real, type: builtinType}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">vardecl {name: i, type: builtinType}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="5"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">loop {}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">declStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">vardecl {name: j, type: builtinType}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">binaryOp {kind: lt}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">unaryOp {kind: post_inc}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">body {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: add_assign}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: actual, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">arrayAccess {}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: output, type: arrayType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">binaryOp {kind: add}</span><ul>
+<li data-indent="12"><span class="joinpoint expand-icon">binaryOp {kind: mul}</span><ul>
+<li data-indent="13"><span class="joinpoint expand-icon">varref {name: i, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="13"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="12"><span class="joinpoint expand-icon">varref {name: j, type: builtinType}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">exprStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">call {function: operator<<}</span><ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: operator<<, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">call {function: operator<<}</span><ul>
+<li data-indent="7"><span class="joinpoint expand-icon">varref {name: operator<<, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">call {function: operator<<}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">varref {name: operator<<, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">call {function: operator<<}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">varref {name: operator<<, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">call {function: operator<<}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: operator<<, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">call {function: operator<<}</span><ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: operator<<, type: functionType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">varref {name: cout, type: elaboratedType}</span></li></ul>
+<ul>
+<li data-indent="11"><span class="joinpoint expand-icon">literal {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: real, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">literal {}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="8"><span class="joinpoint expand-icon">varref {name: actual, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="7"><span class="joinpoint expand-icon">parenExpr {}</span><ul>
+<li data-indent="8"><span class="joinpoint expand-icon">ternaryOp {}</span><ul>
+<li data-indent="9"><span class="joinpoint expand-icon">binaryOp {kind: eq}</span><ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: real, type: builtinType}</span></li></ul>
+<ul>
+<li data-indent="10"><span class="joinpoint expand-icon">varref {name: actual, type: builtinType}</span></li></ul>
+</li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">literal {}</span></li></ul>
+<ul>
+<li data-indent="9"><span class="joinpoint expand-icon">literal {}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="6"><span class="joinpoint expand-icon">varref {name: endl, type: functionType}</span></li></ul>
+</li></ul>
+</li></ul>
+<ul>
+<li data-indent="4"><span class="joinpoint expand-icon">returnStmt {}</span><ul>
+<li data-indent="5"><span class="joinpoint expand-icon">intLiteral {}</span></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+
+  </div>
+  <script>
+    document.querySelectorAll('.joinpoint').forEach(dir => {
+      dir.addEventListener('click', () => {
+        const childUl = dir.nextElementSibling;
+        if (childUl) {
+          dir.classList.toggle('expanded');
+          childUl.classList.toggle('hidden');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+        

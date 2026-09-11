@@ -1,0 +1,58 @@
+digraph G {
+	rankdir=TB;
+	node [shape=box];
+	"TSrc" [label="TSrc: <task_graph_source>", fillcolor=lightgray];
+	"TSink" [label="TSink: <task_graph_sink>", fillcolor=lightgray];
+	"TSrc" -> "TSink" [style=invis];
+	subgraph "cluster_T1" {
+	label = "T1: edge_detect_hw";
+	bgcolor = bisque;
+	"T1_src" [shape=circle, label=""];
+	"T1_target" [shape=diamond, label=""];
+	"T1_src" -> "T1_target" [style=invis];
+	"T1.0" [label="T1.0: cluster_rgbToGrayscale", style="filled,solid", fillcolor=lightpink];
+	"T1.0" -> "T1_target" [style=invis];
+	"T1.1" [label="T1.1: cluster_edge_detect_out0", style="filled,solid", fillcolor=lightpink];
+	"T1.1" -> "T1_target" [style=invis];
+	"T1.2" [label="T1.2: cluster_convolve2d_rep0", style="filled,solid", fillcolor=lightpink];
+	"T1.2" -> "T1_target" [style=invis];
+	"T1.3" [label="T1.3: cluster_edge_detect_out1", style="filled,solid", fillcolor=lightpink];
+	"T1.3" -> "T1_target" [style=invis];
+	"T1.4" [label="T1.4: cluster_convolve2d_rep1", style="filled,solid", fillcolor=lightpink];
+	"T1.4" -> "T1_target" [style=invis];
+	"T1.5" [label="T1.5: cluster_edge_detect_out2", style="filled,solid", fillcolor=lightpink];
+	"T1.5" -> "T1_target" [style=invis];
+	"T1.6" [label="T1.6: cluster_convolve2d_rep2", style="filled,solid", fillcolor=lightpink];
+	"T1.6" -> "T1_target" [style=invis];
+	"T1.7" [label="T1.7: cluster_combthreshold", style="filled,solid", fillcolor=lightpink];
+	"T1.7" -> "T1_target" [style=invis];
+	}
+
+	"T1_src" -> "T1.0" [label=""];
+	"T1_src" -> "T1.0" [label=""];
+	"T1_src" -> "T1.1" [label=""];
+	"T1.0" -> "T1.2" [label="", color="black", fontcolor="black"];
+	"T1.1" -> "T1.2" [label="", color="black", fontcolor="black"];
+	"T1_src" -> "T1.2" [label=""];
+	"T1.1" -> "T1.3" [label="", color="black", fontcolor="black"];
+	"T1.2" -> "T1.4" [label="", color="black", fontcolor="black"];
+	"T1.3" -> "T1.4" [label="", color="black", fontcolor="black"];
+	"T1.0" -> "T1.4" [label="", color="black", fontcolor="black"];
+	"T1.3" -> "T1.5" [label="", color="black", fontcolor="black"];
+	"T1.2" -> "T1.6" [label="", color="black", fontcolor="black"];
+	"T1.5" -> "T1.6" [label="", color="black", fontcolor="black"];
+	"T1_src" -> "T1.6" [label=""];
+	"T1.4" -> "T1.7" [label="", color="black", fontcolor="black"];
+	"T1.6" -> "T1.7" [label="", color="black", fontcolor="black"];
+	"T1.2" -> "T1.7" [label="", color="black", fontcolor="black"];
+	"TSrc" -> "T1_src" [label="", color="black", fontcolor="black"];
+	"TSrc" -> "T1_src" [label="", color="black", fontcolor="black"];
+	"TSrc" -> "T1_src" [label="", color="black", fontcolor="black"];
+	"TSrc" -> "T1_src" [label="", color="black", fontcolor="black"];
+	"TSrc" -> "T1_src" [label="", color="black", fontcolor="black"];
+	"T1_target" -> "TSink" [label="", color="black", fontcolor="black"];
+	"T1_target" -> "TSink" [label="", color="black", fontcolor="black"];
+	"T1_target" -> "TSink" [label="", color="black", fontcolor="black"];
+	"T1_target" -> "TSink" [label="", color="black", fontcolor="black"];
+
+}

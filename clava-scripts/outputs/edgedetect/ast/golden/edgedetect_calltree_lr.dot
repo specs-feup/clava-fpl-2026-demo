@@ -1,0 +1,57 @@
+
+digraph G {
+rankdir=LR;
+node [shape=rectangle];
+
+F27 [label="main
+LOC=28", style=filled];
+F28 [label="now
+LOC=1", style=dotted];
+F29 [label="edge_detect
+LOC=34", style=filled];
+F30 [label="rgbToGrayscale
+LOC=19", style=filled];
+F31 [label="floor
+LOC=2", style=filled];
+F32 [label="convolve2d
+LOC=50", style=filled];
+F33 [label="abs
+LOC=1", style=dotted];
+F34 [label="convolve2d
+LOC=50", style=filled];
+F35 [label="abs
+LOC=1", style=dotted];
+F36 [label="convolve2d
+LOC=50", style=filled];
+F37 [label="abs
+LOC=1", style=dotted];
+F38 [label="combthreshold
+LOC=20", style=filled];
+F39 [label="abs
+LOC=1", style=dotted];
+F40 [label="abs
+LOC=1", style=dotted];
+F41 [label="now
+LOC=1", style=dotted];
+F42 [label="duration_cast
+LOC=1", style=dotted];
+F47 [label="count
+LOC=1", style=dotted];
+
+F27 -> F28 [label=0];
+F30 -> F31 [label=0];
+F29 -> F30 [label=0];
+F32 -> F33 [label=0];
+F29 -> F32 [label=1];
+F34 -> F35 [label=0];
+F29 -> F34 [label=2];
+F36 -> F37 [label=0];
+F29 -> F36 [label=3];
+F38 -> F39 [label=0];
+F38 -> F40 [label=1];
+F29 -> F38 [label=4];
+F27 -> F29 [label=1];
+F27 -> F41 [label=2];
+F27 -> F42 [label=3];
+F27 -> F47 [label=4];
+}

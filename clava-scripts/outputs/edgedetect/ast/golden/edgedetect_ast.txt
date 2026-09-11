@@ -1,0 +1,644 @@
+>program
+->file {filename: edge_detect.cpp}
+-->include {}
+-->include {}
+-->include {}
+-->include {}
+-->include {}
+-->declStmt {}
+--->namedDecl {}
+-->declStmt {}
+--->namedDecl {}
+-->comment {}
+-->comment {}
+-->function {sig: rgbToGrayscale(int *[1536], int *[512])}
+--->param {name: input_image, type: adjustedType}
+--->param {name: output_image, type: adjustedType}
+--->body {}
+---->loop {}
+----->declStmt {}
+------>vardecl {name: i, type: builtinType}
+------->intLiteral {}
+----->exprStmt {}
+------>binaryOp {kind: lt}
+------->varref {name: i, type: builtinType}
+------->intLiteral {}
+----->exprStmt {}
+------>unaryOp {kind: post_inc}
+------->varref {name: i, type: builtinType}
+----->body {}
+------>declStmt {}
+------->vardecl {name: jj, type: builtinType}
+-------->intLiteral {}
+------>loop {}
+------->declStmt {}
+-------->vardecl {name: j, type: builtinType}
+--------->intLiteral {}
+------->exprStmt {}
+-------->binaryOp {kind: lt}
+--------->varref {name: j, type: builtinType}
+--------->intLiteral {}
+------->exprStmt {}
+-------->unaryOp {kind: post_inc}
+--------->varref {name: j, type: builtinType}
+------->body {}
+-------->declStmt {}
+--------->vardecl {name: r, type: builtinType}
+---------->arrayAccess {}
+----------->varref {name: jj, type: builtinType}
+-------->declStmt {}
+--------->vardecl {name: g, type: builtinType}
+---------->arrayAccess {}
+----------->binaryOp {kind: add}
+------------>varref {name: jj, type: builtinType}
+------------>intLiteral {}
+-------->declStmt {}
+--------->vardecl {name: b, type: builtinType}
+---------->arrayAccess {}
+----------->binaryOp {kind: add}
+------------>varref {name: jj, type: builtinType}
+------------>intLiteral {}
+-------->exprStmt {}
+--------->binaryOp {kind: add_assign}
+---------->varref {name: jj, type: builtinType}
+---------->intLiteral {}
+-------->declStmt {}
+--------->vardecl {name: gray, type: builtinType}
+---------->binaryOp {kind: add}
+----------->binaryOp {kind: add}
+------------>binaryOp {kind: mul}
+------------->floatLiteral {}
+------------->varref {name: r, type: builtinType}
+------------>binaryOp {kind: mul}
+------------->floatLiteral {}
+------------->varref {name: g, type: builtinType}
+----------->binaryOp {kind: mul}
+------------>floatLiteral {}
+------------>varref {name: b, type: builtinType}
+-------->exprStmt {}
+--------->binaryOp {kind: assign}
+---------->arrayAccess {}
+----------->varref {name: j, type: builtinType}
+---------->cast {}
+----------->call {function: floor}
+------------>varref {name: floor, type: functionType}
+------------>varref {name: gray, type: builtinType}
+-->function {sig: convolve2d(int *[512], int *[3], int *[512])}
+--->param {name: input_image, type: adjustedType}
+--->param {name: filter, type: adjustedType}
+--->param {name: output_image, type: adjustedType}
+--->body {}
+---->declStmt {}
+----->vardecl {name: i, type: builtinType}
+---->declStmt {}
+----->vardecl {name: j, type: builtinType}
+---->declStmt {}
+----->vardecl {name: c, type: builtinType}
+---->declStmt {}
+----->vardecl {name: r, type: builtinType}
+---->declStmt {}
+----->vardecl {name: normal_factor, type: builtinType}
+---->declStmt {}
+----->vardecl {name: sum, type: builtinType}
+---->declStmt {}
+----->vardecl {name: dead_rows, type: builtinType}
+---->declStmt {}
+----->vardecl {name: dead_cols, type: builtinType}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>varref {name: dead_rows, type: builtinType}
+------>binaryOp {kind: div}
+------->intLiteral {}
+------->intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>varref {name: dead_cols, type: builtinType}
+------>binaryOp {kind: div}
+------->intLiteral {}
+------->intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>varref {name: normal_factor, type: builtinType}
+------>intLiteral {}
+---->loop {}
+----->exprStmt {}
+------>binaryOp {kind: assign}
+------->varref {name: r, type: builtinType}
+------->intLiteral {}
+----->exprStmt {}
+------>binaryOp {kind: lt}
+------->varref {name: r, type: builtinType}
+------->intLiteral {}
+----->exprStmt {}
+------>unaryOp {kind: post_inc}
+------->varref {name: r, type: builtinType}
+----->body {}
+------>loop {}
+------->exprStmt {}
+-------->binaryOp {kind: assign}
+--------->varref {name: c, type: builtinType}
+--------->intLiteral {}
+------->exprStmt {}
+-------->binaryOp {kind: lt}
+--------->varref {name: c, type: builtinType}
+--------->intLiteral {}
+------->exprStmt {}
+-------->unaryOp {kind: post_inc}
+--------->varref {name: c, type: builtinType}
+------->body {}
+-------->exprStmt {}
+--------->binaryOp {kind: add_assign}
+---------->varref {name: normal_factor, type: builtinType}
+---------->call {function: abs}
+----------->varref {name: abs, type: functionType}
+----------->arrayAccess {}
+------------>varref {name: c, type: builtinType}
+---->if {}
+----->binaryOp {kind: eq}
+------>varref {name: normal_factor, type: builtinType}
+------>intLiteral {}
+----->body {}
+------>exprStmt {}
+------->binaryOp {kind: assign}
+-------->varref {name: normal_factor, type: builtinType}
+-------->intLiteral {}
+---->loop {}
+----->exprStmt {}
+------>binaryOp {kind: assign}
+------->varref {name: r, type: builtinType}
+------->intLiteral {}
+----->exprStmt {}
+------>binaryOp {kind: lt}
+------->varref {name: r, type: builtinType}
+------->binaryOp {kind: add}
+-------->binaryOp {kind: sub}
+--------->intLiteral {}
+--------->intLiteral {}
+-------->intLiteral {}
+----->exprStmt {}
+------>unaryOp {kind: post_inc}
+------->varref {name: r, type: builtinType}
+----->body {}
+------>loop {}
+------->exprStmt {}
+-------->binaryOp {kind: assign}
+--------->varref {name: c, type: builtinType}
+--------->intLiteral {}
+------->exprStmt {}
+-------->binaryOp {kind: lt}
+--------->varref {name: c, type: builtinType}
+--------->binaryOp {kind: add}
+---------->binaryOp {kind: sub}
+----------->intLiteral {}
+----------->intLiteral {}
+---------->intLiteral {}
+------->exprStmt {}
+-------->unaryOp {kind: post_inc}
+--------->varref {name: c, type: builtinType}
+------->body {}
+-------->exprStmt {}
+--------->binaryOp {kind: assign}
+---------->varref {name: sum, type: builtinType}
+---------->intLiteral {}
+-------->loop {}
+--------->exprStmt {}
+---------->binaryOp {kind: assign}
+----------->varref {name: i, type: builtinType}
+----------->intLiteral {}
+--------->exprStmt {}
+---------->binaryOp {kind: lt}
+----------->varref {name: i, type: builtinType}
+----------->intLiteral {}
+--------->exprStmt {}
+---------->unaryOp {kind: post_inc}
+----------->varref {name: i, type: builtinType}
+--------->body {}
+---------->loop {}
+----------->exprStmt {}
+------------>binaryOp {kind: assign}
+------------->varref {name: j, type: builtinType}
+------------->intLiteral {}
+----------->exprStmt {}
+------------>binaryOp {kind: lt}
+------------->varref {name: j, type: builtinType}
+------------->intLiteral {}
+----------->exprStmt {}
+------------>unaryOp {kind: post_inc}
+------------->varref {name: j, type: builtinType}
+----------->body {}
+------------>exprStmt {}
+------------->binaryOp {kind: add_assign}
+-------------->varref {name: sum, type: builtinType}
+-------------->binaryOp {kind: mul}
+--------------->arrayAccess {}
+---------------->parenExpr {}
+----------------->binaryOp {kind: add}
+------------------>varref {name: c, type: builtinType}
+------------------>varref {name: j, type: builtinType}
+--------------->arrayAccess {}
+---------------->varref {name: j, type: builtinType}
+-------->exprStmt {}
+--------->binaryOp {kind: assign}
+---------->arrayAccess {}
+----------->parenExpr {}
+------------>binaryOp {kind: add}
+------------->varref {name: c, type: builtinType}
+------------->varref {name: dead_cols, type: builtinType}
+---------->parenExpr {}
+----------->binaryOp {kind: div}
+------------>varref {name: sum, type: builtinType}
+------------>varref {name: normal_factor, type: builtinType}
+-->function {sig: combthreshold(int *[512], int *[512], int *[512])}
+--->param {name: image_gray, type: adjustedType}
+--->param {name: temp_buf, type: adjustedType}
+--->param {name: output, type: adjustedType}
+--->body {}
+---->declStmt {}
+----->vardecl {name: i, type: builtinType}
+----->vardecl {name: j, type: builtinType}
+---->declStmt {}
+----->vardecl {name: temp1, type: builtinType}
+---->declStmt {}
+----->vardecl {name: temp2, type: builtinType}
+---->declStmt {}
+----->vardecl {name: temp3, type: builtinType}
+---->loop {}
+----->exprStmt {}
+------>binaryOp {kind: assign}
+------->varref {name: i, type: builtinType}
+------->intLiteral {}
+----->exprStmt {}
+------>binaryOp {kind: lt}
+------->varref {name: i, type: builtinType}
+------->intLiteral {}
+----->exprStmt {}
+------>unaryOp {kind: post_inc}
+------->varref {name: i, type: builtinType}
+----->body {}
+------>loop {}
+------->exprStmt {}
+-------->binaryOp {kind: assign}
+--------->varref {name: j, type: builtinType}
+--------->intLiteral {}
+------->exprStmt {}
+-------->binaryOp {kind: lt}
+--------->varref {name: j, type: builtinType}
+--------->intLiteral {}
+------->exprStmt {}
+-------->unaryOp {kind: pre_inc}
+--------->varref {name: j, type: builtinType}
+------->body {}
+-------->exprStmt {}
+--------->binaryOp {kind: assign}
+---------->varref {name: temp1, type: builtinType}
+---------->call {function: abs}
+----------->varref {name: abs, type: functionType}
+----------->arrayAccess {}
+------------>varref {name: j, type: builtinType}
+-------->exprStmt {}
+--------->binaryOp {kind: assign}
+---------->varref {name: temp2, type: builtinType}
+---------->call {function: abs}
+----------->varref {name: abs, type: functionType}
+----------->arrayAccess {}
+------------>varref {name: j, type: builtinType}
+-------->exprStmt {}
+--------->binaryOp {kind: assign}
+---------->varref {name: temp3, type: builtinType}
+---------->ternaryOp {}
+----------->parenExpr {}
+------------>binaryOp {kind: gt}
+------------->varref {name: temp1, type: builtinType}
+------------->varref {name: temp2, type: builtinType}
+----------->varref {name: temp1, type: builtinType}
+----------->varref {name: temp2, type: builtinType}
+-------->exprStmt {}
+--------->binaryOp {kind: assign}
+---------->arrayAccess {}
+----------->varref {name: j, type: builtinType}
+---------->ternaryOp {}
+----------->parenExpr {}
+------------>binaryOp {kind: gt}
+------------->varref {name: temp3, type: builtinType}
+------------->intLiteral {}
+----------->intLiteral {}
+----------->intLiteral {}
+-->function {sig: edge_detect(int *[1536], int *[512], int *[512], int *[3], int *[512])}
+--->param {name: image_rgb, type: adjustedType}
+--->param {name: image_gray, type: adjustedType}
+--->param {name: temp_buf, type: adjustedType}
+--->param {name: filter, type: adjustedType}
+--->param {name: output, type: adjustedType}
+--->body {}
+---->exprStmt {}
+----->call {function: rgbToGrayscale}
+------>varref {name: rgbToGrayscale, type: functionType}
+------>varref {name: image_rgb, type: adjustedType}
+------>varref {name: image_gray, type: adjustedType}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>intLiteral {}
+---->exprStmt {}
+----->call {function: convolve2d}
+------>varref {name: convolve2d, type: functionType}
+------>varref {name: image_gray, type: adjustedType}
+------>varref {name: filter, type: adjustedType}
+------>varref {name: output, type: adjustedType}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>unaryOp {kind: minus}
+------->intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>unaryOp {kind: minus}
+------->intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>unaryOp {kind: minus}
+------->intLiteral {}
+---->exprStmt {}
+----->call {function: convolve2d}
+------>varref {name: convolve2d, type: functionType}
+------>varref {name: output, type: adjustedType}
+------>varref {name: filter, type: adjustedType}
+------>varref {name: image_gray, type: adjustedType}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>unaryOp {kind: minus}
+------->intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>unaryOp {kind: minus}
+------->intLiteral {}
+---->exprStmt {}
+----->binaryOp {kind: assign}
+------>arrayAccess {}
+------->intLiteral {}
+------>unaryOp {kind: minus}
+------->intLiteral {}
+---->exprStmt {}
+----->call {function: convolve2d}
+------>varref {name: convolve2d, type: functionType}
+------>varref {name: output, type: adjustedType}
+------>varref {name: filter, type: adjustedType}
+------>varref {name: temp_buf, type: adjustedType}
+---->exprStmt {}
+----->call {function: combthreshold}
+------>varref {name: combthreshold, type: functionType}
+------>varref {name: image_gray, type: adjustedType}
+------>varref {name: temp_buf, type: adjustedType}
+------>varref {name: output, type: adjustedType}
+-->function {sig: main()}
+--->body {}
+---->declStmt {}
+----->vardecl {name: image_rgb, type: arrayType}
+------>initList {}
+------->initList {}
+-------->intLiteral {}
+---->wrapperStmt {}
+----->comment {}
+---->declStmt {}
+----->vardecl {name: image_gray, type: arrayType}
+------>initList {}
+------->initList {}
+-------->intLiteral {}
+---->declStmt {}
+----->vardecl {name: temp_buf, type: arrayType}
+------>initList {}
+------->initList {}
+-------->intLiteral {}
+---->declStmt {}
+----->vardecl {name: filter, type: arrayType}
+------>initList {}
+------->initList {}
+-------->intLiteral {}
+-------->intLiteral {}
+-------->intLiteral {}
+------->initList {}
+-------->intLiteral {}
+-------->intLiteral {}
+-------->intLiteral {}
+------->initList {}
+-------->intLiteral {}
+-------->intLiteral {}
+-------->intLiteral {}
+---->declStmt {}
+----->vardecl {name: output, type: arrayType}
+------>initList {}
+------->initList {}
+-------->intLiteral {}
+---->declStmt {}
+----->vardecl {name: start, type: type}
+------>expression {}
+------->call {function: now}
+-------->varref {name: now, type: functionType}
+---->exprStmt {}
+----->call {function: edge_detect}
+------>varref {name: edge_detect, type: functionType}
+------>varref {name: image_rgb, type: arrayType}
+------>varref {name: image_gray, type: arrayType}
+------>varref {name: temp_buf, type: arrayType}
+------>varref {name: filter, type: arrayType}
+------>varref {name: output, type: arrayType}
+---->declStmt {}
+----->vardecl {name: stop, type: type}
+------>expression {}
+------->call {function: now}
+-------->varref {name: now, type: functionType}
+---->declStmt {}
+----->vardecl {name: duration, type: type}
+------>expression {}
+------->call {function: duration_cast}
+-------->varref {name: duration_cast, type: functionType}
+-------->call {function: operator-}
+--------->varref {name: operator-, type: functionType}
+--------->varref {name: stop, type: type}
+--------->varref {name: start, type: type}
+---->exprStmt {}
+----->call {function: operator<<}
+------>varref {name: operator<<, type: functionType}
+------>call {function: operator<<}
+------->varref {name: operator<<, type: functionType}
+------->call {function: operator<<}
+-------->varref {name: operator<<, type: functionType}
+-------->varref {name: cout, type: elaboratedType}
+-------->literal {}
+------->memberCall {function: count}
+-------->memberAccess {name: count, type: builtinType}
+--------->varref {name: duration, type: type}
+------>varref {name: endl, type: functionType}
+---->declStmt {}
+----->vardecl {name: actual, type: builtinType}
+------>intLiteral {}
+---->declStmt {}
+----->vardecl {name: real, type: builtinType}
+------>intLiteral {}
+---->loop {}
+----->declStmt {}
+------>vardecl {name: i, type: builtinType}
+------->intLiteral {}
+----->exprStmt {}
+------>binaryOp {kind: lt}
+------->varref {name: i, type: builtinType}
+------->intLiteral {}
+----->exprStmt {}
+------>unaryOp {kind: post_inc}
+------->varref {name: i, type: builtinType}
+----->body {}
+------>loop {}
+------->declStmt {}
+-------->vardecl {name: j, type: builtinType}
+--------->intLiteral {}
+------->exprStmt {}
+-------->binaryOp {kind: lt}
+--------->varref {name: j, type: builtinType}
+--------->intLiteral {}
+------->exprStmt {}
+-------->unaryOp {kind: post_inc}
+--------->varref {name: j, type: builtinType}
+------->body {}
+-------->exprStmt {}
+--------->binaryOp {kind: add_assign}
+---------->varref {name: actual, type: builtinType}
+---------->arrayAccess {}
+----------->varref {name: j, type: builtinType}
+---->exprStmt {}
+----->call {function: operator<<}
+------>varref {name: operator<<, type: functionType}
+------>call {function: operator<<}
+------->varref {name: operator<<, type: functionType}
+------->call {function: operator<<}
+-------->varref {name: operator<<, type: functionType}
+-------->call {function: operator<<}
+--------->varref {name: operator<<, type: functionType}
+--------->call {function: operator<<}
+---------->varref {name: operator<<, type: functionType}
+---------->call {function: operator<<}
+----------->varref {name: operator<<, type: functionType}
+----------->varref {name: cout, type: elaboratedType}
+----------->literal {}
+---------->varref {name: real, type: builtinType}
+--------->literal {}
+-------->varref {name: actual, type: builtinType}
+------->parenExpr {}
+-------->ternaryOp {}
+--------->binaryOp {kind: eq}
+---------->varref {name: real, type: builtinType}
+---------->varref {name: actual, type: builtinType}
+--------->literal {}
+--------->literal {}
+------>varref {name: endl, type: functionType}
+---->returnStmt {}
+----->intLiteral {}

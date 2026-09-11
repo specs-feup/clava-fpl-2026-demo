@@ -1,0 +1,144 @@
+{
+  "source": {
+    "name": "<task_graph_source>",
+    "type": "3",
+    "id": "TSrc",
+    "dataItems": [
+      {
+        "name": "<n/a>:image_rgb:<no_name_in_prev_task>",
+        "origin": "0",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": false
+      },
+      {
+        "name": "<n/a>:image_gray:<no_name_in_prev_task>",
+        "origin": "0",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": false
+      },
+      {
+        "name": "<n/a>:temp_buf:<no_name_in_prev_task>",
+        "origin": "0",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": false
+      },
+      {
+        "name": "<n/a>:filter:<no_name_in_prev_task>",
+        "origin": "0",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": false
+      },
+      {
+        "name": "<n/a>:output:<no_name_in_prev_task>",
+        "origin": "0",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": false
+      }
+    ]
+  },
+  "sink": {
+    "name": "<task_graph_sink>",
+    "type": "4",
+    "id": "TSink",
+    "dataItems": [
+      {
+        "name": "<n/a>:image_gray:<no_name_in_prev_task>",
+        "origin": "1",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": false
+      },
+      {
+        "name": "<n/a>:temp_buf:<no_name_in_prev_task>",
+        "origin": "1",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": false
+      },
+      {
+        "name": "<n/a>:filter:<no_name_in_prev_task>",
+        "origin": "1",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": false
+      },
+      {
+        "name": "<n/a>:output:<no_name_in_prev_task>",
+        "origin": "1",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": false
+      }
+    ]
+  },
+  "globals": {
+    "name": "<globals_source>",
+    "type": "5",
+    "id": "TG",
+    "dataItems": []
+  },
+  "top": {
+    "name": "edge_detect",
+    "type": "0",
+    "id": "T0",
+    "dataItems": [
+      {
+        "name": "<n/a>:image_rgb:<no_name_in_prev_task>",
+        "origin": "2",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": false,
+        "isRead": true
+      },
+      {
+        "name": "<n/a>:image_gray:<no_name_in_prev_task>",
+        "origin": "2",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": true,
+        "isRead": true
+      },
+      {
+        "name": "<n/a>:temp_buf:<no_name_in_prev_task>",
+        "origin": "2",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": true,
+        "isRead": true
+      },
+      {
+        "name": "<n/a>:filter:<no_name_in_prev_task>",
+        "origin": "2",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": true,
+        "isRead": true
+      },
+      {
+        "name": "<n/a>:output:<no_name_in_prev_task>",
+        "origin": "2",
+        "datatype": "int",
+        "size": 4,
+        "isWritten": true,
+        "isRead": true
+      }
+    ],
+    "call": "N/A",
+    "numTasks": 1,
+    "childTasks": []
+  }
+}

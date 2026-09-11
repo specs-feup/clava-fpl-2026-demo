@@ -1,0 +1,702 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_convolve2d_rep0_hw_ir
+Args:            
+  - Callee:          'convolve2d_rep0_hw(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_convolve2d_rep0_hw_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: cluster.cpp, Line: 16, Column: 21 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '9'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        filter5seq
+  - ArrayName:       filter
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_16_1
+  - String:          ' '
+  - LoopLoc:         'cluster.cpp:16:21'
+  - String:          ' '
+  - Function:        'convolve2d_rep0_hw(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: cluster.cpp, Line: 20, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.8
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: cluster.cpp, Line: 33, Column: 30 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       input_image
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_33_6
+  - String:          ' '
+  - LoopLoc:         'cluster.cpp:33:30'
+  - String:          ' '
+  - Function:        'convolve2d_rep0_hw(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: cluster.cpp, Line: 34, Column: 28 }
+  - OrigDirection:   read
+  - OrigID:          for.inc32.load.8
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: cluster.cpp, Line: 32, Column: 27 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '9'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        filter5seq6
+  - ArrayName:       filter
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_32_5
+  - String:          ' '
+  - LoopLoc:         'cluster.cpp:32:27'
+  - String:          ' '
+  - Function:        'convolve2d_rep0_hw(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: cluster.cpp, Line: 34, Column: 71 }
+  - OrigDirection:   read
+  - OrigID:          for.inc32.load.13
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: cluster.cpp, Line: 30, Column: 24 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '510'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep7seq
+  - ArrayName:       output_image
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_30_4
+  - String:          ' '
+  - LoopLoc:         'cluster.cpp:30:24'
+  - String:          ' '
+  - Function:        'convolve2d_rep0_hw(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: cluster.cpp, Line: 37, Column: 68 }
+  - OrigDirection:   write
+  - OrigID:          for.inc44.store.7
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: cluster.cpp, Line: 33, Column: 30 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cluster.cpp, Line: 33, Column: 30 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       input_image
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_32_5
+  - String:          ' '
+  - LoopLoc:         'cluster.cpp:32:27'
+  - String:          ' '
+  - Function:        'convolve2d_rep0_hw(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: cluster.cpp, Line: 32, Column: 27 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cluster.cpp, Line: 32, Column: 27 }
+  - OrigDirection:   read
+  - OrigID:          filter5seq6
+  - ArrayName:       filter
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_30_4
+  - String:          ' '
+  - LoopLoc:         'cluster.cpp:30:24'
+  - String:          ' '
+  - Function:        'convolve2d_rep0_hw(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: cluster.cpp, Line: 30, Column: 24 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cluster.cpp, Line: 30, Column: 24 }
+  - OrigDirection:   write
+  - OrigID:          scevgep7seq
+  - ArrayName:       output_image
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_29_3
+  - String:          ' '
+  - LoopLoc:         'cluster.cpp:29:21'
+  - String:          ' '
+  - Function:        'convolve2d_rep0_hw(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualAlignment
+DebugLoc:        { File: cluster.cpp, Line: 30, Column: 24 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to alignment '
+  - Alignment:       '4'
+  - String:          '(bytes)'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cluster.cpp, Line: 30, Column: 24 }
+  - OrigDirection:   write
+  - OrigID:          scevgep7seq
+  - ArrayName:       output_image
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_30_4
+  - String:          ' '
+  - LoopLoc:         'cluster.cpp:30:24'
+  - String:          ' '
+  - Function:        'convolve2d_rep0_hw(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualAlignment
+DebugLoc:        { File: cluster.cpp, Line: 33, Column: 30 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to alignment '
+  - Alignment:       '4'
+  - String:          '(bytes)'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cluster.cpp, Line: 33, Column: 30 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       input_image
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_33_6
+  - String:          ' '
+  - LoopLoc:         'cluster.cpp:33:30'
+  - String:          ' '
+  - Function:        'convolve2d_rep0_hw(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            BadAccessLen
+DebugLoc:        { File: cluster.cpp, Line: 32, Column: 27 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          Sequential access length is not divisible by 2
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cluster.cpp, Line: 32, Column: 27 }
+  - OrigDirection:   read
+  - OrigID:          filter5seq6
+  - ArrayName:       filter
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_33_6
+  - String:          ' '
+  - LoopLoc:         'cluster.cpp:33:30'
+  - String:          ' '
+  - Function:        'convolve2d_rep0_hw(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            BadStartIndexAlignment
+DebugLoc:        { File: cluster.cpp, Line: 32, Column: 27 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          Start index of the access is unaligned
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cluster.cpp, Line: 32, Column: 27 }
+  - OrigDirection:   read
+  - OrigID:          filter5seq6
+  - ArrayName:       filter
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_33_6
+  - String:          ' '
+  - LoopLoc:         'cluster.cpp:33:30'
+  - String:          ' '
+  - Function:        'convolve2d_rep0_hw(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            BadAccessLen
+DebugLoc:        { File: cluster.cpp, Line: 16, Column: 21 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          Sequential access length is not divisible by 2
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cluster.cpp, Line: 16, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          filter5seq
+  - ArrayName:       filter
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_17_2
+  - String:          ' '
+  - LoopLoc:         'cluster.cpp:17:24'
+  - String:          ' '
+  - Function:        'convolve2d_rep0_hw(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            BadStartIndexAlignment
+DebugLoc:        { File: cluster.cpp, Line: 16, Column: 21 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          Start index of the access is unaligned
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cluster.cpp, Line: 16, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          filter5seq
+  - ArrayName:       filter
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_17_2
+  - String:          ' '
+  - LoopLoc:         'cluster.cpp:17:24'
+  - String:          ' '
+  - Function:        'convolve2d_rep0_hw(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_17_2
+  - String:          '> at '
+  - LoopLoc:         'cluster.cpp:17:24'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_30_4
+  - String:          '> at '
+  - LoopLoc:         'cluster.cpp:30:24'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: cluster.cpp, Line: 32, Column: 27 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_32_5
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: cluster.cpp, Line: 33, Column: 30 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_33_6
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_32_5
+  - String:          ''' ('
+  - LoopLoc:         'cluster.cpp:32:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          convolve2d_rep0_hw
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_33_6
+  - String:          ''' ('
+  - LoopLoc:         'cluster.cpp:33:30'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          convolve2d_rep0_hw
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_33_6
+  - String:          ''' ('
+  - LoopLoc:         'cluster.cpp:33:30'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          convolve2d_rep0_hw
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_33_6
+  - String:          ''' ('
+  - LoopLoc:         'cluster.cpp:33:30'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          convolve2d_rep0_hw
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Failure
+Pass:            reflow-interface-check
+Name:            UnspportedNonScalarType
+DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          'Cannot apply interface mode '''
+  - String:          ap_none
+  - String:          ''' '
+  - String:          'on function argument '''
+  - Name:            input_image
+  - String:          ''' since this interface mode only supports scalar types'
+...
+--- !Failure
+Pass:            reflow-interface-check
+Name:            UnspportedNonScalarType
+DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          'Cannot apply interface mode '''
+  - String:          ap_none
+  - String:          ''' '
+  - String:          'on function argument '''
+  - Name:            filter
+  - String:          ''' since this interface mode only supports scalar types'
+...
+--- !Failure
+Pass:            reflow-interface-check
+Name:            UnspportedNonScalarType
+DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          'Cannot apply interface mode '''
+  - String:          ap_none
+  - String:          ''' '
+  - String:          'on function argument '''
+  - Name:            output_image
+  - String:          ''' since this interface mode only supports scalar types'
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            BurstConflict
+DebugLoc:        { File: cluster.cpp, Line: 32, Column: 27 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          'Could not burst due to multiple potential '
+  - Direction:       reads
+  - String:          ' to the same bundle in the same region.'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cluster.cpp, Line: 32, Column: 27 }
+  - OrigDirection:   read
+  - OrigID:          seq2
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'convolve2d_rep0_hw(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: cluster.cpp, Line: 16, Column: 21 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '9'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_16_1
+  - String:          ' '
+  - LoopLoc:         'cluster.cpp:16:21'
+  - String:          ' '
+  - Function:        'convolve2d_rep0_hw(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: cluster.cpp, Line: 16, Column: 21 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '9'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_16_1
+  - String:          '''('
+  - LoopLoc:         'cluster.cpp:16:21'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: cluster.cpp, Line: 30, Column: 24 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '510'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_30_4
+  - String:          ' '
+  - LoopLoc:         'cluster.cpp:30:24'
+  - String:          ' '
+  - Function:        'convolve2d_rep0_hw(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: cluster.cpp, Line: 30, Column: 24 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '510'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_30_4
+  - String:          '''('
+  - LoopLoc:         'cluster.cpp:30:24'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: cluster.cpp, Line: 33, Column: 30 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq4
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'convolve2d_rep0_hw(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: cluster.cpp, Line: 33, Column: 30 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: cluster.cpp, Line: 33, Column: 30 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq5
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'convolve2d_rep0_hw(int*, int*, int*)'
+    DebugLoc:        { File: cluster.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: cluster.cpp, Line: 33, Column: 30 }
+Function:        _Z18convolve2d_rep0_hwPiS_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

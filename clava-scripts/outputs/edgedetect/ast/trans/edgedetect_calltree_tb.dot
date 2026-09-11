@@ -1,0 +1,66 @@
+
+digraph G {
+rankdir=TB;
+node [shape=rectangle];
+
+F54 [label="main
+LOC=27", style=filled];
+F55 [label="now
+LOC=1", style=dotted];
+F56 [label="edge_detect
+LOC=10", style=filled];
+F57 [label="rgbToGrayscale
+LOC=24", style=filled];
+F58 [label="floor
+LOC=2", style=filled];
+F59 [label="edge_detect_out0
+LOC=11", style=filled];
+F60 [label="convolve2d_rep0
+LOC=56", style=filled];
+F61 [label="abs
+LOC=1", style=dotted];
+F62 [label="edge_detect_out1
+LOC=11", style=filled];
+F63 [label="convolve2d_rep1
+LOC=56", style=filled];
+F64 [label="abs
+LOC=1", style=dotted];
+F65 [label="edge_detect_out2
+LOC=11", style=filled];
+F66 [label="convolve2d_rep2
+LOC=56", style=filled];
+F67 [label="abs
+LOC=1", style=dotted];
+F68 [label="combthreshold
+LOC=21", style=filled];
+F69 [label="abs
+LOC=1", style=dotted];
+F70 [label="abs
+LOC=1", style=dotted];
+F71 [label="now
+LOC=1", style=dotted];
+F72 [label="duration_cast
+LOC=1", style=dotted];
+F77 [label="count
+LOC=1", style=dotted];
+
+F54 -> F55 [label=0];
+F57 -> F58 [label=0];
+F56 -> F57 [label=0];
+F56 -> F59 [label=1];
+F60 -> F61 [label=0];
+F56 -> F60 [label=2];
+F56 -> F62 [label=3];
+F63 -> F64 [label=0];
+F56 -> F63 [label=4];
+F56 -> F65 [label=5];
+F66 -> F67 [label=0];
+F56 -> F66 [label=6];
+F68 -> F69 [label=0];
+F68 -> F70 [label=1];
+F56 -> F68 [label=7];
+F54 -> F56 [label=1];
+F54 -> F71 [label=2];
+F54 -> F72 [label=3];
+F54 -> F77 [label=4];
+}

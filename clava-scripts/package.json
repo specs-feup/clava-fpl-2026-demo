@@ -1,24 +1,26 @@
 {
-    "name": "@specs-feup/clava-project-template",
+    "name": "@specs-feup/clava-fpl-2026-demo",
     "version": "1.1.0",
     "author": "L. Sousa",
     "description": "A template for developing projects for Clava in Typescript",
     "type": "module",
     "files": [
-      "api",
-      "src",
-      ".gitignore",
-      "jest.config.js",
-      "LICENSE",
-      "package-lock.json",
-      "package.json",
-      "README.md",
-      "tsconfig.jest.json",
-      "tsconfig.json",
-      "typedoc.config.js"
-    ],     
+        "api",
+        "src",
+        ".gitignore",
+        "jest.config.js",
+        "LICENSE",
+        "package-lock.json",
+        "package.json",
+        "README.md",
+        "tsconfig.jest.json",
+        "tsconfig.json",
+        "typedoc.config.js"
+    ],
     "scripts": {
-        "run": "npx clava classic dist/main.js -p CxxSources/",
+        "run": "tsc && npx clava classic dist/main.js -p CxxSources/edge_detect.cpp -ncg",
+        "run:hoopa": "tsc && npx clava classic dist/hoopa.js -p CxxSources/edge_detect.cpp -ncg",
+        "run:expansion": "tsc && npx clava classic dist/expansion.js -p CxxSources/edge_detect.cpp -ncg",
         "run:watch": "npx clava dist/main.js -w dist/main.js -- clang CxxSources/",
         "build": "tsc",
         "build:watch": "tsc --watch",
@@ -29,7 +31,9 @@
         "test:watch": "npm run test -- --watch"
     },
     "dependencies": {
-        "@specs-feup/clava": "~3.5.0"
+        "@specs-feup/clava": "^3.0.33",
+        "@specs-feup/extended-task-graph": "^1.1.0",
+        "@specs-feup/hoopa": "^0.7.1"
     },
     "devDependencies": {
         "@jest/globals": "^30.2.0",
